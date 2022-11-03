@@ -1,0 +1,12 @@
+.hero {
+    background-image: url("../../../img/Background\ Image.png");
+    
+    &__container {
+        width: pxToRem(375);
+    }
+}
+
+img {
+    width: pxToRem(466);
+    height: pxToRem(521);
+}

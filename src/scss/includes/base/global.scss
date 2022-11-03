@@ -90,3 +90,42 @@ a {
 button, input, label, select {
 	cursor: auto;
 }
+/*---------------------------------------------*/
+.title {
+	font-weight: $typography-h2-font-weight;
+	font-size: $typography-h2-font-size;
+	text-align: center;
+
+	&-default {
+		color: var($color-grey-900);
+		}
+
+	&-contrast {
+		color: var($color-secondary-main);
+		}
+}
+
+.subtitle {
+	font-size: $typography-subtitle-font-size;
+	font-weight: $typography-subtitle-font-weight;
+	text-align: center;
+
+	&-default {
+		color: $color-text-primary;
+	}
+
+	&-contrast {
+		color: $color-text-divider;
+	}
+}
+
+.button {
+	color: $color-secondary-main;
+	background: $color-info-main;
+}
+
+link {
+	&hover {
+		text-decoration: underline;
+	}
+}
