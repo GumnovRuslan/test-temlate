@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2? family= Noto+Sans+Mono & display=swap');
 // General
-@import 'includes/base/vars';
+@import 'includes/base/vars.scss';
 @import 'includes/base/mixins';
-@import 'includes/base/fonts';
+@import 'includes/base/fonts.scss';
+@import 'includes/base/functions.scss';
 @import 'includes/base/utils';
 @import 'includes/base/global.scss';
 
@@ -17,5 +17,5 @@
 
 
 // Core Templates
-@import 'footer.scss';
 @import 'header.scss';
+@import 'footer.scss'

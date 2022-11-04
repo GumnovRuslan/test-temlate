@@ -1,22 +1,75 @@
-.hero {
-    font-family: 'Noto Sans Mono', monospace;
+.wrapper {
     background-image: url("../../../img/Background\ Image.png");
+    overflow: hidden;
+    
+    &__content {
+        display: flex;
 
-    &__container {
-        width: pxToRem(375);
-        margin: 0 auto;
-    }
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    &__card {
-    }
-
-    &__image {
-
-        img {
-            width: pxToRem(466);
-            height: pxToRem(521);
+        @include tablet {
+            flex-direction: row;
         }
     }
+
 }
+.card {
+    display: inline-block;
+    border: pxToRem(10) solid #7572FF;
+    margin-bottom: pxToRem(60);
+
+    &__wrapper {
+        position: relative;
+        background: $color-secondary-main;
+        width: pxToRem(323);
+        padding: pxToRem(20) pxToRem(18);
+    }
+
+	&__title {
+            color: $color-info-main;
+            text-transform: uppercase;
+            font-size: pxToRem(25);
+            line-height: pxToRem(38);
+            font-weight: 600;
+            margin-bottom: pxToRem(14);
+		}
+
+	&__subtitle {
+            line-height: pxToRem(24);
+            color: $color-text-primary;
+            margin-bottom: pxToRem(25);
+		}
+
+    &__title-bottom {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+            margin-bottom: pxToRem(20);
+        }
+
+	&__service {
+            display: flex;
+            gap: pxToRem(10);
+		}
+
+	&__image-google {
+            width: pxToRem(108);
+		}
+
+	&__image-appStore {
+            width: pxToRem(108);
+		}
+}
+.image {
+    min-width: pxToRem(466);
+    max-width: pxToRem(466);
+    height: pxToRem(521);
+}
+
+
 
 
