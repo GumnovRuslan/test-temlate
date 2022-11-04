@@ -133,3 +133,20 @@ link {
 		color: $color-primary-main
 	}
 }
+
+.wrapper {
+	@include desktop {
+		padding: pxToRem(120) pxToRem(134);
+		overflow-x: hidden;
+	}
+
+	@include tablet {
+		padding: pxToRem(120) pxToRem(40);
+		overflow-x: hidden;
+	}
+
+	@include mobile {
+		padding: pxToRem(60) pxToRem(16);
+		overflow-x: hidden;
+	}
+}
