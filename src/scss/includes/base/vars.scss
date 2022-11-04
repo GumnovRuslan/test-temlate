@@ -6,6 +6,7 @@ $color-primary-main: #5956E9;
 $color-secondary-main: #ffffff;
 $color-grey-900: #232233;
 $color-text-primary: #6C6C72;
+$color-text-divider: #ffffff;
 $color-info-main: #5851EA;
 
 :root {
@@ -13,6 +14,7 @@ $color-info-main: #5851EA;
     --color-secondary-main: #{$color-secondary-main};
     --color-grey-900: #{$color-grey-900};
     --color-text-primary: #{$color-text-primary};
+    --color-text-divider: #{$color-text-divider};
     --color-info-main: #{$color-info-main};
 }
 
@@ -38,6 +40,7 @@ $typography-h3-font-weight: 500;
 $typography-h2-font-size: pxToRem(31.25);
 $typography-h2-font-weight: 700;
 
+$typography-subtitle-font-size: pxToRem(16);
 $typography-subtitle-font-size: pxToRem(10);
 $typography-subtitle-font-weight: 400;
 
