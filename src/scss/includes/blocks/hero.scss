@@ -1,12 +1,22 @@
 .hero {
+    font-family: 'Noto Sans Mono', monospace;
     background-image: url("../../../img/Background\ Image.png");
-    
+
     &__container {
         width: pxToRem(375);
+        margin: 0 auto;
+    }
+
+    &__card {
+    }
+
+    &__image {
+
+        img {
+            width: pxToRem(466);
+            height: pxToRem(521);
+        }
     }
 }
 
-img {
-    width: pxToRem(466);
-    height: pxToRem(521);
-}
+

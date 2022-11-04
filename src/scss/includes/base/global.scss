@@ -120,12 +120,16 @@ button, input, label, select {
 }
 
 .button {
-	color: $color-secondary-main;
+	text-transform: uppercase;
+	padding: pxToRem(11) pxToRem(14);
+	border-radius: pxToRem(4);
 	background: $color-info-main;
+	color: $color-secondary-main;
 }
 
 link {
 	&hover {
 		text-decoration: underline;
+		color: $color-primary-main
 	}
 }
