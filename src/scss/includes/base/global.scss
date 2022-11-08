@@ -99,33 +99,86 @@ button, input, label, select {
 .title {
 	font-weight: $typography-h2-font-weight;
 	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
+	line-height: pxToRem(38);
 	text-align: center;
+
+	@include mobile {
+		margin-bottom: pxToRem(20);
+		font-size: pxToRem(25);
+		font-weight: 600;
+	}
+
+	@include tablet {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
+
+	@include desktop {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
 }
 
 .title-default {
 	font-weight: $typography-h2-font-weight;
 	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
+	line-height: pxToRem(38);
 	text-align: center;
 	color: $color-grey-900;
+
+	@include mobile {
+		font-size: pxToRem(25);
+		font-weight: 600;
+	}
+
+	@include tablet {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
+
+	@include desktop {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
 	}
 
 .title-contrast {
 	font-weight: $typography-h2-font-weight;
 	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
+	line-height: pxToRem(38);
 	text-align: center;
 	color: $color-secondary-main;
 	background: #000;
+
+	@include mobile {
+		font-size: pxToRem(25);
+		font-weight: 600;
 	}
+
+	@include tablet {
+		font-weight: 700;
+		font-size: pxToRem(31.25);
+	}
+
+	@include desktop {
+		font-weight: 700;
+		font-size: pxToRem(31.25);
+	}
+}
 
 .subtitle {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
-	text-align: center;
+	line-height: pxToRem(24);
 }
 
 .subtitle-default {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
+	line-height: pxToRem(24);
 	text-align: center;
 	color: $color-text-primary;
 }
@@ -133,6 +186,7 @@ button, input, label, select {
 .subtitle-contrast {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
+	line-height: pxToRem(24);
 	text-align: center;
 	color: $color-text-divider;
 	background: #000;
@@ -160,7 +214,7 @@ button, input, label, select {
 	overflow-x: hidden;
 
 	@include mobile {
-		padding: pxToRem(60) pxToRem(16) pxToRem(60) pxToRem(16);
+		padding: pxToRem(60) pxToRem(16);
 	}
 
 	@include tablet {

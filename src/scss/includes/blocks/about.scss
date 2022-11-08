@@ -1,0 +1,81 @@
+.about {
+
+    &__content {
+
+        @include mobile {
+            
+        }
+
+        @include tablet {
+            
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__title {
+    }
+
+    &__subtitle {
+        
+
+        @include mobile {
+            margin-bottom: pxToRem(40);
+        }
+
+        @include tablet {
+            
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__cards {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include tablet {
+            
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__image {
+
+        @include mobile {
+            width: 238px;
+            height: 324px;
+            margin-bottom: pxToRem(75);
+        }
+
+        @include tablet {
+            
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__title-card {
+        text-transform: uppercase;
+    }
+
+    &__card {
+        padding: pxToRem(10);
+        background-color: $color-secondary-main;
+        box-shadow:$shadows-card;
+    }
+}
+
+.title {
+}
+.subtitle {
+}
