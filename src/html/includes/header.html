@@ -8,4 +8,34 @@
     <title><%=title%></title>
   </head>
   <body>
-    <header>header</header>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__burger">
+          <div class="burger">
+            <input class="burger__checkbox" id="burger-checkbox" type="checkbox" />
+            <label class="burger__btn-open" for="burger-checkbox">
+              <div class="burger__line first-line"></div>
+              <div class="burger__line second-line"></div>
+              <div class="burger__line third-line"></div>
+            </label>
+            <nav class="burger__menu">
+              <div class="burger__btn-close">
+                <label class="burger__close" for="burger-checkbox"></label>
+              </div>
+              <div class="burger__items">
+                <a class="burger__item" href="#">Home</a>
+                <a class="burger__item" href="#">About us</a>
+                <a class="burger__item" href="#">Blog</a>
+                <a class="burger__item" href="#">Articles</a>
+                <a class="burger__item" href="#">Contacts</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="header__logo">
+          <img class="header__image" src="../../img/Logo.png" alt="" >
+        </div>
+        <button class="header__btn button">Download</button>
+      </div>
+    </header>

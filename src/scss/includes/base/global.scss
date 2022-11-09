@@ -193,13 +193,27 @@ button, input, label, select {
 }
 
 .button {
+	font-family: 'JosefinSans';
 	text-transform: uppercase;
-	padding: pxToRem(11) pxToRem(14);
 	border: none;
 	border-radius: pxToRem(4);
 	background: $color-info-main;
 	color: $color-secondary-main;
 	cursor: pointer;
+
+	@include mobile {
+		padding: pxToRem(12) pxToRem(6);
+		font-size: pxToRem(10);
+	}
+
+	@include tablet {
+		padding: pxToRem(12) pxToRem(16);
+		font-size: pxToRem(20);
+	}
+
+	@include desktop {
+		
+	}
 }
 
 .link {
@@ -223,5 +237,20 @@ button, input, label, select {
 
 	@include desktop {
 		padding: pxToRem(120) pxToRem(134);
+	}
+}
+
+.header {
+
+	@include mobile {
+		padding: pxToRem(0) pxToRem(16);
+	}
+
+	@include tablet {
+		padding: pxToRem(0) pxToRem(40);
+	}
+
+	@include desktop {
+		padding: pxToRem(0) pxToRem(134);
 	}
 }

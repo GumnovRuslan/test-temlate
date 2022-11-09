@@ -2,5 +2,233 @@ body {
     font-family: 'JosefinSans';
 }
 .header {
+    position: relative;
+    left: 0;
+    top: 80px;
+
+    @include mobile {
+        
+    }
+
+    @include tablet {
+        
+    }
+
+    @include desktop {
+        
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        background: $color-secondary-main;
+        border-radius: pxToRem(3);
+        box-shadow: $shadows-card;
+
+        @include mobile {
+            padding: pxToRem(3);
+            height: pxToRem(40);
+            justify-content: space-between;
+        }
     
+        @include tablet {
+            padding: pxToRem(3);
+            height: pxToRem(60);
+            justify-content: space-between;
+        }
+    
+        @include desktop {
+            
+        }
+    }
+
+    &__burger {
+
+        @include mobile {
+            
+        }
+    
+        @include tablet {
+            
+        }
+    
+        @include desktop {
+            
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: $color-secondary-main;
+        
+
+        @include mobile {
+            width: pxToRem(100);
+            height: pxToRem(60);
+            border-radius: pxToRem(5);
+            left: calc(50% - 3.125rem);
+            top: calc(50% - 1.875rem);
+        }
+    
+        @include tablet {
+            width: pxToRem(200);
+            height: pxToRem(90);
+            border-radius: pxToRem(5);
+            left: calc(50% - 6.25rem);
+            top: calc(50% - 2.813rem);
+        }
+    
+        @include desktop {
+            
+        }
+    }
+
+    &__image {
+
+        @include mobile {
+            width: pxToRem(79);
+            height: pxToRem(12);
+        }
+    
+        @include tablet {
+            width: pxToRem(167);
+            height: pxToRem(28);
+        }
+    
+        @include desktop {
+            
+        }
+    }
+
+    &__btn {
+
+        @include mobile {
+            font-size: $typography-button-font-size;
+            font-weight: $typography-button-font-weight;
+            
+        }
+    
+        @include tablet {
+            
+        }
+    
+        @include desktop {
+            
+        }
+    }
+}
+
+
+.burger {
+    position: relative;
+    width: pxToRem(36);
+    height: pxToRem(36);
+    
+    &__checkbox {
+        display: none;
+    }
+
+    &__btn-open {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__line {
+        position: absolute;
+        top: pxToRem(10);
+        left: pxToRem(9);
+        width: pxToRem(18);
+        height: pxToRem(3);
+        background: $color-grey-900;
+
+        &.second-line{
+            top: pxToRem(17);
+        }
+
+        &.third-line {
+            top: pxToRem(24);
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        top: pxToRem(-8);
+        left: pxToRem(-3);
+        z-index: 1;
+        min-width: pxToRem(267);
+        border-radius: pxToRem(10);
+        background: $color-secondary-main;
+        box-shadow: $shadows-block;
+    }
+
+    &__btn-close {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: pxToRem(25) pxToRem(25) pxToRem(7) pxToRem(25) ;
+    }
+
+    &__close {
+        display: block;
+        position: relative;
+        width: pxToRem(35);
+        height: pxToRem(35);
+        background: $color-primary-main;
+        border-radius: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 0.563rem);
+            top: calc(50% - 0.125rem);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-secondary-main;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: calc(50% - 0.563rem);
+            top: calc(50% - 0.125rem);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-secondary-main;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(22);
+        padding: 0 pxToRem(40) pxToRem(40) pxToRem(40);
+    }
+
+    &__item {
+        display: block;
+        padding: pxToRem(6) 0;
+        text-transform: uppercase;
+        font-size: pxToRem(20);
+        font-weight: 600;
+        color: $color-grey-900;
+    }
+}
+
+#burger-checkbox:checked .burger__close {
+    display: none;
+}
+
+#burger-checkbox:checked ~ .burger__menu {
+    display: block;
 }
