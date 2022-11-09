@@ -1,19 +1,22 @@
 // General
-@import 'includes/base/vars';
+@import 'includes/base/vars.scss';
 @import 'includes/base/mixins';
-//@import 'includes/base/fonts';
+@import 'includes/base/fonts.scss';
+@import 'includes/base/functions.scss';
 @import 'includes/base/utils';
-@import 'includes/base/global';
+@import 'includes/base/global.scss';
 
 // Blocks
-//@import 'includes/blocks/*';
+@import 'includes/blocks/hero.scss';
+@import 'includes/blocks/about.scss';
 
 // Vendor
 //@import 'includes/vendor/**/*';
 
 // Templates
-@import 'templates/*';
+// @import 'templates/*';
+
 
 // Core Templates
-@import 'footer.scss';
 @import 'header.scss';
+@import 'footer.scss'
