@@ -3,13 +3,14 @@
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     @include mobile {
         padding: pxToRem(188) 0 pxToRem(120) 0;
     }
 
     @include tablet {
-        padding: pxToRem(380) 0 pxToRem(220) 0;
+        padding: pxToRem(365) 0 pxToRem(220) 0;
     }
 
     @include desktop {

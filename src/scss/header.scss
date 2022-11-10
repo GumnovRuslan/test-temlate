@@ -2,58 +2,152 @@ body {
     font-family: 'JosefinSans';
 }
 .header {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
     left: 0;
-    top: 80px;
+    width: 100%;
 
     @include mobile {
-        
+        top: pxToRem(40);
+        gap: pxToRem(40);
     }
 
     @include tablet {
-        
+        top: pxToRem(28);
+        gap: pxToRem(34);
     }
 
     @include desktop {
-        
+        top: pxToRem(38);
+        gap: pxToRem(14);
     }
 
-    &__container {
+    &__info {
+        display: flex;
+        gap: pxToRem(48);
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: flex;
+        }
+    
+        @include desktop {
+            
+        }
+    }
+
+//===============================================
+
+.info {
+
+    &__mail {
+    }
+
+    &__number {
+        flex: auto;
+    }
+
+    &__networks {
+        display: inline-flex;
+        gap: pxToRem(30);
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: flex;
+        }
+    
+        @include desktop {
+            padding-right: pxToRem(8);
+        }
+    }
+}
+.mail {
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+    }
+
+    &__favicon {
+    }
+
+    &__address {
+        color: $color-text-divider;
+        font-size: pxToRem(16);
+    }
+}
+.number {
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+    }
+
+    &__favicon {
+    }
+
+    &__phone {
+        color: $color-text-divider;
+        font-size: pxToRem(16);
+    }
+}
+.networks {
+
+    &__link-facebook {
+    }
+
+    &__link-instagram {
+    }
+
+    &__link-twitter {
+    }
+
+    &__link-youtube {
+    }
+}
+
+    &__menu {
+        position: relative;
         display: flex;
         align-items: center;
         background: $color-secondary-main;
-        border-radius: pxToRem(3);
         box-shadow: $shadows-card;
 
         @include mobile {
             padding: pxToRem(3);
             height: pxToRem(40);
             justify-content: space-between;
+            border-radius: pxToRem(3);
         }
     
         @include tablet {
-            padding: pxToRem(3);
+            padding: pxToRem(5);
             height: pxToRem(60);
             justify-content: space-between;
+            border-radius: pxToRem(5);
         }
     
         @include desktop {
-            
+            justify-content: start;
         }
     }
 
-    &__burger {
+.menu {
 
-        @include mobile {
-            
-        }
-    
-        @include tablet {
-            
-        }
+    &__burger {
     
         @include desktop {
-            
+            display: none;
         }
     }
 
@@ -63,7 +157,7 @@ body {
         justify-content: center;
         position: absolute;
         background: $color-secondary-main;
-        
+        box-shadow: $shadows-card;
 
         @include mobile {
             width: pxToRem(100);
@@ -77,12 +171,16 @@ body {
             width: pxToRem(200);
             height: pxToRem(90);
             border-radius: pxToRem(5);
-            left: calc(50% - 6.25rem);
+            left: calc(50% - 6.5rem);
             top: calc(50% - 2.813rem);
         }
     
         @include desktop {
-            
+            width: pxToRem(200);
+            height: pxToRem(90);
+            border-radius: pxToRem(5);
+            left: calc(50% - 6.22rem);
+            top: calc(50% - 2.813rem);
         }
     }
 
@@ -99,75 +197,113 @@ body {
         }
     
         @include desktop {
-            
+            width: pxToRem(167);
+            height: pxToRem(28);
         }
     }
 
-    &__btn {
+    &__nav-left {
+        display: flex;
+        align-items: center;
+        flex: auto;
 
         @include mobile {
-            font-size: $typography-button-font-size;
-            font-weight: $typography-button-font-weight;
-            
+            display: none;
         }
     
         @include tablet {
-            
+            display: none;
         }
     
         @include desktop {
-            
+            display: block;
+            gap: pxToRem(9);
+            padding-left: pxToRem(34);
+        }
+    }
+
+    &__nav-right {
+        display: flex;
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: none;
+        }
+    
+        @include desktop {
+            display: block;
+            gap: pxToRem(9);
+            padding-right: pxToRem(30);
+        }
+    }
+
+    &__item {
+        
+        @include desktop {
+            font-size: pxToRem(20);
+            font-weight: 600;
+            color: $color-grey-900;
+            text-transform: uppercase;
+            padding: pxToRem(15);
+
+            &:hover {
+                color: $color-primary-main;
+                text-decoration: underline;
+            }
         }
     }
 }
 
 
 .burger {
-    position: relative;
-    width: pxToRem(36);
-    height: pxToRem(36);
     
     &__checkbox {
         display: none;
     }
 
     &__btn-open {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: pxToRem(5);
         width: 100%;
         height: 100%;
-        cursor: pointer;
+
+        @include mobile {
+            padding: pxToRem(10);
+        }
+    
+        @include tablet {
+            padding: pxToRem(15) pxToRem(16);
+        }
+    
+        @include desktop {
+            //display: none;
+        }
     }
 
     &__line {
-        position: absolute;
-        top: pxToRem(10);
-        left: pxToRem(9);
         width: pxToRem(18);
-        height: pxToRem(3);
+        height: pxToRem(2);
         background: $color-grey-900;
-
-        &.second-line{
-            top: pxToRem(17);
-        }
-
-        &.third-line {
-            top: pxToRem(24);
-        }
     }
 
     &__menu {
-        display: none;
-        position: absolute;
-        top: pxToRem(-8);
-        left: pxToRem(-3);
+        position: fixed;
+        top: pxToRem(0);
+        left: -100%;
         z-index: 1;
         min-width: pxToRem(267);
-        border-radius: pxToRem(10);
+        height: 100%;
+        border-top-right-radius: pxToRem(10);
+        border-bottom-right-radius: pxToRem(10);
         background: $color-secondary-main;
         box-shadow: $shadows-block;
+        transition: 0.5s all;
     }
 
     &__btn-close {
@@ -178,8 +314,10 @@ body {
     }
 
     &__close {
-        display: block;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: pxToRem(35);
         height: pxToRem(35);
         background: $color-primary-main;
@@ -188,8 +326,6 @@ body {
         &::before {
             content: "";
             position: absolute;
-            left: calc(50% - 0.563rem);
-            top: calc(50% - 0.125rem);
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-secondary-main;
@@ -199,8 +335,6 @@ body {
         &::after {
             content: "";
             position: absolute;
-            left: calc(50% - 0.563rem);
-            top: calc(50% - 0.125rem);
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-secondary-main;
@@ -225,10 +359,7 @@ body {
     }
 }
 
-#burger-checkbox:checked .burger__close {
-    display: none;
-}
-
 #burger-checkbox:checked ~ .burger__menu {
-    display: block;
+    left: 0;
+}
 }
