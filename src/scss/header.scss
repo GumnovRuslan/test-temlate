@@ -203,10 +203,7 @@ body {
     }
 
     &__nav-left {
-        display: flex;
-        align-items: center;
-        flex: auto;
-
+        
         @include mobile {
             display: none;
         }
@@ -216,14 +213,15 @@ body {
         }
     
         @include desktop {
-            display: block;
+            display: flex;
+            align-items: center;
+            flex: auto;
             gap: pxToRem(9);
             padding-left: pxToRem(34);
         }
     }
 
     &__nav-right {
-        display: flex;
 
         @include mobile {
             display: none;
@@ -234,7 +232,8 @@ body {
         }
     
         @include desktop {
-            display: block;
+            display: flex;
+            align-items: center;
             gap: pxToRem(9);
             padding-right: pxToRem(30);
         }
@@ -323,6 +322,10 @@ body {
         background: $color-primary-main;
         border-radius: 50%;
 
+        &:hover {
+            opacity: 0.8;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -356,6 +359,11 @@ body {
         font-size: pxToRem(20);
         font-weight: 600;
         color: $color-grey-900;
+
+        &:hover {
+            color: $color-primary-main;
+            text-decoration: underline;
+        }
     }
 }
 

@@ -6,65 +6,86 @@
     position: relative;
 
     @include mobile {
-        padding: pxToRem(188) 0 pxToRem(120) 0;
+        padding: pxToRem(188) pxToRem(16) pxToRem(132) pxToRem(16);
     }
 
     @include tablet {
-        padding: pxToRem(365) 0 pxToRem(220) 0;
+        padding: pxToRem(368) pxToRem(40) pxToRem(227) pxToRem(40);
     }
 
     @include desktop {
-        padding: pxToRem(216) 0 pxToRem(83) 0;
+        padding: pxToRem(216) pxToRem(135) pxToRem(102) pxToRem(135);
     }
-    
+
     &__content {
         display: flex;
 
         @include mobile {
             flex-direction: column;
             align-items: center;
-            
+            gap: pxToRem(39);
         }
 
         @include tablet {
             flex-direction: row;
             justify-content: center;
-            position: relative;
-            left: pxToRem(40);
-            
+            align-items: flex-end;
+            gap: pxToRem(0);
         }
 
         @include desktop {
-            position: relative;
+            flex-direction: row;
             justify-content: center;
-            left: pxToRem(40);
+            align-items: flex-end;
+            gap: pxToRem(0);
+        }
+    }
+
+    &__card {
+
+        @include mobile {
+            padding-left: pxToRem(20);
+        }
+
+        @include tablet {
+            padding-left: pxToRem(16);
+        }
+
+        @include desktop {
+            padding-left: pxToRem(52);
+            align-self: center;
+        }
+    }
+
+    &__image {
+        
+        @include tablet {
+            padding: 0 pxToRem(26) pxToRem(4) pxToRem(55);
+        }
+
+        @include desktop {
+            padding: 0 pxToRem(57) pxToRem(0) pxToRem(123);
         }
     }
 }
-
 .card {
 
-    &__container {
-
+    &__border {
         @include mobile {
             width: pxToRem(323);
             padding: pxToRem(10) 0;
-            margin-bottom: pxToRem(39);
-            margin-left: pxToRem(20);
             border: pxToRem(10) solid #7572FF;
         }
         
         @include tablet {
             width: pxToRem(374);
             padding: pxToRem(15) 0;
-            margin-left: pxToRem(17);
             border: pxToRem(18) solid #7572FF;
         }
         
         @include desktop {
             width: pxToRem(570);
-            padding: pxToRem(32) 0;
-            margin-left: pxToRem(12);
+            padding: pxToRem(32) pxToRem(0);
             border: pxToRem(20) solid #7572FF;
         }
     }
@@ -75,148 +96,146 @@
 
         @include mobile {
             width: pxToRem(323);
-            padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
             right: pxToRem(30);
+            padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
         }
 
         @include tablet {
             width: pxToRem(356);
-            padding: pxToRem(14) pxToRem(18) pxToRem(15) pxToRem(18);
-            right: pxToRem(31);
+            right: pxToRem(34);
+            padding: pxToRem(14) pxToRem(18) pxToRem(14) pxToRem(18);
         }
 
         @include desktop {
             width: pxToRem(570);
-            padding: pxToRem(41) pxToRem(30) pxToRem(40) pxToRem(30);
             right: pxToRem(72);
+            padding: pxToRem(41) pxToRem(30) pxToRem(39) pxToRem(30);
         }
     }
 
 	&__title {
-            color: $color-info-main;
-            text-transform: uppercase;
-            
+        color: $color-info-main;
+        text-transform: uppercase;
 
-            @include mobile {
-                font-size: pxToRem(25);
-                line-height: pxToRem(38);
-                font-weight: 600;
-                margin-bottom: pxToRem(13);
-            }
-
-            @include tablet {
-                font-size: pxToRem(31.25);
-                line-height: pxToRem(47);
-                font-weight: 700;
-                margin-bottom: pxToRem(6);
-            }
-
-            @include desktop {
-                font-size: pxToRem(48.83);
-                line-height: pxToRem(63);
-                font-weight: 700;
-                margin-bottom: pxToRem(17);
-            }
-		}
-
-	&__subtitle {
-            line-height: pxToRem(24);
-            color: $color-text-primary;
-            
-
-            @include mobile {
-                margin-bottom: pxToRem(24);
-            }
-            
-            @include tablet {
-                margin-bottom: pxToRem(17);
-            }
-            
-            @include desktop {
-                margin-bottom: pxToRem(46);
-            }
-		}
-
-    &__title-bottom {
-            text-transform: uppercase;
+        @include mobile {
+            font-size: pxToRem(25);
+            line-height: pxToRem(38);
             font-weight: 600;
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
-
-            @include mobile {
-                margin-bottom: pxToRem(19);
-            }
-            
-            @include tablet {
-                margin-bottom: pxToRem(22);
-            }
-            
-            @include desktop {
-                margin-bottom: pxToRem(5);
-                font-size: pxToRem(25);
-                line-height: pxToRem(38);
-            }
+            margin-bottom: pxToRem(13);
         }
 
-	&__download {
-            display: flex;
+        @include tablet {
+            font-size: pxToRem(31.25);
+            line-height: pxToRem(47);
+            font-weight: 700;
+            margin-bottom: pxToRem(6);
+        }
 
-            @include mobile {
-                gap: pxToRem(10);
-            }
+        @include desktop {
+            font-size: pxToRem(48.83);
+            line-height: pxToRem(63);
+            font-weight: 700;
+            margin-bottom: pxToRem(17);
+        }
+    }
 
-            @include tablet {
-                gap: pxToRem(14);
-            }
-		}
+    &__subtitle {
+        line-height: pxToRem(24);
+        color: $color-text-primary;
 
-	&__image-google {
+        @include mobile {
+            margin-bottom: pxToRem(24);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(17);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(46);
+        }
+    }
 
-            @include mobile {
-                width: pxToRem(108);
-            }
+    &__title-bottom {
+        text-transform: uppercase;
+        font-weight: 600;
 
-            @include tablet {
-                width: pxToRem(149);
-            }
-            @include desktop {
-                width: pxToRem(149);
-            }
-		}
+        @include mobile {
+            margin-bottom: pxToRem(19);
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(22);
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+        }
 
-	&__image-appStore {
+        @include desktop {
+            margin-bottom: pxToRem(5);
+            font-size: pxToRem(25);
+            line-height: pxToRem(38);
+        }
+    }
 
-            @include mobile{
-                width: pxToRem(108);
-            }
+    &__download {
+        display: flex;
 
-            @include tablet{
-                width: pxToRem(151);
-            }
-            @include desktop {
-                width: pxToRem(149);
-            }
-		}
+        @include mobile {
+            gap: pxToRem(10);
+        }
+
+        @include tablet {
+            gap: pxToRem(14);
+        }
+    }
+
+    &__image-google {
+
+        @include mobile {
+            width: pxToRem(108);
+        }
+
+        @include tablet {
+            width: pxToRem(149);
+        }
+
+        @include desktop {
+            width: pxToRem(149);
+        }
+    }
+
+    &__image-appStore {
+        
+        @include mobile{
+            width: pxToRem(108);
+        }
+
+        @include tablet{
+            width: pxToRem(151);
+        }
+        @include desktop {
+            width: pxToRem(149);
+        }
+    }
 }
 .image {
 
-    @include mobile {
-        min-width: pxToRem(545);
-        height: pxToRem(523);
-        padding-left: pxToRem(139);
-    }
-    
-    @include tablet {
-        min-width: pxToRem(387);
-        height: pxToRem(441);
-        padding-left: pxToRem(60);
-        padding-bottom: pxToRem(20);
-    }
-    
-    @include desktop {
-        min-width: pxToRem(687);
-        height: pxToRem(735);
-        padding-left: pxToRem(124);
-        padding-bottom: pxToRem(15);
+    &__phone {
+        @include mobile {
+            min-width: pxToRem(250);
+            height: pxToRem(510);
+        }
+        
+        @include tablet {
+            min-width: pxToRem(187);
+            height: pxToRem(414);
+        }
+        
+        @include desktop {
+            min-width: pxToRem(287);
+            height: pxToRem(706);
+        }
     }
 }
