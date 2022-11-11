@@ -179,7 +179,6 @@ button, input, label, select {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
 	line-height: pxToRem(24);
-	text-align: center;
 	color: $color-text-primary;
 }
 
@@ -187,7 +186,6 @@ button, input, label, select {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
 	line-height: pxToRem(24);
-	text-align: center;
 	color: $color-text-divider;
 	background: #000;
 }
