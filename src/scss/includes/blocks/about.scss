@@ -1,27 +1,20 @@
-@include mobile {
-            
-}
-
-@include tablet {
-    
-}
-
-@include desktop {
-    
-}
-
 .about {
+    display: flex;
+    flex-direction: column;
 
     @include mobile {
+        gap: pxToRem(37);
         padding-bottom: pxToRem(92);
     }
     
     @include tablet {
-        
+        gap: pxToRem(58);
+        padding-bottom: pxToRem(162);
     }
     
     @include desktop {
-        
+        gap: pxToRem(58);
+        padding-bottom: pxToRem(136);
     }
 
     &__header {
@@ -31,19 +24,27 @@
 
         @include mobile {
             gap: pxToRem(19);
-            margin-bottom: pxToRem(37);
         }
     
         @include tablet {
-            
+            gap: pxToRem(23);
         }
     
         @include desktop {
-            
+            gap: pxToRem(23);
+            padding-right: pxToRem(51);
         }
     }
 
     &__title {
+        
+        @include tablet {
+            padding-top: pxToRem(5);
+        }
+        
+        @include desktop {
+            padding-top: pxToRem(5);
+        }
     }
 
     &__subtitle-first {
@@ -73,30 +74,50 @@
         @include tablet {
             display: block;
             width: pxToRem(450);
-            text-align: center;
+        }
+    
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__subtitle-third {
+        text-align: center;
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: none;
         }
     
         @include desktop {
             display: block;
-            width: pxToRem(600);
+            width: pxToRem(601);
         }
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         @include mobile {
             gap: pxToRem(75);
+            align-items: center;
         }
         
         @include tablet {
-            
+            flex-direction: row;
+            gap: pxToRem(60);
+            align-items: flex-start;
         }
         
         @include desktop {
-            
+            flex-direction: row;
+            gap: pxToRem(60);
+            align-items: flex-start;
+            justify-content: space-between;
         }
     }
 }
@@ -104,23 +125,31 @@
 .content {
 
     &__image {
+
+        @include tablet {
+            padding-top: pxToRem(15);
+        }
+    
+        @include desktop {
+            padding-top: pxToRem(0);
+        }
     }
 
     &__items {
         display: flex;
         flex-direction: column;
-        gap: pxToRem(20);
 
         @include mobile {
-            
+            gap: pxToRem(20);
         }
     
         @include tablet {
-            
+            gap: pxToRem(20);
         }
     
         @include desktop {
-            
+            gap: pxToRem(38);
+            padding-right: pxToRem(26);
         }
     }
 }
@@ -135,11 +164,13 @@
         }
     
         @include tablet {
-            
+            width: pxToRem(238);
+            height: pxToRem(324);
         }
     
         @include desktop {
-            
+            width: pxToRem(386);
+            height: pxToRem(526);
         }
     }
 }
@@ -149,12 +180,27 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
-        row-gap: pxToRem(3);
         column-gap: pxToRem(17);
         box-shadow: $shadows-card;
-        padding: pxToRem(18) pxToRem(18) pxToRem(11) pxToRem(18);
         background: $color-secondary-main;
         border-radius: pxToRem(10);
+
+        @include mobile {
+            row-gap: pxToRem(3);
+            padding: pxToRem(18) pxToRem(18) pxToRem(11) pxToRem(18);
+        }
+        
+        @include tablet {
+            row-gap: pxToRem(3);
+            width: pxToRem(391);
+            padding: pxToRem(18) pxToRem(18) pxToRem(11) pxToRem(18);
+        }
+        
+        @include desktop {
+            row-gap: pxToRem(12);
+            width: pxToRem(570);
+            padding: pxToRem(30) pxToRem(18) pxToRem(18) pxToRem(18);
+        }
     }
 }
 .card {
@@ -173,6 +219,33 @@
     &__description {
         line-height: pxToRem(24);
         
+        @include mobile {
+            display: block;
+        }
+        
+        @include tablet {
+            display: block;
+        }
+        
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__description-desktop {
+        line-height: pxToRem(24);
+        
+        @include mobile {
+            display: none;
+        }
+        
+        @include tablet {
+            display: none;
+        }
+        
+        @include desktop {
+            display: block;
+        }
     }
 }
 .progress {
