@@ -1,5 +1,9 @@
-$font-Josefin: 'Josefin', sans-serif;
+$base-size: 16;
 
+@function pxToRem($size, $postfix: rem) {
+  @return $size / $base-size * 1 + $postfix;
+    //@return $size + px;
+}
 
 // Colors
 $color-primary-main: #5956E9;
@@ -23,10 +27,9 @@ $shadows-card: 0px 1px 10px rgba(0, 0, 0, 0.1);
 $shadows-block: 0px 10px 100px rgba(0, 0, 0, 0.24);
 
 // Media queries
-$desktop-extra: pxToRem(1200, em);
-$desktop: pxToRem(992px, em);
-$tablet: pxToRem(768px, em);
-$mobile: pxToRem(576px, em);
+$desktop: pxToRem(1440, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(375, em);
 
 // Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);
@@ -41,8 +44,7 @@ $typography-h2-font-size: pxToRem(31.25);
 $typography-h2-font-weight: 700;
 
 $typography-subtitle-font-size: pxToRem(16);
-$typography-subtitle-font-size: pxToRem(10);
 $typography-subtitle-font-weight: 400;
 
-$typography-button-font-size: pxToRem(12);
-$typography-button-font-weight: 400;
+$typography-button-font-size: pxToRem(10);
+$typography-button-font-weight: 600;
