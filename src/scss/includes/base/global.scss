@@ -152,7 +152,7 @@ button, input, label, select {
 	line-height: pxToRem(38);
 	text-align: center;
 	color: $color-secondary-main;
-	background: #000;
+
 
 	@include mobile {
 		font-size: pxToRem(25);
@@ -188,7 +188,6 @@ button, input, label, select {
 	font-weight: $typography-subtitle-font-weight;
 	line-height: pxToRem(24);
 	color: $color-text-divider;
-	background: #000;
 }
 
 .button {
