@@ -100,18 +100,19 @@ button, input, label, select {
 	font-weight: $typography-h2-font-weight;
 	font-size: $typography-h2-font-size;
 	text-transform: uppercase;
-	line-height: pxToRem(38);
 	text-align: center;
 
 	@include mobile {
 		margin-bottom: pxToRem(20);
 		font-size: pxToRem(25);
 		font-weight: 600;
+		line-height: pxToRem(38);
 	}
 
 	@include tablet {
 		font-size: pxToRem(31.25);
 		font-weight: 700;
+		line-height: pxToRem(47);
 	}
 
 	@include desktop {
@@ -179,7 +180,6 @@ button, input, label, select {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
 	line-height: pxToRem(24);
-	text-align: center;
 	color: $color-text-primary;
 }
 
@@ -187,12 +187,12 @@ button, input, label, select {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
 	line-height: pxToRem(24);
-	text-align: center;
 	color: $color-text-divider;
 	background: #000;
 }
 
 .button {
+	font-family: 'JosefinSans';
 	font-family: 'JosefinSans';
 	text-transform: uppercase;
 	border: none;
