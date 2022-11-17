@@ -31,6 +31,11 @@ $desktop: pxToRem(1440, em);
 $tablet: pxToRem(768, em);
 $mobile: pxToRem(375, em);
 
+// CCustom media queries
+$max-desktop: pxToRem(2560, em);
+$max-tablet: pxToRem(1439, em);
+$max-mobile: pxToRem(767, em);
+
 // Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);
 $typography-font-weight: 400;
