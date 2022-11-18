@@ -1,0 +1,221 @@
+@include mobile {
+    
+}
+
+@include tablet {
+    
+}
+
+@include desktop {
+    
+}
+
+.interface {
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(17);
+        margin-bottom: pxToRem(40);
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(38);
+        margin-bottom: pxToRem(61);
+    }
+
+    &__download-app {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.header {
+
+    &__title {
+        text-align: center;
+
+        @include mobile {
+            line-height: pxToRem(38);
+        }
+        
+        @include tablet {
+            line-height: pxToRem(47);
+        }
+        
+        @include desktop {
+            
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+}
+
+.subtitle-first {
+
+    @include mobile {
+        display: block;
+        width: pxToRem(300);
+    }
+    
+    @include tablet {
+        display: none;
+    }
+    
+    @include desktop {
+        display: none;
+    }
+}
+
+.subtitle-second {
+
+    @include mobile {
+        display: none;
+    }
+    
+    @include tablet {
+        display: block;
+        width: pxToRem(450);
+    }
+    
+    @include desktop {
+        display: none;
+    }
+}
+
+.subtitle-third {
+
+    @include mobile {
+        display: none;
+    }
+    
+    @include tablet {
+        display: none;
+    }
+    
+    @include desktop {
+        
+    }
+}
+
+.slider {
+
+    &__images {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+
+    &__iPhoneX {
+        width: pxToRem(227);
+        height: pxToRem(444);
+    }
+
+    &__dotter {
+        display: flex;
+        gap: pxToRem(14);
+    }
+
+    &__border {
+        padding: pxToRem(2);
+        
+        
+        &:hover {
+            padding: pxToRem(2);
+            outline: pxToRem(1) solid $color-info-main;
+            border-radius: 50%;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: pxToRem(16);
+        height: pxToRem(16);
+        
+        
+        border-radius: 50%;
+        background: $color-info-main;
+
+        
+    }
+}
+.download-app {
+
+    &__title {
+        font-size: pxToRem(25);
+		font-weight: 600;
+        text-transform: uppercase;
+        line-height: pxToRem(38);
+        text-align: left;
+        margin-bottom: pxToRem(17);
+        color: $color-grey-900;
+    }
+
+    &__subtitle {
+        width: pxToRem(320);
+        font-size: $typography-subtitle-font-size;
+        font-weight: $typography-subtitle-font-weight;
+        line-height: pxToRem(24);
+        margin-bottom: pxToRem(40);
+    }
+
+    &__service {
+        display: flex;
+        gap: pxToRem(25);
+        margin-bottom: pxToRem(60);
+    }
+
+    &__google {
+        
+    }
+
+    &__store {
+    }
+
+    &__statistics {
+        display: flex;
+        gap: pxToRem(18);
+    }
+
+    &__carts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: pxToRem(6);
+        width: pxToRem(96);
+        min-height: pxToRem(100);
+        margin-bottom: pxToRem(60);
+        border-radius: pxToRem(5);
+        box-shadow: $shadows-card;
+        background: $color-primary-main;
+        color: $color-text-divider;
+    }
+
+    &__icon {
+        width: pxToRem(18);
+        height: pxToRem(18);
+    }
+
+    &__number {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: pxToRem(20);
+        line-height: pxToRem(30);
+            }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__gravity {
+        width: pxToRem(334);
+        height: pxToRem(311);
+        align-self: center;
+    }
+}
