@@ -1,4 +1,5 @@
 // Placeholder color
+/*
 @mixin placeholder-color($color) {
 	&:-moz-placeholder {
 		color: $color !important;
@@ -30,7 +31,7 @@
 		color: transparent !important;
 	}
 }
-
+*/
 // Media queries
 @mixin media($min, $max) {
 	@media (min-width: $min) and (max-width: $max) {
@@ -82,7 +83,7 @@
 	}
 }
 
-@mixin tablet() {
+@mixin tablet {
 	@media (min-width: $tablet) and (max-width: $max-tablet) {
 		@content;
 	}

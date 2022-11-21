@@ -1,0 +1,448 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../../img/Background\ Image.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: pxToRem(18);
+
+        @include mobile {
+            margin-bottom: pxToRem(30);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(58);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(58);
+        }
+    }
+
+    &__content {
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: pxToRem(35);
+            width: pxToRem(297);
+        }
+        
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(4, auto);
+            align-items: start;
+            justify-items: center;
+            width: auto;
+            row-gap: pxToRem(50);
+        }
+        
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(4, auto);
+            align-items: start;
+            justify-items: center;
+            width: auto;
+            row-gap: pxToRem(50);
+        }
+    }
+}
+
+.header {
+
+    &__title {
+        
+        @include tablet {
+            line-height: pxToRem(48);
+        }
+        
+        @include desktop {
+            line-height: pxToRem(48);
+        }
+    }
+
+    &__subtitle-first {
+        text-align: center;
+
+        @include mobile {
+            display: block;
+            width: pxToRem(300);
+        }
+    
+        @include tablet {
+            display: none;
+        }
+    
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__subtitle-second {
+        text-align: center;
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: block;
+            width: pxToRem(450);
+        }
+    
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__subtitle-third {
+        text-align: center;
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: none;
+        }
+    
+        @include desktop {
+            display: block;
+            width: pxToRem(600);
+        }
+    }
+}
+
+.content {
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            align-items: center;
+            width: pxToRem(225);
+        }
+        
+        @include tablet {
+            align-items: center;
+            width: pxToRem(225);
+        }
+        
+        @include desktop {
+            align-items: center;
+            width: pxToRem(365);
+        }
+    }
+
+    &__icon {
+        width: pxToRem(50);
+        height: pxToRem(50);
+
+        @include mobile {
+            margin-bottom: pxToRem(31);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(31);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(22);
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $color-text-divider;
+
+        @include mobile {
+            letter-spacing: pxToRem(0.7);
+            line-height: pxToRem(30);
+            margin-bottom: pxToRem(17);
+            text-align: center;
+        }
+        
+        @include tablet {
+            letter-spacing: pxToRem(0.7);
+            line-height: pxToRem(30);
+            margin-bottom: pxToRem(17);
+            text-align: center;
+        }
+        
+        @include desktop {
+            line-height: pxToRem(38);
+            margin-bottom: pxToRem(18);
+            font-size: pxToRem(25);
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        line-height: pxToRem(24);
+        text-align: center;
+        color: $color-text-divider;
+    }
+
+    &__interface {
+
+        @include mobile {
+            padding-top: pxToRem(18);
+            padding-bottom: pxToRem(70);
+        }
+        
+        @include tablet {
+            grid-row: 2/4;
+        }
+        
+        @include desktop {
+            grid-row: 2/4;
+        }
+    }
+
+    &__image-interface {
+
+        @include mobile {
+            border-radius: pxToRem(40);
+            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
+        }
+        
+        @include tablet {
+            border-radius: pxToRem(40);
+            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
+        }
+        
+        @include desktop {
+            width: pxToRem(375);
+            height: pxToRem(812);
+            border-radius: pxToRem(40);
+            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
+        }
+    }
+}
+
+.comment {
+
+    @include tablet {
+        grid-column: 2;
+        grid-row: 1;
+        padding-bottom: pxToRem(5);
+    }
+
+    @include desktop {
+        grid-column: 2;
+        grid-row: 1;
+        padding-bottom: pxToRem(5);
+    }
+}
+
+.vector {
+
+    @include tablet {
+        grid-column: 1;
+        grid-row: 3;
+        padding-right: pxToRem(12);
+    
+        .content__icon {
+            align-self: end;
+        }
+    
+        h3 {
+            align-self: end;
+            text-align: right;
+        }
+    
+        p {
+            text-align: right;
+        }
+    }
+
+    @include desktop {
+        grid-column: 1;
+        grid-row: 3;
+        padding-bottom: pxToRem(58);
+        padding-right: pxToRem(61);
+        align-self: flex-end;
+
+        .content__icon {
+            align-self: end;
+        }
+    
+        h3 {
+            align-self: end;
+            text-align: right;
+        }
+    
+        p {
+            text-align: right;
+        }
+    }
+}
+
+.telemarketer {
+
+    @include tablet {
+        grid-column: 1/4;
+        grid-row: 4;
+        width: auto;
+
+        p {
+            width: pxToRem(350);
+        }
+    }
+
+    @include desktop {
+        grid-column: 1/4;
+        grid-row: 4;
+        width: auto;
+        padding-top: pxToRem(10);
+
+        p {
+            width: pxToRem(350);
+        }
+    }
+}
+
+.eye-scanner {
+
+    @include tablet {
+        grid-column: 3;
+        grid-row: 3;
+        padding-left: pxToRem(12);
+    
+        .content__icon {
+            align-self: start;
+        }
+    
+        h3 {
+            align-self: start;
+            text-align: left;
+        }
+    
+        p {
+            text-align: left;
+        }
+    }
+
+    @include desktop {
+        grid-column: 3;
+        grid-row: 3;
+        align-self: center;
+        padding-top: pxToRem(209);
+        padding-left: pxToRem(59);
+
+        .content__icon {
+            align-self: start;
+        }
+    
+        h3 {
+            align-self: start;
+            text-align: left;
+        }
+    
+        p {
+            text-align: left;
+        }
+    }
+}
+
+.cell-phone {
+
+    @include tablet {
+        grid-column: 3;
+        grid-row: 2;
+        padding-top: pxToRem(17);
+    
+        .content__icon {
+            align-self: start;
+            padding-left: pxToRem(4);
+        }
+        
+        h3 {
+            align-self: start;
+            text-align: left;
+            padding-left: pxToRem(12);
+        }
+    
+        p {
+            text-align: left;
+            padding-left: pxToRem(13);
+        }
+    }
+
+    @include desktop {
+        grid-column: 3;
+        grid-row: 2;
+        padding-top: pxToRem(60);
+        padding-left: pxToRem(46);
+
+        .content__icon {
+            align-self: start;
+            padding-left: pxToRem(4);
+        }
+        
+        h3 {
+            align-self: start;
+            text-align: left;
+            padding-left: pxToRem(12);
+        }
+    
+        p {
+            text-align: left;
+            padding-left: pxToRem(13);
+        }
+    }
+}
+
+.browser {
+
+    @include tablet {
+        grid-column: 1;
+        grid-row: 2;
+        padding-right: pxToRem(12);
+        padding-top: pxToRem(17);
+
+        .content__icon {
+            align-self: end;
+        }
+
+        h3 {
+            align-self: end;
+            text-align: right;
+        }
+
+        p {
+            text-align: right;
+        }
+    }
+
+    @include desktop {
+        grid-column: 1;
+        grid-row: 2;
+        padding-top: pxToRem(60);
+        padding-right: pxToRem(61);
+
+        .content__icon {
+            align-self: end;
+        }
+
+        h3 {
+            align-self: end;
+            text-align: right;
+        }
+
+        p {
+            text-align: right;
+        }
+    }
+}

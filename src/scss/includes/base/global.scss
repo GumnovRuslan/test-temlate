@@ -42,6 +42,11 @@ select {
 	cursor: pointer;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
 label[for] {
 	cursor: pointer;
 }
@@ -94,59 +99,163 @@ button, input, label, select {
 .title {
 	font-weight: $typography-h2-font-weight;
 	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
 	text-align: center;
 
-	&-default {
-		color: var($color-grey-900);
-		}
+	@include mobile {
+		margin-bottom: pxToRem(20);
+		font-size: pxToRem(25);
+		font-weight: 600;
+		line-height: pxToRem(38);
+	}
 
-	&-contrast {
-		color: var($color-secondary-main);
-		}
+	@include tablet {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+		line-height: pxToRem(47);
+	}
+
+	@include desktop {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
+}
+
+.title-default {
+	font-weight: $typography-h2-font-weight;
+	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
+	line-height: pxToRem(38);
+	text-align: center;
+	color: $color-grey-900;
+
+	@include mobile {
+		font-size: pxToRem(25);
+		font-weight: 600;
+	}
+
+	@include tablet {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
+
+	@include desktop {
+		font-size: pxToRem(31.25);
+		font-weight: 700;
+	}
+	}
+
+.title-contrast {
+	font-weight: $typography-h2-font-weight;
+	font-size: $typography-h2-font-size;
+	text-transform: uppercase;
+	line-height: pxToRem(38);
+	text-align: center;
+	color: $color-secondary-main;
+
+
+	@include mobile {
+		font-size: pxToRem(25);
+		font-weight: 600;
+	}
+
+	@include tablet {
+		font-weight: 700;
+		font-size: pxToRem(31.25);
+	}
+
+	@include desktop {
+		font-weight: 700;
+		font-size: pxToRem(31.25);
+	}
 }
 
 .subtitle {
 	font-size: $typography-subtitle-font-size;
 	font-weight: $typography-subtitle-font-weight;
-	text-align: center;
+	line-height: pxToRem(24);
+}
 
-	&-default {
-		color: $color-text-primary;
-	}
+.subtitle-default {
+	font-size: $typography-subtitle-font-size;
+	font-weight: $typography-subtitle-font-weight;
+	line-height: pxToRem(24);
+	color: $color-text-primary;
+}
 
-	&-contrast {
-		color: $color-text-divider;
-	}
+.subtitle-contrast {
+	font-size: $typography-subtitle-font-size;
+	font-weight: $typography-subtitle-font-weight;
+	line-height: pxToRem(24);
+	color: $color-text-divider;
 }
 
 .button {
+	font-family: 'JosefinSans';
+	font-family: 'JosefinSans';
 	text-transform: uppercase;
-	padding: pxToRem(11) pxToRem(14);
+	border: none;
 	border-radius: pxToRem(4);
 	background: $color-info-main;
 	color: $color-secondary-main;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	@include mobile {
+		padding: pxToRem(12) pxToRem(6);
+		font-size: pxToRem(10);
+	}
+
+	@include tablet {
+		padding: pxToRem(15) pxToRem(16);
+		font-size: pxToRem(20);
+		
+	}
+
+	@include desktop {
+		padding: pxToRem(15) pxToRem(16);
+		font-size: pxToRem(20);
+	}
 }
 
-link {
-	&hover {
+.link {
+	color: $color-grey-900;
+	&:hover {
 		text-decoration: underline;
 		color: $color-primary-main
 	}
 }
 
 .wrapper {
-	@include desktop {
-		padding: pxToRem(120) pxToRem(134);
-		overflow-x: hidden;
+	overflow-x: hidden;
+
+	@include mobile {
+		padding: pxToRem(60) pxToRem(16);
 	}
 
 	@include tablet {
 		padding: pxToRem(120) pxToRem(40);
-		overflow-x: hidden;
 	}
 
+	@include desktop {
+		padding: pxToRem(120) pxToRem(135);
+	}
+}
+
+.header {
+
 	@include mobile {
-		padding: pxToRem(60) pxToRem(16);
-		overflow-x: hidden;
+		padding: pxToRem(0) pxToRem(16);
+	}
+
+	@include tablet {
+		padding: pxToRem(0) pxToRem(40);
+	}
+
+	@include desktop {
+		padding: pxToRem(0) pxToRem(134);
 	}
 }
