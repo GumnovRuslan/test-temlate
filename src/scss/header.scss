@@ -15,18 +15,16 @@ body {
     }
 
     @include tablet {
-        top: pxToRem(28);
-        gap: pxToRem(34);
+        top: pxToRem(18);
+        gap: pxToRem(28);
     }
 
     @include desktop {
-        top: pxToRem(38);
-        gap: pxToRem(14);
+        top: pxToRem(28);
+        gap: pxToRem(8);
     }
 
     &__info {
-        display: flex;
-        gap: pxToRem(48);
 
         @include mobile {
             display: none;
@@ -34,50 +32,47 @@ body {
     
         @include tablet {
             display: flex;
+            justify-content: space-between;
         }
     
         @include desktop {
-            
+            display: flex;
+            justify-content: space-between;
         }
     }
 
-//===============================================
-
 .info {
 
+    &__left {
+        display: flex;
+        gap: pxToRem(28);
+    }
+
     &__mail {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10) pxToRem(10) pxToRem(10) 0;
     }
 
     &__number {
-        flex: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10);
     }
 
     &__networks {
         display: inline-flex;
-        gap: pxToRem(30);
-
-        @include mobile {
-            display: none;
-        }
-    
-        @include tablet {
-            display: flex;
-        }
-    
-        @include desktop {
-            padding-right: pxToRem(8);
-        }
+        display: flex;
+        gap: pxToRem(10);
     }
 }
 .mail {
 
-    &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: pxToRem(18);
-    }
-
     &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
     }
 
     &__address {
@@ -87,13 +82,9 @@ body {
 }
 .number {
 
-    &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: pxToRem(18);
-    }
-
     &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
     }
 
     &__phone {
@@ -104,15 +95,26 @@ body {
 .networks {
 
     &__link-facebook {
+        padding: pxToRem(10);
     }
 
     &__link-instagram {
+        padding: pxToRem(10);
     }
 
     &__link-twitter {
+        padding: pxToRem(10);
     }
 
     &__link-youtube {
+        
+        @include tablet {
+            padding: pxToRem(10) pxToRem(0) pxToRem(10) pxToRem(10);
+        }
+    
+        @include desktop {
+            padding: pxToRem(10) pxToRem(8) pxToRem(10) pxToRem(10);
+        }
     }
 }
 
@@ -124,21 +126,24 @@ body {
         box-shadow: $shadows-card;
 
         @include mobile {
-            padding: pxToRem(3);
-            height: pxToRem(40);
             justify-content: space-between;
+            height: pxToRem(40);
+            padding: pxToRem(3);
             border-radius: pxToRem(3);
         }
     
         @include tablet {
-            padding: pxToRem(5);
-            height: pxToRem(60);
             justify-content: space-between;
+            height: pxToRem(60);
+            padding: pxToRem(5);
             border-radius: pxToRem(5);
         }
     
         @include desktop {
             justify-content: start;
+            height: pxToRem(60);
+            padding: pxToRem(5);
+            border-radius: pxToRem(5);
         }
     }
 
@@ -268,12 +273,11 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: pxToRem(5);
         width: 100%;
         height: 100%;
 
         @include mobile {
-            padding: pxToRem(10);
+            padding: pxToRem(10) pxToRem(9);
         }
     
         @include tablet {
@@ -281,14 +285,35 @@ body {
         }
     
         @include desktop {
-            //display: none;
+            display: none;
         }
     }
 
     &__line {
+        position: relative;
         width: pxToRem(18);
         height: pxToRem(2);
         background: $color-grey-900;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
     }
 
     &__menu {
@@ -369,5 +394,9 @@ body {
 
 #burger-checkbox:checked ~ .burger__menu {
     left: 0;
+}
+
+#burger-checkbox:checked ~ .burger__btn-open {
+    display: none;
 }
 }
