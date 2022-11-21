@@ -3,9 +3,19 @@
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 <%= _.template(require('./../includes/hero.html').default)(data) %> 
+<%= _.template(require('./../includes/about.html').default)(data) %>
+<%= _.template(require('./../includes/features.html').default)(data) %> 
+<%= _.template(require('./../includes/interface.html').default)(data) %>
 
-<div class="container">
-  <h1>Title</h1>
-</div>
+<div>
+  <h2 class="title">Hello world</h2>
+  <h2 class="title-default">Hello world</h2>
+  <h2 class="title-contrast">Hello world</h2>
+  <p class="subtitle">Hello world</p>
+  <p class="subtitle-default">Hello world</p>
+  <p class="subtitle-contrast">Hello world</p>
+  <button class="button">Hello world</button>
+  <a class="link" href="#">Hello world</a>
+</div> interface
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>

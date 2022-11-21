@@ -1,22 +1,241 @@
 .hero {
-    font-family: 'Noto Sans Mono', monospace;
     background-image: url("../../../img/Background\ Image.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
-    &__container {
-        width: pxToRem(375);
-        margin: 0 auto;
+    @include mobile {
+        padding: pxToRem(188) pxToRem(16) pxToRem(132) pxToRem(16);
+    }
+
+    @include tablet {
+        padding: pxToRem(368) pxToRem(40) pxToRem(227) pxToRem(40);
+    }
+
+    @include desktop {
+        padding: pxToRem(216) pxToRem(135) pxToRem(102) pxToRem(135);
+    }
+
+    &__content {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: pxToRem(39);
+        }
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            gap: pxToRem(0);
+        }
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            gap: pxToRem(0);
+        }
     }
 
     &__card {
+
+        @include mobile {
+            padding-left: pxToRem(20);
+        }
+
+        @include tablet {
+            padding-left: pxToRem(16);
+        }
+
+        @include desktop {
+            padding-left: pxToRem(52);
+            align-self: center;
+        }
     }
 
     &__image {
+        
+        @include tablet {
+            padding: 0 pxToRem(26) pxToRem(4) pxToRem(55);
+        }
 
-        img {
-            width: pxToRem(466);
-            height: pxToRem(521);
+        @include desktop {
+            padding: 0 pxToRem(57) pxToRem(0) pxToRem(123);
         }
     }
 }
+.card {
 
+    &__border {
+        @include mobile {
+            width: pxToRem(323);
+            padding: pxToRem(10) 0;
+            border: pxToRem(10) solid #7572FF;
+        }
+        
+        @include tablet {
+            width: pxToRem(374);
+            padding: pxToRem(15) 0;
+            border: pxToRem(18) solid #7572FF;
+        }
+        
+        @include desktop {
+            width: pxToRem(570);
+            padding: pxToRem(32) pxToRem(0);
+            border: pxToRem(20) solid #7572FF;
+        }
+    }
 
+    &__content {
+        position: relative;
+        background: $color-secondary-main;
+
+        @include mobile {
+            width: pxToRem(323);
+            right: pxToRem(30);
+            padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
+        }
+
+        @include tablet {
+            width: pxToRem(356);
+            right: pxToRem(34);
+            padding: pxToRem(14) pxToRem(18) pxToRem(14) pxToRem(18);
+        }
+
+        @include desktop {
+            width: pxToRem(570);
+            right: pxToRem(72);
+            padding: pxToRem(41) pxToRem(30) pxToRem(39) pxToRem(30);
+        }
+    }
+
+	&__title {
+        color: $color-info-main;
+        text-transform: uppercase;
+
+        @include mobile {
+            font-size: pxToRem(25);
+            line-height: pxToRem(38);
+            font-weight: 600;
+            margin-bottom: pxToRem(13);
+        }
+
+        @include tablet {
+            font-size: pxToRem(31.25);
+            line-height: pxToRem(47);
+            font-weight: 700;
+            margin-bottom: pxToRem(6);
+        }
+
+        @include desktop {
+            font-size: pxToRem(48.83);
+            line-height: pxToRem(63);
+            font-weight: 700;
+            margin-bottom: pxToRem(17);
+        }
+    }
+
+    &__subtitle {
+        line-height: pxToRem(24);
+        color: $color-text-primary;
+
+        @include mobile {
+            margin-bottom: pxToRem(24);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(17);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(46);
+        }
+    }
+
+    &__title-bottom {
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include mobile {
+            margin-bottom: pxToRem(19);
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(22);
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(5);
+            font-size: pxToRem(25);
+            line-height: pxToRem(38);
+        }
+    }
+
+    &__download {
+        display: flex;
+
+        @include mobile {
+            gap: pxToRem(10);
+        }
+
+        @include tablet {
+            gap: pxToRem(14);
+        }
+    }
+
+    &__image-google {
+
+        @include mobile {
+            width: pxToRem(108);
+        }
+
+        @include tablet {
+            width: pxToRem(149);
+        }
+
+        @include desktop {
+            width: pxToRem(149);
+        }
+    }
+
+    &__image-appStore {
+        
+        @include mobile{
+            width: pxToRem(108);
+        }
+
+        @include tablet{
+            width: pxToRem(151);
+        }
+        @include desktop {
+            width: pxToRem(149);
+        }
+    }
+}
+.image {
+
+    &__phone {
+        @include mobile {
+            min-width: pxToRem(250);
+            height: pxToRem(510);
+        }
+        
+        @include tablet {
+            min-width: pxToRem(187);
+            height: pxToRem(414);
+        }
+        
+        @include desktop {
+            min-width: pxToRem(287);
+            height: pxToRem(706);
+        }
+    }
+}
