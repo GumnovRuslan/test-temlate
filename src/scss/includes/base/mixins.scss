@@ -75,10 +75,10 @@
 // 	}
 // }
 
-//===================================
+//==========================================
 
-@mixin desktop {
-	@media (min-width: $desktop) and (max-width: $max-desktop) {
+@mixin mobile() {
+	@media (max-width: $max-mobile) {
 		@content;
 	}
 }
@@ -89,8 +89,8 @@
 	}
 }
 
-@mixin mobile {
-	@media (min-width: $mobile) and (max-width: $max-mobile) {
+@mixin desktop() {
+	@media (min-width: $desktop) {
 		@content;
 	}
 }
