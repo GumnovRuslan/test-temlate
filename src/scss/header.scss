@@ -2,5 +2,401 @@ body {
     font-family: 'JosefinSans';
 }
 .header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+
+    @include mobile {
+        top: pxToRem(40);
+        gap: pxToRem(40);
+    }
+
+    @include tablet {
+        top: pxToRem(18);
+        gap: pxToRem(28);
+    }
+
+    @include desktop {
+        top: pxToRem(28);
+        gap: pxToRem(8);
+    }
+
+    &__info {
+
+        @include mobile {
+            display: none;
+        }
     
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+.info {
+
+    &__left {
+        display: flex;
+        gap: pxToRem(28);
+    }
+
+    &__mail {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10) pxToRem(10) pxToRem(10) 0;
+    }
+
+    &__number {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10);
+    }
+
+    &__networks {
+        display: inline-flex;
+        display: flex;
+        gap: pxToRem(10);
+    }
+}
+.mail {
+
+    &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
+    }
+
+    &__address {
+        color: $color-text-divider;
+        font-size: pxToRem(16);
+    }
+}
+.number {
+
+    &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
+    }
+
+    &__phone {
+        color: $color-text-divider;
+        font-size: pxToRem(16);
+    }
+}
+.networks {
+
+    &__link-facebook {
+        padding: pxToRem(10);
+    }
+
+    &__link-instagram {
+        padding: pxToRem(10);
+    }
+
+    &__link-twitter {
+        padding: pxToRem(10);
+    }
+
+    &__link-youtube {
+        
+        @include tablet {
+            padding: pxToRem(10) pxToRem(0) pxToRem(10) pxToRem(10);
+        }
+    
+        @include desktop {
+            padding: pxToRem(10) pxToRem(8) pxToRem(10) pxToRem(10);
+        }
+    }
+}
+
+    &__menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: $color-secondary-main;
+        box-shadow: $shadows-card;
+
+        @include mobile {
+            justify-content: space-between;
+            height: pxToRem(40);
+            padding: pxToRem(3);
+            border-radius: pxToRem(3);
+        }
+    
+        @include tablet {
+            justify-content: space-between;
+            height: pxToRem(60);
+            padding: pxToRem(5);
+            border-radius: pxToRem(5);
+        }
+    
+        @include desktop {
+            justify-content: start;
+            height: pxToRem(60);
+            padding: pxToRem(5);
+            border-radius: pxToRem(5);
+        }
+    }
+
+.menu {
+
+    &__burger {
+    
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: $color-secondary-main;
+        box-shadow: $shadows-card;
+
+        @include mobile {
+            width: pxToRem(100);
+            height: pxToRem(60);
+            border-radius: pxToRem(5);
+            left: calc(50% - 3.125rem);
+            top: calc(50% - 1.875rem);
+        }
+    
+        @include tablet {
+            width: pxToRem(200);
+            height: pxToRem(90);
+            border-radius: pxToRem(5);
+            left: calc(50% - 6.5rem);
+            top: calc(50% - 2.813rem);
+        }
+    
+        @include desktop {
+            width: pxToRem(200);
+            height: pxToRem(90);
+            border-radius: pxToRem(5);
+            left: calc(50% - 6.22rem);
+            top: calc(50% - 2.813rem);
+        }
+    }
+
+    &__image {
+
+        @include mobile {
+            width: pxToRem(79);
+            height: pxToRem(12);
+        }
+    
+        @include tablet {
+            width: pxToRem(167);
+            height: pxToRem(28);
+        }
+    
+        @include desktop {
+            width: pxToRem(167);
+            height: pxToRem(28);
+        }
+    }
+
+    &__nav-left {
+        
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: none;
+        }
+    
+        @include desktop {
+            display: flex;
+            align-items: center;
+            flex: auto;
+            gap: pxToRem(9);
+            padding-left: pxToRem(34);
+        }
+    }
+
+    &__nav-right {
+
+        @include mobile {
+            display: none;
+        }
+    
+        @include tablet {
+            display: none;
+        }
+    
+        @include desktop {
+            display: flex;
+            align-items: center;
+            gap: pxToRem(9);
+            padding-right: pxToRem(30);
+        }
+    }
+
+    &__item {
+        
+        @include desktop {
+            font-size: pxToRem(20);
+            font-weight: 600;
+            color: $color-grey-900;
+            text-transform: uppercase;
+            padding: pxToRem(15);
+
+            &:hover {
+                color: $color-primary-main;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.burger {
+    
+    &__checkbox {
+        display: none;
+    }
+
+    &__btn-open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        @include mobile {
+            padding: pxToRem(10) pxToRem(9);
+        }
+    
+        @include tablet {
+            padding: pxToRem(15) pxToRem(16);
+        }
+    
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__line {
+        position: relative;
+        width: pxToRem(18);
+        height: pxToRem(2);
+        background: $color-grey-900;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: pxToRem(0);
+        left: -100%;
+        z-index: 1;
+        min-width: pxToRem(267);
+        height: 100%;
+        border-top-right-radius: pxToRem(10);
+        border-bottom-right-radius: pxToRem(10);
+        background: $color-secondary-main;
+        box-shadow: $shadows-block;
+        transition: 0.5s all;
+    }
+
+    &__btn-close {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: pxToRem(25) pxToRem(25) pxToRem(7) pxToRem(25) ;
+    }
+
+    &__close {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(35);
+        height: pxToRem(35);
+        background: $color-primary-main;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-secondary-main;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-secondary-main;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(22);
+        padding: 0 pxToRem(40) pxToRem(40) pxToRem(40);
+    }
+
+    &__item {
+        display: block;
+        padding: pxToRem(6) 0;
+        text-transform: uppercase;
+        font-size: pxToRem(20);
+        font-weight: 600;
+        color: $color-grey-900;
+
+        &:hover {
+            color: $color-primary-main;
+            text-decoration: underline;
+        }
+    }
+}
+
+#burger-checkbox:checked ~ .burger__menu {
+    left: 0;
+}
+
+#burger-checkbox:checked ~ .burger__btn-open {
+    display: none;
+}
 }
