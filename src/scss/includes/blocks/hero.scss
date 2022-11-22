@@ -72,7 +72,7 @@
 
     &__border {
         @include mobile {
-            width: pxToRem(323);
+            max-width: pxToRem(323);
             padding: pxToRem(10) 0;
             border: pxToRem(10) solid #7572FF;
         }
@@ -96,8 +96,8 @@
 
         @include mobile {
             width: pxToRem(323);
-            right: pxToRem(30);
             padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
+            right: pxToRem(20);
         }
 
         @include tablet {
