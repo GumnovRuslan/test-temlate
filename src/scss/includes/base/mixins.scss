@@ -51,26 +51,46 @@
 	}
 }
 
-@mixin desktop-extra() {
-	@media (min-width: $desktop-extra) {
+// @mixin desktop-extra() {
+// 	@media (min-width: $desktop-extra) {
+// 		@content;
+// 	}
+// }
+
+// @mixin desktop() {
+// 	@media (min-width: $desktop) {
+// 		@content;
+// 	}
+// }
+
+// @mixin tablet() {
+// 	@media (min-width: $tablet) {
+// 		@content;
+// 	}
+// }
+
+// @mixin mobile() {
+// 	@media (min-width: $mobile) {
+// 		@content;
+// 	}
+// }
+
+//==========================================
+
+@mixin mobile() {
+	@media (max-width: $max-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $tablet) and (max-width: $max-tablet) {
 		@content;
 	}
 }
 
 @mixin desktop() {
-	@media (min-width: $desktop) {
-		@content;
-	}
-}
-
-@mixin tablet() {
-	@media (min-width: $tablet) {
-		@content;
-	}
-}
-
-@mixin mobile() {
-	@media (min-width: $mobile) {
+	@media (min-width: $desktop-extra) {
 		@content;
 	}
 }

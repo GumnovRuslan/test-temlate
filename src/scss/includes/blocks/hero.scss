@@ -46,7 +46,7 @@
     &__container {
 
         @include mobile {
-            width: pxToRem(323);
+            max-width: pxToRem(323);
             padding: pxToRem(10) 0;
             margin-bottom: pxToRem(39);
             margin-left: pxToRem(20);
@@ -75,7 +75,7 @@
         @include mobile {
             width: pxToRem(323);
             padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
-            right: pxToRem(30);
+            right: pxToRem(20);
         }
 
         @include tablet {
