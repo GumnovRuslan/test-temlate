@@ -201,7 +201,7 @@
         color: $color-grey-900;
 
         @include mobile {
-            width: pxToRem(260);
+            max-width: pxToRem(260);
             margin-bottom: pxToRem(17);
             font-weight: 600;
             font-size: pxToRem(25);
@@ -228,8 +228,8 @@
         line-height: pxToRem(24);
 
         @include mobile {
+            max-width: pxToRem(320);
             margin-bottom: pxToRem(41);
-            width: pxToRem(320);
         }
         
         @include tablet {
@@ -258,6 +258,14 @@
         @include desktop {
             margin-bottom: pxToRem(59);
         }
+    }
+
+    &__google {
+        max-width: pxToRem(149);
+    }
+
+    &__store {
+        max-width: pxToRem(150);
     }
 
     &__statistics {
