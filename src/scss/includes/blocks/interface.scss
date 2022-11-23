@@ -261,11 +261,11 @@
     }
 
     &__google {
-        max-width: pxToRem(149);
+        min-width: pxToRem(100);
     }
 
     &__store {
-        max-width: pxToRem(150);
+        min-width: pxToRem(100);
     }
 
     &__statistics {
