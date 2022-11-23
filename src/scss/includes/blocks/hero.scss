@@ -167,6 +167,10 @@
             @include tablet {
                 gap: pxToRem(14);
             }
+
+            @include desktop {
+                gap: pxToRem(14);
+            }
 		}
 
 	&__image-google {
