@@ -7,15 +7,15 @@
     background-size: cover;
 
     @include mobile {
-        padding: pxToRem(188) pxToRem(16) pxToRem(120) pxToRem(16);
+        padding: pxToRem(188) pxToRem(16) pxToRem(131) pxToRem(16);
     }
 
     @include tablet {
-        padding: pxToRem(380) pxToRem(40) pxToRem(220) pxToRem(40);
+        padding: pxToRem(380) pxToRem(40) pxToRem(229) pxToRem(40);
     }
 
     @include desktop {
-        padding: pxToRem(216) pxToRem(135) pxToRem(83) pxToRem(135);
+        padding: pxToRem(216) pxToRem(135) pxToRem(86) pxToRem(135);
     }
     
     &__content {
@@ -30,11 +30,13 @@
         @include tablet {
             width: pxToRem(688);
             align-items: end;
+            gap: pxToRem(55);
         }
 
         @include desktop {
             width: pxToRem(1170);
-            align-items: center;
+            align-items: end;
+            gap: pxToRem(122)
         }
     }
 
@@ -50,18 +52,13 @@
     
         @include desktop {
             padding-left: pxToRem(40);
-            
+            padding-bottom: pxToRem(82);
         }
     }
 
     &__image {
-
-        @include tablet {
-            margin-left: pxToRem(55);
-        }
         
         @include desktop {
-            padding-left: pxToRem(122);
             padding-bottom: pxToRem(15);
         }
     }
@@ -73,11 +70,11 @@
         }
         
         @include tablet {
-            width: pxToRem(217);
+            max-width: pxToRem(217);
         }
         
         @include desktop {
-            width: pxToRem(370);
+            max-width: pxToRem(370);
         }
     }
 }
@@ -114,18 +111,36 @@
             max-width: pxToRem(323);
             padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
             right: pxToRem(30);
+            margin-right: pxToRem(-20);
         }
 
         @include tablet {
-            width: pxToRem(356);
+            max-width: pxToRem(356);
             padding: pxToRem(14) pxToRem(18) pxToRem(15) pxToRem(18);
             right: pxToRem(35);
+            margin-right: pxToRem(-18);
         }
 
         @include desktop {
-            width: pxToRem(570);
+            max-width: pxToRem(570);
             padding: pxToRem(41) pxToRem(30) pxToRem(40) pxToRem(30);
             right: pxToRem(72);
+            margin-right: pxToRem(-40);
+        }
+    }
+
+    &__header {
+
+        @include mobile {
+            margin-bottom: pxToRem(24);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(17);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(46);
         }
     }
 
@@ -160,32 +175,37 @@
             line-height: pxToRem(24);
             color: $color-text-primary;
             
+            &:nth-child(2) {
+                @include desktop {
+                    display: none;
+                }
+            }
 
-            @include mobile {
-                margin-bottom: pxToRem(24);
-            }
-            
-            @include tablet {
-                margin-bottom: pxToRem(17);
-            }
-            
-            @include desktop {
-                margin-bottom: pxToRem(46);
+            &:nth-child(3) {
+                @include mobile {
+                    display: none;
+                }
+                
+                @include tablet {
+                    display: none;
+                }
             }
 		}
 
-    &__title-bottom {
+    &__title-download {
             text-transform: uppercase;
             font-weight: 600;
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
 
             @include mobile {
                 margin-bottom: pxToRem(19);
+                font-size: pxToRem(20);
+                line-height: pxToRem(30);
             }
             
             @include tablet {
                 margin-bottom: pxToRem(22);
+                font-size: pxToRem(20);
+                line-height: pxToRem(30);
             }
             
             @include desktop {
@@ -195,7 +215,7 @@
             }
         }
 
-	&__download {
+	&__images-download {
             display: flex;
 
             @include mobile {
@@ -214,32 +234,30 @@
 	&__image-google {
 
             @include mobile {
-                width: pxToRem(108);
+                max-width: pxToRem(108);
             }
 
             @include tablet {
-                width: pxToRem(149);
+                max-width: pxToRem(149);
             }
+
             @include desktop {
-                width: pxToRem(149);
+                max-width: pxToRem(149);
             }
 		}
 
 	&__image-appStore {
 
             @include mobile{
-                width: pxToRem(108);
+                max-width: pxToRem(108);
             }
 
             @include tablet{
-                width: pxToRem(151);
+                max-width: pxToRem(151);
             }
+            
             @include desktop {
-                width: pxToRem(149);
+                max-width: pxToRem(149);
             }
 		}
-}
-.image {
-
-    
 }
