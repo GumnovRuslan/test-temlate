@@ -245,18 +245,3 @@ button, input, label, select {
 		padding: pxToRem(120) pxToRem(135);
 	}
 }
-
-.header {
-
-	@include mobile {
-		padding: pxToRem(0) pxToRem(16);
-	}
-
-	@include tablet {
-		padding: pxToRem(0) pxToRem(40);
-	}
-
-	@include desktop {
-		padding: pxToRem(0) pxToRem(134);
-	}
-}
