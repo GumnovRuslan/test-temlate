@@ -1,43 +1,42 @@
 .hero {
+    display: flex;
+    justify-content: center;
     background-image: url("../../../img/Background\ Image.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 
     @include mobile {
-        padding: pxToRem(188) pxToRem(16) pxToRem(132) pxToRem(16);
+        padding: pxToRem(188) pxToRem(16) pxToRem(131) pxToRem(16);
     }
 
     @include tablet {
-        padding: pxToRem(368) pxToRem(40) pxToRem(227) pxToRem(40);
+        padding: pxToRem(380) pxToRem(40) pxToRem(229) pxToRem(40);
     }
 
     @include desktop {
-        padding: pxToRem(216) pxToRem(135) pxToRem(102) pxToRem(135);
+        padding: pxToRem(216) pxToRem(135) pxToRem(86) pxToRem(135);
     }
-
+    
     &__content {
         display: flex;
 
         @include mobile {
             flex-direction: column;
             align-items: center;
-            gap: pxToRem(39);
+            gap: pxToRem(40);
         }
 
         @include tablet {
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
-            gap: pxToRem(0);
+            width: pxToRem(688);
+            align-items: end;
+            gap: pxToRem(55);
         }
 
         @include desktop {
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
-            gap: pxToRem(0);
+            width: pxToRem(1170);
+            align-items: end;
+            gap: pxToRem(122)
         }
     }
 
@@ -46,33 +45,46 @@
         @include mobile {
             padding-left: pxToRem(20);
         }
-
+    
         @include tablet {
-            padding-left: pxToRem(16);
+            padding-left: pxToRem(17);
         }
-
+    
         @include desktop {
-            padding-left: pxToRem(52);
-            align-self: center;
+            padding-left: pxToRem(40);
+            padding-bottom: pxToRem(82);
         }
     }
 
     &__image {
         
-        @include tablet {
-            padding: 0 pxToRem(26) pxToRem(4) pxToRem(55);
-        }
-
         @include desktop {
-            padding: 0 pxToRem(57) pxToRem(0) pxToRem(123);
+            padding-bottom: pxToRem(15);
+        }
+    }
+
+    &__phone {
+
+        @include mobile {
+            max-width: pxToRem(267);
+        }
+        
+        @include tablet {
+            max-width: pxToRem(217);
+        }
+        
+        @include desktop {
+            max-width: pxToRem(370);
         }
     }
 }
+
 .card {
 
     &__border {
+
         @include mobile {
-            width: pxToRem(323);
+            max-width: pxToRem(323);
             padding: pxToRem(10) 0;
             border: pxToRem(10) solid #7572FF;
         }
@@ -85,7 +97,8 @@
         
         @include desktop {
             width: pxToRem(570);
-            padding: pxToRem(32) pxToRem(0);
+            padding: pxToRem(32) 0;
+            margin-left: pxToRem(12);
             border: pxToRem(20) solid #7572FF;
         }
     }
@@ -95,53 +108,28 @@
         background: $color-secondary-main;
 
         @include mobile {
-            width: pxToRem(323);
-            right: pxToRem(30);
+            max-width: pxToRem(323);
             padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
+            right: pxToRem(30);
+            margin-right: pxToRem(-20);
         }
 
         @include tablet {
-            width: pxToRem(356);
-            right: pxToRem(34);
-            padding: pxToRem(14) pxToRem(18) pxToRem(14) pxToRem(18);
+            max-width: pxToRem(356);
+            padding: pxToRem(14) pxToRem(18) pxToRem(15) pxToRem(18);
+            right: pxToRem(35);
+            margin-right: pxToRem(-18);
         }
 
         @include desktop {
-            width: pxToRem(570);
+            max-width: pxToRem(570);
+            padding: pxToRem(41) pxToRem(30) pxToRem(40) pxToRem(30);
             right: pxToRem(72);
-            padding: pxToRem(41) pxToRem(30) pxToRem(39) pxToRem(30);
+            margin-right: pxToRem(-40);
         }
     }
 
-	&__title {
-        color: $color-info-main;
-        text-transform: uppercase;
-
-        @include mobile {
-            font-size: pxToRem(25);
-            line-height: pxToRem(38);
-            font-weight: 600;
-            margin-bottom: pxToRem(13);
-        }
-
-        @include tablet {
-            font-size: pxToRem(31.25);
-            line-height: pxToRem(47);
-            font-weight: 700;
-            margin-bottom: pxToRem(6);
-        }
-
-        @include desktop {
-            font-size: pxToRem(48.83);
-            line-height: pxToRem(63);
-            font-weight: 700;
-            margin-bottom: pxToRem(17);
-        }
-    }
-
-    &__subtitle {
-        line-height: pxToRem(24);
-        color: $color-text-primary;
+    &__header {
 
         @include mobile {
             margin-bottom: pxToRem(24);
@@ -156,86 +144,120 @@
         }
     }
 
-    &__title-bottom {
-        text-transform: uppercase;
-        font-weight: 600;
+	&__title {
+            color: $color-info-main;
+            text-transform: uppercase;
+            
 
-        @include mobile {
-            margin-bottom: pxToRem(19);
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
-        }
-        
-        @include tablet {
-            margin-bottom: pxToRem(22);
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
+            @include mobile {
+                font-size: pxToRem(25);
+                line-height: pxToRem(38);
+                font-weight: 600;
+                margin-bottom: pxToRem(13);
+            }
+
+            @include tablet {
+                font-size: pxToRem(31.25);
+                line-height: pxToRem(47);
+                font-weight: 700;
+                margin-bottom: pxToRem(6);
+            }
+
+            @include desktop {
+                font-size: pxToRem(48.83);
+                line-height: pxToRem(63);
+                font-weight: 700;
+                margin-bottom: pxToRem(17);
+            }
+		}
+
+	&__subtitle {
+            line-height: pxToRem(24);
+            color: $color-text-primary;
+            
+            &:nth-child(2) {
+                @include desktop {
+                    display: none;
+                }
+            }
+
+            &:nth-child(3) {
+                @include mobile {
+                    display: none;
+                }
+                
+                @include tablet {
+                    display: none;
+                }
+            }
+		}
+
+    &__title-download {
+            text-transform: uppercase;
+            font-weight: 600;
+
+            @include mobile {
+                margin-bottom: pxToRem(19);
+                font-size: pxToRem(20);
+                line-height: pxToRem(30);
+            }
+            
+            @include tablet {
+                margin-bottom: pxToRem(22);
+                font-size: pxToRem(20);
+                line-height: pxToRem(30);
+            }
+            
+            @include desktop {
+                margin-bottom: pxToRem(5);
+                font-size: pxToRem(25);
+                line-height: pxToRem(38);
+            }
         }
 
-        @include desktop {
-            margin-bottom: pxToRem(5);
-            font-size: pxToRem(25);
-            line-height: pxToRem(38);
-        }
-    }
+	&__images-download {
+            display: flex;
 
-    &__download {
-        display: flex;
+            @include mobile {
+                gap: pxToRem(10);
+            }
 
-        @include mobile {
-            gap: pxToRem(10);
-        }
+            @include tablet {
+                gap: pxToRem(14);
+            }
 
-        @include tablet {
-            gap: pxToRem(14);
-        }
-    }
+            @include desktop {
+                gap: pxToRem(14);
+            }
+		}
 
-    &__image-google {
+	&__image-google {
 
-        @include mobile {
-            width: pxToRem(108);
-        }
+            @include mobile {
+                max-width: pxToRem(108);
+            }
 
-        @include tablet {
-            width: pxToRem(149);
-        }
+            @include tablet {
+                max-width: pxToRem(149);
+            }
 
-        @include desktop {
-            width: pxToRem(149);
-        }
-    }
+            @include desktop {
+                max-width: pxToRem(149);
+            }
+		}
 
-    &__image-appStore {
-        
-        @include mobile{
-            width: pxToRem(108);
-        }
+	&__image-appStore {
 
-        @include tablet{
-            width: pxToRem(151);
-        }
-        @include desktop {
-            width: pxToRem(149);
-        }
-    }
-}
-.image {
+            @include mobile{
+                max-width: pxToRem(108);
+            }
 
-    &__phone {
-        @include mobile {
-            min-width: pxToRem(250);
-            height: pxToRem(510);
-        }
-        
-        @include tablet {
-            min-width: pxToRem(187);
-            height: pxToRem(414);
-        }
-        
-        @include desktop {
-            min-width: pxToRem(287);
-            height: pxToRem(706);
-        }
-    }
+            @include tablet{
+                max-width: pxToRem(151);
+            }
+            
+            @include desktop {
+                max-width: pxToRem(149);
+            }
+		}
 }

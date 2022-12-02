@@ -27,14 +27,22 @@ $shadows-card: 0px 1px 10px rgba(0, 0, 0, 0.1);
 $shadows-block: 0px 10px 100px rgba(0, 0, 0, 0.24);
 
 // Media queries
-$desktop: pxToRem(1440, em);
-$tablet: pxToRem(768, em);
-$mobile: pxToRem(375, em);
 
-// CCustom media queries
-$max-desktop: pxToRem(2560, em);
-$max-tablet: pxToRem(1439, em);
+$desktop-extra-large: pxToRem(1536, em);
+$desktop-extra: pxToRem(1440, em);
+$desktop: pxToRem(992, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(576, em);
+$medium-mobile: pxToRem(450, em);
+$min-medium-mobile: pxToRem(449, em);
+$small-mobile: pxToRem(320, em);
+
+// Custom media queries
+$max-small-mobile: pxToRem(575, em);
 $max-mobile: pxToRem(767, em);
+$max-tablet: pxToRem(1439, em);
+$max-desktop: pxToRem(1999, em);
+$max-desktop-extra: pxToRem(1535, em);
 
 // Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);

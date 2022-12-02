@@ -1,32 +1,61 @@
 body {
     font-family: 'JosefinSans';
 }
-.header {
-    display: flex;
-    flex-direction: column;
+
+.header-position {
     position: absolute;
     z-index: 2;
     left: 0;
-    width: 100%;
 
     @include mobile {
         top: pxToRem(40);
-        gap: pxToRem(40);
     }
 
     @include tablet {
-        top: pxToRem(28);
-        gap: pxToRem(34);
+        top: pxToRem(18);
     }
 
     @include desktop {
-        top: pxToRem(38);
-        gap: pxToRem(14);
+        top: pxToRem(28);
+    }
+}
+
+.header {
+    width: 100%;
+
+    &__container {
+
+        @include mobile {
+            padding: pxToRem(0) pxToRem(16);
+        }
+    
+        @include tablet {
+            padding: pxToRem(0) pxToRem(40);
+        }
+    
+        @include desktop {
+            padding: pxToRem(0) pxToRem(134);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            gap: pxToRem(40);
+        }
+    
+        @include tablet {
+            gap: pxToRem(28);
+        }
+    
+        @include desktop {
+            gap: pxToRem(8);
+        }
     }
 
     &__info {
-        display: flex;
-        gap: pxToRem(48);
 
         @include mobile {
             display: none;
@@ -34,50 +63,47 @@ body {
     
         @include tablet {
             display: flex;
+            justify-content: space-between;
         }
     
         @include desktop {
-            
+            display: flex;
+            justify-content: space-between;
         }
     }
 
-//===============================================
-
 .info {
 
+    &__left {
+        display: flex;
+        gap: pxToRem(28);
+    }
+
     &__mail {
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10) pxToRem(10) pxToRem(10) 0;
     }
 
     &__number {
-        flex: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: pxToRem(18);
+        padding: pxToRem(10);
     }
 
     &__networks {
         display: inline-flex;
-        gap: pxToRem(30);
-
-        @include mobile {
-            display: none;
-        }
-    
-        @include tablet {
-            display: flex;
-        }
-    
-        @include desktop {
-            padding-right: pxToRem(8);
-        }
+        display: flex;
+        gap: pxToRem(10);
     }
 }
 .mail {
 
-    &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: pxToRem(18);
-    }
-
     &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
     }
 
     &__address {
@@ -87,13 +113,9 @@ body {
 }
 .number {
 
-    &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: pxToRem(18);
-    }
-
     &__favicon {
+        width: pxToRem(18);
+        height: pxToRem(18);
     }
 
     &__phone {
@@ -104,15 +126,26 @@ body {
 .networks {
 
     &__link-facebook {
+        padding: pxToRem(10);
     }
 
     &__link-instagram {
+        padding: pxToRem(10);
     }
 
     &__link-twitter {
+        padding: pxToRem(10);
     }
 
     &__link-youtube {
+        
+        @include tablet {
+            padding: pxToRem(10) pxToRem(0) pxToRem(10) pxToRem(10);
+        }
+    
+        @include desktop {
+            padding: pxToRem(10) pxToRem(8) pxToRem(10) pxToRem(10);
+        }
     }
 }
 
@@ -124,27 +157,40 @@ body {
         box-shadow: $shadows-card;
 
         @include mobile {
-            padding: pxToRem(3);
-            height: pxToRem(40);
             justify-content: space-between;
+            height: pxToRem(40);
+            padding: pxToRem(3);
             border-radius: pxToRem(3);
         }
     
         @include tablet {
-            padding: pxToRem(5);
-            height: pxToRem(60);
             justify-content: space-between;
+            height: pxToRem(60);
+            padding: pxToRem(5);
             border-radius: pxToRem(5);
         }
     
         @include desktop {
             justify-content: start;
+            height: pxToRem(60);
+            padding: pxToRem(5);
+            border-radius: pxToRem(5);
         }
     }
 
 .menu {
 
     &__burger {
+
+        @include mobile {
+            width: pxToRem(36);
+            height: 100%;
+        }
+
+        @include tablet {
+            width: pxToRem(50);
+            height: 100%;
+        }
     
         @include desktop {
             display: none;
@@ -254,50 +300,71 @@ body {
             }
         }
     }
+
+    &__btn {
+
+        &:active {
+            box-shadow: inset 0 0 pxToRem(7) #000;
+        }
+    }
 }
 
 
 .burger {
-    
-    &__checkbox {
-        display: none;
-    }
 
     &__btn-open {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: pxToRem(5);
         width: 100%;
         height: 100%;
 
-        @include mobile {
-            padding: pxToRem(10);
+        &:hover {
+            background: rgb(230, 230, 230);
+            border-radius: pxToRem(3);
         }
-    
-        @include tablet {
-            padding: pxToRem(15) pxToRem(16);
-        }
+        
     
         @include desktop {
-            //display: none;
+            display: none;
         }
     }
 
     &__line {
+        position: relative;
         width: pxToRem(18);
         height: pxToRem(2);
         background: $color-grey-900;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+        }
     }
 
     &__menu {
         position: fixed;
-        top: pxToRem(0);
-        left: -100%;
+        top: 0;
+        left: -100vh;
         z-index: 1;
         min-width: pxToRem(267);
-        height: 100%;
+        height: 100vh;
         border-top-right-radius: pxToRem(10);
         border-bottom-right-radius: pxToRem(10);
         background: $color-secondary-main;
@@ -305,26 +372,31 @@ body {
         transition: 0.5s all;
     }
 
-    &__btn-close {
+    &__close {
         display: flex;
         justify-content: end;
-        align-items: center;
-        padding: pxToRem(25) pxToRem(25) pxToRem(7) pxToRem(25) ;
+        padding: pxToRem(15) ;
     }
 
-    &__close {
+    &__btn-close {
+        padding: pxToRem(10);
+
+        &:hover .burger__btn-line{
+            background: rgb(255, 88, 88);
+        }
+    }
+
+    &__btn-line {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: pxToRem(35);
         height: pxToRem(35);
-        background: $color-primary-main;
         border-radius: 50%;
+        background: $color-primary-main;
 
-        &:hover {
-            opacity: 0.8;
-        }
+        
 
         &::before {
             content: "";
@@ -345,19 +417,32 @@ body {
         }
     }
 
-    &__items {
-        display: flex;
-        flex-direction: column;
-        gap: pxToRem(22);
-        padding: 0 pxToRem(40) pxToRem(40) pxToRem(40);
+    &__menu-wrapper {
+        height: calc(100vh - 5.313rem);
+        padding: pxToRem(15);
+        margin-right: pxToRem(5);
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: pxToRem(3);
+            background-color: $color-secondary-main;
+            border-radius: pxToRem(5);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-text-primary;
+            border-radius: pxToRem(3);
+        }
     }
 
     &__item {
         display: block;
-        padding: pxToRem(6) 0;
+        padding: pxToRem(10);
         text-transform: uppercase;
         font-size: pxToRem(20);
         font-weight: 600;
+        white-space: wrap;
+        line-height: pxToRem(30);
         color: $color-grey-900;
 
         &:hover {
@@ -366,8 +451,22 @@ body {
         }
     }
 }
+}
 
-#burger-checkbox:checked ~ .burger__menu {
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked ~ .no-scroll .burger__menu {
     left: 0;
 }
+
+#burger-checkbox:checked ~ .no-scroll .burger__btn-open {
+    display: none;
+}
+
+#burger-checkbox:checked ~ .no-scroll {
+    position: fixed;
+    width: 100vw;
+    overflow-y: scroll;
 }
