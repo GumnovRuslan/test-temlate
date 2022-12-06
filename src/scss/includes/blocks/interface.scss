@@ -1,84 +1,30 @@
 .interface {
 
     &__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
         @include mobile {
-            gap: pxToRem(17);
             margin-bottom: pxToRem(38);
         }
         
         @include tablet {
-            gap: pxToRem(19);
-            margin-bottom: pxToRem(58);
+            margin-bottom: pxToRem(59);
         }
         
         @include desktop {
-            gap: pxToRem(23);
-            margin-bottom: pxToRem(57);
+            margin-bottom: pxToRem(59);
         }
     }
-
-    &__slider {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @include mobile {
-            gap: pxToRem(40);
-            margin-bottom: pxToRem(60);
-        }
-        
-        @include tablet {
-            gap: pxToRem(60);
-            margin-bottom: pxToRem(120);
-        }
-        
-        @include desktop {
-            gap: pxToRem(38);
-            margin-bottom: pxToRem(115);
-        }
-    }
-
-    &__download-app {
-        display: flex;
-
-        @include mobile {
-            flex-direction: column;
-        }
-        
-        @include tablet {
-            gap: pxToRem(29);
-            justify-content: center;
-        }
-        
-        @include desktop {
-            gap: pxToRem(80);
-            justify-content: center;
-            align-items: center;
-            height: pxToRem(506);
-        }
-    }
-}
-
-.header {
 
     &__title {
         text-align: center;
 
         @include mobile {
-            line-height: pxToRem(38);
-
             span {
                 display: block;
             }
         }
         
         @include tablet {
-            line-height: pxToRem(47);
-
             span {
                 display: block;
             }
@@ -88,13 +34,34 @@
     &__subtitle {
         text-align: center;
     }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            gap: pxToRem(25);
+            margin-bottom: pxToRem(61);
+        }
+        
+        @include tablet {
+            gap: pxToRem(46);
+            margin-bottom: pxToRem(120);
+        }
+        
+        @include desktop {
+            gap: pxToRem(25);
+            margin-bottom: pxToRem(120);
+        }
+    }
 }
 
 .subtitle-first {
 
     @include mobile {
         display: block;
-        width: pxToRem(300);
+        max-width: pxToRem(300);
     }
     
     @include tablet {
@@ -114,7 +81,7 @@
     
     @include tablet {
         display: block;
-        width: pxToRem(450);
+        max-width: pxToRem(450);
     }
     
     @include desktop {
@@ -134,7 +101,7 @@
     
     @include desktop {
         display: block;
-        width: pxToRem(600);
+        max-width: pxToRem(600);
     }
 }
 
@@ -147,8 +114,19 @@
         gap: pxToRem(40);
         
         &::-webkit-scrollbar {
-            width: 0;
-            height: 0;
+            height: pxToRem(15);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: pxToRem(10);
+            background-color: rgb(225, 225, 225);
+            -webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.5); 
+        }
+
+        &::-webkit-scrollbar-track-piece {
+            border-radius: pxToRem(10);
+            background: $color-info-main;
+            -webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.3);
         }
     }
 
@@ -170,7 +148,7 @@
         }
     }
 
-    &__dotter {
+    &__dotters {
         display: flex;
         gap: pxToRem(14);
     }
@@ -185,7 +163,7 @@
         }
     }
 
-    &__button {
+    &__dotter {
         display: block;
         width: pxToRem(16);
         height: pxToRem(16);
@@ -193,53 +171,88 @@
         background: $color-info-main;
     }
 }
-.download-app {
 
-    &__title {
-        text-transform: uppercase;
-        text-align: left;
-        color: $color-grey-900;
+.download {
+
+    &__content {
+        display: flex;
 
         @include mobile {
-            max-width: pxToRem(260);
-            margin-bottom: pxToRem(17);
-            font-weight: 600;
-            font-size: pxToRem(25);
-            line-height: pxToRem(38);
+            gap: pxToRem(60);
+            flex-direction: column;
+            align-items: center;
         }
         
         @include tablet {
-            margin-bottom: pxToRem(20);
-            font-weight: 700;
-            font-size: pxToRem(31.25);
-            line-height: pxToRem(47);
+            gap: pxToRem(28);
+            justify-content: center;
         }
         
         @include desktop {
-            font-weight: 700;
-            font-size: pxToRem(31.25);
-            line-height: pxToRem(47);
+            gap: pxToRem(80);
+            justify-content: center;
         }
     }
 
-    &__subtitle {
-        font-size: $typography-subtitle-font-size;
-        font-weight: $typography-subtitle-font-weight;
-        line-height: pxToRem(24);
+    &__block {
+
+        @include mobile {
+            padding-right: pxToRem(19);
+        }
+
+        @include desktop {
+            padding-top: pxToRem(17);
+        }
+    }
+
+    &__header {
 
         @include mobile {
             max-width: pxToRem(320);
             margin-bottom: pxToRem(41);
+
+            :nth-child(3) {
+                display: none;
+            }
         }
         
         @include tablet {
-            margin-bottom: pxToRem(41);
-            width: pxToRem(320);
+            max-width: pxToRem(320);
+            margin-bottom: pxToRem(40);
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            max-width: pxToRem(570);
+            margin-bottom: pxToRem(31);
+
+            :nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+
+        @include mobile {
+            margin-bottom: pxToRem(16);
+            span {
+                display: block;
+            }
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(20);
+            span {
+                display: block;
+            }
         }
         
         @include desktop {
-            width: pxToRem(570);
-            margin-bottom: pxToRem(32);
+            margin-bottom: pxToRem(2);
         }
     }
 
@@ -260,18 +273,11 @@
         }
     }
 
-    &__google {
-        min-width: pxToRem(100);
-    }
-
-    &__store {
-        min-width: pxToRem(100);
-    }
-
     &__statistics {
         display: flex;
 
         @include mobile {
+            flex-wrap: wrap;
             gap: pxToRem(18);
         }
         
@@ -284,7 +290,7 @@
         }
     }
 
-    &__carts {
+    &__cart {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -296,7 +302,6 @@
             width: pxToRem(96);
             min-height: pxToRem(100);
             padding-top: pxToRem(11);
-            margin-bottom: pxToRem(60);
             border-radius: pxToRem(5);
         }
         
@@ -310,7 +315,6 @@
         @include desktop {
             width: pxToRem(170);
             min-height: pxToRem(176);
-            justify-content: flex-start;
             padding: pxToRem(30) 0 pxToRem(20) 0;
             gap: pxToRem(18);
             border-radius: pxToRem(10);
@@ -367,56 +371,30 @@
         }
     }
 
-    &__gravity {
-
-        @include mobile {
-            width: pxToRem(334);
-            height: pxToRem(311);
-            align-self: center;
-        }
+    &__image {
         
         @include tablet {
-            width: pxToRem(334);
-            height: pxToRem(311);
-            align-self: flex-end;
+            align-self: end;
             margin-bottom: pxToRem(17);
         }
         
         @include desktop {
-            width: pxToRem(516);
-            height: pxToRem(480);
-            align-self: flex-start;
-            margin-top: 7px;
+            margin-bottom: pxToRem(26);
         }
     }
-}
 
-.subtitle-mobil {
+    &__gravity {
 
-    @include mobile {
-        display: block;
-    }
-    
-    @include tablet {
-        display: block;
-    }
-    
-    @include desktop {
-        display: none;
-    }
-}
-
-.subtitle-desktop {
-
-    @include mobile {
-        display: none;
-    }
-    
-    @include tablet {
-        display: none;
-    }
-    
-    @include desktop {
-        display: block;
+        @include mobile {
+            width: pxToRem(334);
+        }
+        
+        @include tablet {
+            width: pxToRem(334);
+        }
+        
+        @include desktop {
+            width: pxToRem(516);
+        }
     }
 }
