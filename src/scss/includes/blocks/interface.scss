@@ -194,7 +194,7 @@
         }
     }
 
-    &__block {
+    &__section {
 
         @include mobile {
             padding-right: pxToRem(19);
@@ -372,6 +372,10 @@
     }
 
     &__image {
+
+        @include mobile {
+            margin-bottom: pxToRem(17);
+        }
         
         @include tablet {
             align-self: end;
