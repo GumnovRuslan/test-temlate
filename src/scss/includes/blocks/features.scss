@@ -99,10 +99,11 @@
         
         @include tablet {
             display: grid;
-            grid-template-columns: 1fr pxToRem(250) 1fr;
+            grid-template-columns: 1fr pxToRem(214) 1fr;
             grid-template-rows: repeat(4, auto);
             justify-items: center;
             row-gap: pxToRem(48);
+            column-gap: pxToRem(18);
         }
         
         @include desktop {
@@ -110,7 +111,7 @@
             grid-template-columns: 1fr pxToRem(375) 1fr;
             grid-template-rows: repeat(4, auto);
             justify-items: center;
-            row-gap: pxToRem(50);
+            row-gap: pxToRem(55);
             column-gap: pxToRem(50);
         }
     }
@@ -196,10 +197,12 @@
 
         @include mobile {
             max-width: pxToRem(214);
+            height: pxToRem(468);
         }
         
         @include tablet {
             max-width: pxToRem(214);
+            height: pxToRem(468);
         }
         
         @include desktop {
@@ -225,7 +228,6 @@
     @include desktop {
         grid-column: 2;
         grid-row: 1;
-        margin-bottom: pxToRem(5);
         text-align: center;
 
         .content__section-icon {
@@ -286,7 +288,7 @@
     @include desktop {
         grid-column: 1/4;
         grid-row: 4;
-        margin-top: pxToRem(10);
+        margin-top: pxToRem(5);
         text-align: center;
 
         .content__section-icon {
@@ -331,7 +333,7 @@
     @include tablet {
         grid-column: 3;
         grid-row: 2;
-        padding-top: pxToRem(17);
+        margin-top: pxToRem(17);
     }
 
     @include desktop {
@@ -350,7 +352,7 @@
     @include tablet {
         grid-column: 1;
         grid-row: 2;
-        padding-top: pxToRem(17);
+        margin-top: pxToRem(17);
         text-align: right;
 
         .content__section-icon {
