@@ -99,7 +99,7 @@
         
         @include tablet {
             display: grid;
-            grid-template-columns: auto pxToRem(250) auto;
+            grid-template-columns: 1fr pxToRem(250) 1fr;
             grid-template-rows: repeat(4, auto);
             justify-items: center;
             row-gap: pxToRem(48);
@@ -277,10 +277,6 @@
             align-self: center;
         }
 
-        .content__section-title {
-            letter-spacing: pxToRem(0.6);
-        }
-
         .content__section-subtitle {
             margin: 0 auto;
             max-width: pxToRem(297);
@@ -300,7 +296,6 @@
 
         .content__section-title {
             font-size: pxToRem(20);
-            font-weight: 600;
             line-height: pxToRem(30);
         }
 
