@@ -32,6 +32,7 @@
     }
 
     &__subtitle-content {
+        text-align: center;
         
         @include mobile {
             max-width: pxToRem(300);
@@ -69,10 +70,6 @@
             }
         }
     }
-
-    &__subtitle {
-        text-align: center;
-    }
 }
 
 .slider {
@@ -101,7 +98,7 @@
             }
             
             @include desktop {
-                top: calc(50% - 45.063rem - 1.875rem);
+                top: calc(50% - 16.938rem - 1.875rem);
                 width: pxToRem(10);
                 height: pxToRem(542);
                 box-shadow: 0px 0px pxToRem(40) pxToRem(60) $color-text-divider;
@@ -129,7 +126,7 @@
             }
             
             @include desktop {
-                top: calc(50% - 45.063rem - 1.875rem);
+                top: calc(50% - 16.938rem - 1.875rem);
                 width: pxToRem(10);
                 height: pxToRem(542);
                 box-shadow: 0px 0px pxToRem(40) pxToRem(60) $color-text-divider;
@@ -161,19 +158,16 @@
         }
 
         @include mobile {
-            margin-bottom: pxToRem(6);
             padding: 0 pxToRem(74);
             gap: pxToRem(40);
         }
         
         @include tablet {
-            margin-bottom: pxToRem(46);
             padding: 0 pxToRem(100);
             gap: pxToRem(50);
         }
         
         @include desktop {
-            margin-bottom: pxToRem(25);
             padding: 0 pxToRem(200);
             gap: pxToRem(200);
             
@@ -181,19 +175,21 @@
     }
 
     &__iPhoneX {
-        margin-bottom: pxToRem(40);
 
         @include mobile {
+            margin-bottom: pxToRem(43);
             min-width: pxToRem(227);
             height: pxToRem(444);
         }
         
         @include tablet {
+            margin-bottom: pxToRem(64);
             width: pxToRem(227);
             height: pxToRem(444);
         }
         
         @include desktop {
+            margin-bottom: pxToRem(44);
             width: pxToRem(319);
             height: pxToRem(622);
         }
@@ -223,234 +219,3 @@
         background: $color-info-main;
     }
 }
-
-// .download {
-
-//     &__content {
-//         display: flex;
-
-//         @include mobile {
-//             gap: pxToRem(60);
-//             flex-direction: column;
-//             align-items: center;
-//         }
-        
-//         @include tablet {
-//             gap: pxToRem(28);
-//             justify-content: center;
-//         }
-        
-//         @include desktop {
-//             gap: pxToRem(80);
-//             justify-content: center;
-//         }
-//     }
-
-//     &__section {
-
-//         @include mobile {
-//             padding-right: pxToRem(19);
-//         }
-
-//         @include desktop {
-//             padding-top: pxToRem(17);
-//         }
-//     }
-
-//     &__header {
-
-//         @include mobile {
-//             max-width: pxToRem(320);
-//             margin-bottom: pxToRem(41);
-
-//             :nth-child(3) {
-//                 display: none;
-//             }
-//         }
-        
-//         @include tablet {
-//             max-width: pxToRem(320);
-//             margin-bottom: pxToRem(40);
-
-//             :nth-child(3) {
-//                 display: none;
-//             }
-//         }
-
-//         @include desktop {
-//             max-width: pxToRem(570);
-//             margin-bottom: pxToRem(31);
-
-//             :nth-child(2) {
-//                 display: none;
-//             }
-//         }
-//     }
-
-//     &__title {
-
-//         @include mobile {
-//             margin-bottom: pxToRem(16);
-//             span {
-//                 display: block;
-//             }
-//         }
-        
-//         @include tablet {
-//             margin-bottom: pxToRem(20);
-//             span {
-//                 display: block;
-//             }
-//         }
-        
-//         @include desktop {
-//             margin-bottom: pxToRem(2);
-//         }
-//     }
-
-//     &__service {
-//         display: flex;
-//         gap: pxToRem(25);
-
-//         @include mobile {
-//             margin-bottom: pxToRem(60);
-//         }
-        
-//         @include tablet {
-//             margin-bottom: pxToRem(40);
-//         }
-        
-//         @include desktop {
-//             margin-bottom: pxToRem(59);
-//         }
-//     }
-
-//     &__statistics {
-//         display: flex;
-
-//         @include mobile {
-//             flex-wrap: wrap;
-//             gap: pxToRem(18);
-//         }
-        
-//         @include tablet {
-//             gap: pxToRem(18);
-//         }
-        
-//         @include desktop {
-//             gap: pxToRem(30);
-//         }
-//     }
-
-//     &__cart {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         box-shadow: $shadows-card;
-//         background: $color-primary-main;
-//         color: $color-text-divider;
-
-//         @include mobile {
-//             width: pxToRem(96);
-//             min-height: pxToRem(100);
-//             padding-top: pxToRem(11);
-//             border-radius: pxToRem(5);
-//         }
-        
-//         @include tablet {
-//             width: pxToRem(96);
-//             min-height: pxToRem(100);
-//             padding-top: pxToRem(11);
-//             border-radius: pxToRem(5);
-//         }
-        
-//         @include desktop {
-//             width: pxToRem(170);
-//             min-height: pxToRem(176);
-//             padding: pxToRem(30) 0 pxToRem(20) 0;
-//             gap: pxToRem(18);
-//             border-radius: pxToRem(10);
-//         }
-//     }
-
-//     &__icon {
-
-//         @include mobile {
-//             width: pxToRem(18);
-//             height: pxToRem(18);
-//             margin-bottom: pxToRem(8);
-//         }
-        
-//         @include tablet {
-//             width: pxToRem(18);
-//             height: pxToRem(18);
-//             margin-bottom: pxToRem(8);
-//         }
-        
-//         @include desktop {
-//             width: pxToRem(35);
-//             height: pxToRem(35);
-//         }
-//     }
-
-//     &__number {
-//         text-transform: uppercase;
-//         font-weight: 600;
-
-//         @include mobile {
-//             font-size: pxToRem(20);
-//             line-height: pxToRem(30);
-//         }
-        
-//         @include tablet {
-//             font-size: pxToRem(20);
-//             line-height: pxToRem(30);
-//         }
-        
-//         @include desktop {
-//             font-size: pxToRem(25);
-//             line-height: pxToRem(25);
-//         }
-//     }
-
-//     &__text {
-//         text-align: center;
-
-//         @include desktop {
-//             text-transform: uppercase;
-//             font-size: pxToRem(20);
-//             line-height: pxToRem(30);
-//         }
-//     }
-
-//     &__image {
-
-//         @include mobile {
-//             margin-bottom: pxToRem(17);
-//         }
-        
-//         @include tablet {
-//             align-self: end;
-//             margin-bottom: pxToRem(17);
-//         }
-        
-//         @include desktop {
-//             margin-bottom: pxToRem(26);
-//         }
-//     }
-
-//     &__gravity {
-
-//         @include mobile {
-//             width: pxToRem(334);
-//         }
-        
-//         @include tablet {
-//             width: pxToRem(334);
-//         }
-        
-//         @include desktop {
-//             width: pxToRem(516);
-//         }
-//     }
-// }
