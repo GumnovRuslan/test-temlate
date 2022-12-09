@@ -224,233 +224,233 @@
     }
 }
 
-.download {
+// .download {
 
-    &__content {
-        display: flex;
+//     &__content {
+//         display: flex;
 
-        @include mobile {
-            gap: pxToRem(60);
-            flex-direction: column;
-            align-items: center;
-        }
+//         @include mobile {
+//             gap: pxToRem(60);
+//             flex-direction: column;
+//             align-items: center;
+//         }
         
-        @include tablet {
-            gap: pxToRem(28);
-            justify-content: center;
-        }
+//         @include tablet {
+//             gap: pxToRem(28);
+//             justify-content: center;
+//         }
         
-        @include desktop {
-            gap: pxToRem(80);
-            justify-content: center;
-        }
-    }
+//         @include desktop {
+//             gap: pxToRem(80);
+//             justify-content: center;
+//         }
+//     }
 
-    &__section {
+//     &__section {
 
-        @include mobile {
-            padding-right: pxToRem(19);
-        }
+//         @include mobile {
+//             padding-right: pxToRem(19);
+//         }
 
-        @include desktop {
-            padding-top: pxToRem(17);
-        }
-    }
+//         @include desktop {
+//             padding-top: pxToRem(17);
+//         }
+//     }
 
-    &__header {
+//     &__header {
 
-        @include mobile {
-            max-width: pxToRem(320);
-            margin-bottom: pxToRem(41);
+//         @include mobile {
+//             max-width: pxToRem(320);
+//             margin-bottom: pxToRem(41);
 
-            :nth-child(3) {
-                display: none;
-            }
-        }
+//             :nth-child(3) {
+//                 display: none;
+//             }
+//         }
         
-        @include tablet {
-            max-width: pxToRem(320);
-            margin-bottom: pxToRem(40);
+//         @include tablet {
+//             max-width: pxToRem(320);
+//             margin-bottom: pxToRem(40);
 
-            :nth-child(3) {
-                display: none;
-            }
-        }
+//             :nth-child(3) {
+//                 display: none;
+//             }
+//         }
 
-        @include desktop {
-            max-width: pxToRem(570);
-            margin-bottom: pxToRem(31);
+//         @include desktop {
+//             max-width: pxToRem(570);
+//             margin-bottom: pxToRem(31);
 
-            :nth-child(2) {
-                display: none;
-            }
-        }
-    }
+//             :nth-child(2) {
+//                 display: none;
+//             }
+//         }
+//     }
 
-    &__title {
+//     &__title {
 
-        @include mobile {
-            margin-bottom: pxToRem(16);
-            span {
-                display: block;
-            }
-        }
+//         @include mobile {
+//             margin-bottom: pxToRem(16);
+//             span {
+//                 display: block;
+//             }
+//         }
         
-        @include tablet {
-            margin-bottom: pxToRem(20);
-            span {
-                display: block;
-            }
-        }
+//         @include tablet {
+//             margin-bottom: pxToRem(20);
+//             span {
+//                 display: block;
+//             }
+//         }
         
-        @include desktop {
-            margin-bottom: pxToRem(2);
-        }
-    }
+//         @include desktop {
+//             margin-bottom: pxToRem(2);
+//         }
+//     }
 
-    &__service {
-        display: flex;
-        gap: pxToRem(25);
+//     &__service {
+//         display: flex;
+//         gap: pxToRem(25);
 
-        @include mobile {
-            margin-bottom: pxToRem(60);
-        }
+//         @include mobile {
+//             margin-bottom: pxToRem(60);
+//         }
         
-        @include tablet {
-            margin-bottom: pxToRem(40);
-        }
+//         @include tablet {
+//             margin-bottom: pxToRem(40);
+//         }
         
-        @include desktop {
-            margin-bottom: pxToRem(59);
-        }
-    }
+//         @include desktop {
+//             margin-bottom: pxToRem(59);
+//         }
+//     }
 
-    &__statistics {
-        display: flex;
+//     &__statistics {
+//         display: flex;
 
-        @include mobile {
-            flex-wrap: wrap;
-            gap: pxToRem(18);
-        }
+//         @include mobile {
+//             flex-wrap: wrap;
+//             gap: pxToRem(18);
+//         }
         
-        @include tablet {
-            gap: pxToRem(18);
-        }
+//         @include tablet {
+//             gap: pxToRem(18);
+//         }
         
-        @include desktop {
-            gap: pxToRem(30);
-        }
-    }
+//         @include desktop {
+//             gap: pxToRem(30);
+//         }
+//     }
 
-    &__cart {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: $shadows-card;
-        background: $color-primary-main;
-        color: $color-text-divider;
+//     &__cart {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         box-shadow: $shadows-card;
+//         background: $color-primary-main;
+//         color: $color-text-divider;
 
-        @include mobile {
-            width: pxToRem(96);
-            min-height: pxToRem(100);
-            padding-top: pxToRem(11);
-            border-radius: pxToRem(5);
-        }
+//         @include mobile {
+//             width: pxToRem(96);
+//             min-height: pxToRem(100);
+//             padding-top: pxToRem(11);
+//             border-radius: pxToRem(5);
+//         }
         
-        @include tablet {
-            width: pxToRem(96);
-            min-height: pxToRem(100);
-            padding-top: pxToRem(11);
-            border-radius: pxToRem(5);
-        }
+//         @include tablet {
+//             width: pxToRem(96);
+//             min-height: pxToRem(100);
+//             padding-top: pxToRem(11);
+//             border-radius: pxToRem(5);
+//         }
         
-        @include desktop {
-            width: pxToRem(170);
-            min-height: pxToRem(176);
-            padding: pxToRem(30) 0 pxToRem(20) 0;
-            gap: pxToRem(18);
-            border-radius: pxToRem(10);
-        }
-    }
+//         @include desktop {
+//             width: pxToRem(170);
+//             min-height: pxToRem(176);
+//             padding: pxToRem(30) 0 pxToRem(20) 0;
+//             gap: pxToRem(18);
+//             border-radius: pxToRem(10);
+//         }
+//     }
 
-    &__icon {
+//     &__icon {
 
-        @include mobile {
-            width: pxToRem(18);
-            height: pxToRem(18);
-            margin-bottom: pxToRem(8);
-        }
+//         @include mobile {
+//             width: pxToRem(18);
+//             height: pxToRem(18);
+//             margin-bottom: pxToRem(8);
+//         }
         
-        @include tablet {
-            width: pxToRem(18);
-            height: pxToRem(18);
-            margin-bottom: pxToRem(8);
-        }
+//         @include tablet {
+//             width: pxToRem(18);
+//             height: pxToRem(18);
+//             margin-bottom: pxToRem(8);
+//         }
         
-        @include desktop {
-            width: pxToRem(35);
-            height: pxToRem(35);
-        }
-    }
+//         @include desktop {
+//             width: pxToRem(35);
+//             height: pxToRem(35);
+//         }
+//     }
 
-    &__number {
-        text-transform: uppercase;
-        font-weight: 600;
+//     &__number {
+//         text-transform: uppercase;
+//         font-weight: 600;
 
-        @include mobile {
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
-        }
+//         @include mobile {
+//             font-size: pxToRem(20);
+//             line-height: pxToRem(30);
+//         }
         
-        @include tablet {
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
-        }
+//         @include tablet {
+//             font-size: pxToRem(20);
+//             line-height: pxToRem(30);
+//         }
         
-        @include desktop {
-            font-size: pxToRem(25);
-            line-height: pxToRem(25);
-        }
-    }
+//         @include desktop {
+//             font-size: pxToRem(25);
+//             line-height: pxToRem(25);
+//         }
+//     }
 
-    &__text {
-        text-align: center;
+//     &__text {
+//         text-align: center;
 
-        @include desktop {
-            text-transform: uppercase;
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
-        }
-    }
+//         @include desktop {
+//             text-transform: uppercase;
+//             font-size: pxToRem(20);
+//             line-height: pxToRem(30);
+//         }
+//     }
 
-    &__image {
+//     &__image {
 
-        @include mobile {
-            margin-bottom: pxToRem(17);
-        }
+//         @include mobile {
+//             margin-bottom: pxToRem(17);
+//         }
         
-        @include tablet {
-            align-self: end;
-            margin-bottom: pxToRem(17);
-        }
+//         @include tablet {
+//             align-self: end;
+//             margin-bottom: pxToRem(17);
+//         }
         
-        @include desktop {
-            margin-bottom: pxToRem(26);
-        }
-    }
+//         @include desktop {
+//             margin-bottom: pxToRem(26);
+//         }
+//     }
 
-    &__gravity {
+//     &__gravity {
 
-        @include mobile {
-            width: pxToRem(334);
-        }
+//         @include mobile {
+//             width: pxToRem(334);
+//         }
         
-        @include tablet {
-            width: pxToRem(334);
-        }
+//         @include tablet {
+//             width: pxToRem(334);
+//         }
         
-        @include desktop {
-            width: pxToRem(516);
-        }
-    }
-}
+//         @include desktop {
+//             width: pxToRem(516);
+//         }
+//     }
+// }
