@@ -1,0 +1,112 @@
+.teams {
+
+    &__content {
+    }
+
+    &__header {
+
+        @include mobile {
+            margin-bottom: pxToRem(40);
+        }
+
+        @include tablet {
+
+        }
+
+        @include desktop {
+
+        }
+    }
+
+    &__header-text {
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        @include mobile {
+            max-width: pxToRem(300);
+
+            :nth-child(2) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include tablet {
+
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include desktop {
+
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    &__subtitle-text {
+    }
+
+    &__cards {
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.card-team {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: pxToRem(29) pxToRem(22);
+        box-shadow: $shadows-card;
+    }
+
+    &__photo {
+        margin-bottom: pxToRem(66);
+    }
+
+    &__photo-border {
+        padding: pxToRem(11);
+        border: pxToRem(4) solid $color-primary-main;
+        border-radius: 50%;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__name {
+    }
+
+    &__jop-position {
+    }
+
+    &__description {
+    }
+
+    &__social-network {
+    }
+
+    &__network-favicon {
+    }
+}
