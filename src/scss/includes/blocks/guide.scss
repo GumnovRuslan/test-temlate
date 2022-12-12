@@ -1,0 +1,199 @@
+.guide {
+
+    &__wrapper {
+        position: relative;
+
+        @include mobile {
+            padding-bottom: pxToRem(74);
+        }
+
+        @include tablet {
+            padding-bottom: pxToRem(121);
+        }
+
+        @include desktop {
+            padding-top: pxToRem(43);
+            padding-bottom: pxToRem(163);
+        }
+    }
+
+    &__title-text {
+        text-align: center;
+
+        @include mobile {
+            margin: 0 auto;
+            max-width: pxToRem(357);
+            margin-bottom: pxToRem(35);
+        }
+
+        @include tablet {
+            margin: 0 auto;
+            max-width: pxToRem(357);
+            margin-bottom: pxToRem(18);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(23);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        @include mobile {
+            max-width: pxToRem(300);
+            margin: 0 auto;
+
+            :nth-child(2) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include tablet {
+            max-width: pxToRem(450);
+            margin: 0 auto;
+            
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            max-width: pxToRem(600);
+            margin: 0 auto;
+            
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    &__video {
+        position: absolute;
+        bottom: pxToRem(0);
+
+        @include mobile {
+            left: calc(50% - 10.688rem);
+        }
+
+        @include small-mobile {
+            left: calc(50% - 9.375rem);
+        }
+
+        @include tablet {
+            left: calc(50% - 17.813rem);
+        }
+
+        @include desktop {
+            left: calc(50% - 24.063rem);
+        }
+    }
+
+    &__btn-play {
+        position: absolute;
+        left: calc(50% - 2.188rem);
+        top: calc(50% - 2.188rem);
+    }
+}
+
+.background {
+    background-image: url("../../../img/Background\ Image.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__wrapper {
+
+        @include mobile {
+            padding-top: pxToRem(60);
+            padding-bottom: pxToRem(114);
+        }
+
+        @include tablet {
+            padding-top: pxToRem(50);
+            padding-bottom: pxToRem(168);
+        }
+
+        @include desktop {
+            padding-top: pxToRem(120);
+            padding-bottom: pxToRem(214);
+        }
+    }
+}
+
+.video {
+
+    &__container {
+        position: relative;
+    }
+
+    &__image-preview {
+        border-radius: pxToRem(10);
+        box-shadow: $shadows-block;
+
+        @include mobile {
+            max-width: pxToRem(343);
+            height: pxToRem(150);
+        }
+
+        @include small-mobile {
+            max-width: pxToRem(300);
+            height: pxToRem(150);
+        }
+
+        @include tablet {
+            width: pxToRem(570);
+            height: pxToRem(231);
+        }
+
+        @include desktop {
+            width: pxToRem(770);
+            height: pxToRem(319);
+        }
+    }
+}
+
+.button-play {
+
+    &__item-big {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(70);
+        height: pxToRem(70);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    &__item-middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(60);
+        height: pxToRem(60);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    &__item-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(50);
+        height: pxToRem(50);
+        border-radius: 50%;
+        background: $color-text-divider;
+    }
+}
