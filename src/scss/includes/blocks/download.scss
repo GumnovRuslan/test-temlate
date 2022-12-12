@@ -3,6 +3,8 @@
     &__container {
 
         @include mobile {
+            max-width: pxToRem(375);
+            margin: 0 auto;
             padding-bottom: pxToRem(60);
         }
     
@@ -81,7 +83,6 @@
         @include mobile {
             gap: pxToRem(60);
             flex-direction: column;
-            align-items: center;
         }
         
         @include tablet {
@@ -98,7 +99,7 @@
     &__section {
 
         @include mobile {
-            padding-right: pxToRem(19);
+            max-width: pxToRem(325);
         }
 
         @include tablet {
@@ -229,6 +230,7 @@
     &__image {
 
         @include mobile {
+            align-self: center;
             margin-bottom: pxToRem(17);
         }
         
