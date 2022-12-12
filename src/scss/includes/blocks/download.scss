@@ -9,10 +9,14 @@
         }
     
         @include tablet {
+            max-width: pxToRem(768);
+            margin: 0 auto;
             padding-bottom: pxToRem(120);
         }
     
         @include desktop {
+            max-width: pxToRem(1440);
+            margin: 0 auto;
             padding-bottom: pxToRem(120);
         }
     }
@@ -81,18 +85,16 @@
         display: flex;
 
         @include mobile {
-            gap: pxToRem(60);
             flex-direction: column;
+            gap: pxToRem(60);
         }
         
         @include tablet {
-            gap: pxToRem(31);
-            justify-content: center;
+            gap: pxToRem(28);
         }
         
         @include desktop {
             gap: pxToRem(80);
-            justify-content: center;
         }
     }
 
@@ -103,7 +105,7 @@
         }
 
         @include tablet {
-            max-width: pxToRem(323);
+            max-width: pxToRem(325);
         }
 
         @include desktop {
@@ -131,9 +133,9 @@
 
     &__statistics {
         display: flex;
+        flex-wrap: wrap;
 
         @include mobile {
-            flex-wrap: wrap;
             gap: pxToRem(18);
         }
         
@@ -228,6 +230,7 @@
     }
 
     &__image {
+        position: relative;
 
         @include mobile {
             align-self: center;
@@ -256,6 +259,34 @@
         
         @include desktop {
             width: pxToRem(516);
+        }
+    }
+
+    &__image-shadow {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: $shadows-card;
+        transform: rotateX(10deg);
+
+        @include mobile {
+            width: pxToRem(137);
+            height: pxToRem(46);
+            left: calc(50% - 5.5rem);
+            bottom: pxToRem(-16);
+        }
+
+        @include tablet {
+            width: pxToRem(137);
+            height: pxToRem(46);
+            left: calc(50% - 5.5rem);
+            bottom: pxToRem(-17);
+        }
+
+        @include desktop {
+            width: pxToRem(212);
+            height: pxToRem(71);
+            left: pxToRem(120);
+            bottom: pxToRem(-25);
         }
     }
 }
