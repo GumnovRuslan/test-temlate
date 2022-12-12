@@ -149,7 +149,10 @@ body {
     }
 }
 
-    &__menu {
+
+.menu {
+
+    &__container {
         position: relative;
         display: flex;
         align-items: center;
@@ -171,14 +174,11 @@ body {
         }
     
         @include desktop {
-            justify-content: start;
             height: pxToRem(60);
             padding: pxToRem(5);
             border-radius: pxToRem(5);
         }
     }
-
-.menu {
 
     &__burger {
 
@@ -248,6 +248,16 @@ body {
         }
     }
 
+    &__navigation {
+
+        @include desktop {
+            display: flex;
+            flex: auto;
+            justify-content: space-between;
+            padding: 0 pxToRem(30) 0 pxToRem(34);
+        }
+    }
+
     &__nav-left {
         
         @include mobile {
@@ -261,9 +271,7 @@ body {
         @include desktop {
             display: flex;
             align-items: center;
-            flex: auto;
             gap: pxToRem(9);
-            padding-left: pxToRem(34);
         }
     }
 
@@ -281,7 +289,6 @@ body {
             display: flex;
             align-items: center;
             gap: pxToRem(9);
-            padding-right: pxToRem(30);
         }
     }
 
@@ -309,7 +316,6 @@ body {
     }
 }
 
-
 .burger {
 
     &__btn-open {
@@ -325,7 +331,6 @@ body {
             border-radius: pxToRem(3);
         }
         
-    
         @include desktop {
             display: none;
         }
