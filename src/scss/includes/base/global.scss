@@ -97,13 +97,9 @@ button, input, label, select {
 }
 /*---------------------------------------------*/
 .title {
-	font-weight: $typography-h2-font-weight;
-	font-size: $typography-h2-font-size;
 	text-transform: uppercase;
-	text-align: center;
 
 	@include mobile {
-		margin-bottom: pxToRem(20);
 		font-size: pxToRem(25);
 		font-weight: 600;
 		line-height: pxToRem(38);
@@ -118,53 +114,52 @@ button, input, label, select {
 	@include desktop {
 		font-size: pxToRem(31.25);
 		font-weight: 700;
+		line-height: pxToRem(47);
 	}
 }
 
 .title-default {
-	font-weight: $typography-h2-font-weight;
-	font-size: $typography-h2-font-size;
 	text-transform: uppercase;
-	line-height: pxToRem(38);
-	text-align: center;
 	color: $color-grey-900;
 
 	@include mobile {
+		line-height: pxToRem(38);
 		font-size: pxToRem(25);
 		font-weight: 600;
 	}
 
 	@include tablet {
+		line-height: pxToRem(47);
 		font-size: pxToRem(31.25);
 		font-weight: 700;
 	}
 
 	@include desktop {
+		line-height: pxToRem(47);
 		font-size: pxToRem(31.25);
 		font-weight: 700;
 	}
-	}
+}
 
 .title-contrast {
-	font-weight: $typography-h2-font-weight;
-	font-size: $typography-h2-font-size;
 	text-transform: uppercase;
-	line-height: pxToRem(38);
-	text-align: center;
 	color: $color-secondary-main;
 
 
 	@include mobile {
+		line-height: pxToRem(38);
 		font-size: pxToRem(25);
 		font-weight: 600;
 	}
 
 	@include tablet {
+		line-height: pxToRem(47);
 		font-weight: 700;
 		font-size: pxToRem(31.25);
 	}
 
 	@include desktop {
+		line-height: pxToRem(47);
 		font-weight: 700;
 		font-size: pxToRem(31.25);
 	}
@@ -245,17 +240,57 @@ button, input, label, select {
 	}
 }
 
-.header {
+.section-container {
 
 	@include mobile {
-		padding: pxToRem(0) pxToRem(16);
+		padding: 0 pxToRem(16);
 	}
 
 	@include tablet {
-		padding: pxToRem(0) pxToRem(40);
+		padding: 0 pxToRem(40);
 	}
 
 	@include desktop {
-		padding: pxToRem(0) pxToRem(134);
+		padding: 0 pxToRem(135);
 	}
+}
+
+.section-wrapper {
+
+	@include mobile {
+		padding: pxToRem(60) 0;
+	}
+
+	@include tablet {
+		padding: pxToRem(120) 0;
+	}
+
+	@include desktop {
+		padding: pxToRem(120) 0;
+	}
+}
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include mobile {
+		gap: pxToRem(18);
+	}
+
+	@include tablet {
+		gap: pxToRem(18);
+	}
+
+	@include desktop {
+		gap: pxToRem(23);
+	}
+}
+
+.header-default {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: pxToRem(18);
 }

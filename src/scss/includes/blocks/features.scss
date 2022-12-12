@@ -1,17 +1,16 @@
 .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("../../../img/Background\ Image.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    &__header {
+    &__background {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: pxToRem(18);
+        background-image: url("../../../img/Background\ Image.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__header {
 
         @include mobile {
             margin-bottom: pxToRem(30);
@@ -23,182 +22,164 @@
         
         @include desktop {
             margin-bottom: pxToRem(58);
-        }
+            }
     }
-
-    &__content {
-
-        @include mobile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: pxToRem(35);
-            width: pxToRem(297);
-        }
-        
-        @include tablet {
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            grid-template-rows: repeat(4, auto);
-            align-items: start;
-            justify-items: center;
-            width: auto;
-            row-gap: pxToRem(50);
-        }
-        
-        @include desktop {
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            grid-template-rows: repeat(4, auto);
-            align-items: start;
-            justify-items: center;
-            width: auto;
-            row-gap: pxToRem(50);
-        }
-    }
-}
-
-.header {
-
+    
     &__title {
-        
+
         @include tablet {
-            line-height: pxToRem(48);
+            margin-top: pxToRem(1);
         }
-        
+
         @include desktop {
-            line-height: pxToRem(48);
+            margin-top: pxToRem(1);
         }
     }
 
-    &__subtitle-first {
+    &__subtitle {
         text-align: center;
 
         @include mobile {
-            display: block;
-            width: pxToRem(300);
+
+            :nth-child(1) {
+                max-width: pxToRem(300);
+            }
+
+            :nth-child(2) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
         }
-    
+
         @include tablet {
-            display: none;
+
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(2) {
+                max-width: pxToRem(450);
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
         }
-    
+
         @include desktop {
-            display: none;
-        }
-    }
 
-    &__subtitle-second {
-        text-align: center;
+            :nth-child(1) {
+                display: none;
+            }
 
-        @include mobile {
-            display: none;
-        }
-    
-        @include tablet {
-            display: block;
-            width: pxToRem(450);
-        }
-    
-        @include desktop {
-            display: none;
-        }
-    }
+            :nth-child(2) {
+                display: none;
+            }
 
-    &__subtitle-third {
-        text-align: center;
-
-        @include mobile {
-            display: none;
-        }
-    
-        @include tablet {
-            display: none;
-        }
-    
-        @include desktop {
-            display: block;
-            width: pxToRem(600);
+            :nth-child(3) {
+                max-width: pxToRem(600);
+            }
         }
     }
 }
 
 .content {
 
-    &__section {
-        display: flex;
-        flex-direction: column;
+    &__wrapper {
 
         @include mobile {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            width: pxToRem(225);
+            gap: pxToRem(35);
         }
         
         @include tablet {
-            align-items: center;
-            width: pxToRem(225);
+            display: grid;
+            grid-template-columns: 1fr pxToRem(214) 1fr;
+            grid-template-rows: repeat(4, auto);
+            justify-items: center;
+            row-gap: pxToRem(48);
+            column-gap: pxToRem(18);
         }
         
         @include desktop {
-            align-items: center;
-            width: pxToRem(365);
+            display: grid;
+            grid-template-columns: 1fr pxToRem(375) 1fr;
+            grid-template-rows: repeat(4, auto);
+            justify-items: center;
+            row-gap: pxToRem(55);
+            column-gap: pxToRem(50);
         }
     }
 
-    &__icon {
-        width: pxToRem(50);
+    &__section {
+        
+        @include mobile {
+            text-align: center;
+            max-width: pxToRem(225);
+        }
+        
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__section-icon {
+        max-width: pxToRem(50);
         height: pxToRem(50);
 
         @include mobile {
-            margin-bottom: pxToRem(31);
+            margin: 0 auto;
+            margin-bottom: pxToRem(30);
         }
         
         @include tablet {
-            margin-bottom: pxToRem(31);
-        }
-        
-        @include desktop {
-            margin-bottom: pxToRem(22);
+            margin-bottom: pxToRem(30);
         }
     }
 
-    &__title {
+    &__section-title {
         text-transform: uppercase;
         color: $color-text-divider;
+        margin-bottom: pxToRem(18);
+        font-weight: 600;
 
         @include mobile {
             letter-spacing: pxToRem(0.7);
             line-height: pxToRem(30);
-            margin-bottom: pxToRem(17);
-            text-align: center;
         }
         
         @include tablet {
-            letter-spacing: pxToRem(0.7);
+            letter-spacing: pxToRem(0.8);
             line-height: pxToRem(30);
-            margin-bottom: pxToRem(17);
-            text-align: center;
         }
         
         @include desktop {
             line-height: pxToRem(38);
-            margin-bottom: pxToRem(18);
             font-size: pxToRem(25);
-            text-align: center;
         }
     }
 
-    &__subtitle {
+    &__section-subtitle {
         line-height: pxToRem(24);
-        text-align: center;
         color: $color-text-divider;
     }
 
     &__interface {
 
         @include mobile {
-            padding-top: pxToRem(18);
-            padding-bottom: pxToRem(70);
+            padding-top: pxToRem(19);
+            padding-bottom: pxToRem(68);
         }
         
         @include tablet {
@@ -211,22 +192,22 @@
     }
 
     &__image-interface {
+        border-radius: pxToRem(40);
+        box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
 
         @include mobile {
-            border-radius: pxToRem(40);
-            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
+            max-width: pxToRem(214);
+            height: pxToRem(468);
         }
         
         @include tablet {
-            border-radius: pxToRem(40);
-            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
+            max-width: pxToRem(214);
+            height: pxToRem(468);
         }
         
         @include desktop {
             width: pxToRem(375);
             height: pxToRem(812);
-            border-radius: pxToRem(40);
-            box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
         }
     }
 }
@@ -236,13 +217,27 @@
     @include tablet {
         grid-column: 2;
         grid-row: 1;
-        padding-bottom: pxToRem(5);
+        margin-bottom: pxToRem(7.5);
+        text-align: center;
+
+        .content__section-icon {
+            align-self: center;
+        }
     }
 
     @include desktop {
         grid-column: 2;
         grid-row: 1;
-        padding-bottom: pxToRem(5);
+        text-align: center;
+
+        .content__section-icon {
+            align-self: center;
+            margin-bottom: pxToRem(22);
+        }
+
+        .content__section-subtitle {
+            max-width: pxToRem(297);
+        }
     }
 }
 
@@ -251,40 +246,24 @@
     @include tablet {
         grid-column: 1;
         grid-row: 3;
-        padding-right: pxToRem(12);
-    
-        .content__icon {
+        margin-top: pxToRem(3);
+        text-align: right;
+
+        .content__section-icon {
             align-self: end;
-        }
-    
-        h3 {
-            align-self: end;
-            text-align: right;
-        }
-    
-        p {
-            text-align: right;
         }
     }
 
     @include desktop {
         grid-column: 1;
         grid-row: 3;
-        padding-bottom: pxToRem(58);
-        padding-right: pxToRem(61);
-        align-self: flex-end;
+        align-self: end;
+        text-align: end;
+        margin-bottom: pxToRem(59);
 
-        .content__icon {
+        .content__section-icon {
             align-self: end;
-        }
-    
-        h3 {
-            align-self: end;
-            text-align: right;
-        }
-    
-        p {
-            text-align: right;
+            margin-bottom: pxToRem(22);
         }
     }
 }
@@ -294,21 +273,37 @@
     @include tablet {
         grid-column: 1/4;
         grid-row: 4;
-        width: auto;
+        text-align: center;
 
-        p {
-            width: pxToRem(350);
+        .content__section-icon {
+            align-self: center;
+        }
+
+        .content__section-subtitle {
+            margin: 0 auto;
+            max-width: pxToRem(297);
         }
     }
 
     @include desktop {
         grid-column: 1/4;
         grid-row: 4;
-        width: auto;
-        padding-top: pxToRem(10);
+        margin-top: pxToRem(5);
+        text-align: center;
 
-        p {
-            width: pxToRem(350);
+        .content__section-icon {
+            margin-bottom: pxToRem(30);
+            align-self: center;
+        }
+
+        .content__section-title {
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+        }
+
+        .content__section-subtitle {
+            margin: 0 auto;
+            max-width: pxToRem(297);
         }
     }
 }
@@ -318,40 +313,17 @@
     @include tablet {
         grid-column: 3;
         grid-row: 3;
-        padding-left: pxToRem(12);
-    
-        .content__icon {
-            align-self: start;
-        }
-    
-        h3 {
-            align-self: start;
-            text-align: left;
-        }
-    
-        p {
-            text-align: left;
-        }
+        margin-top: pxToRem(3);
     }
 
     @include desktop {
         grid-column: 3;
         grid-row: 3;
-        align-self: center;
-        padding-top: pxToRem(209);
-        padding-left: pxToRem(59);
+        align-self: end;
+        margin-bottom: pxToRem(60);
 
-        .content__icon {
-            align-self: start;
-        }
-    
-        h3 {
-            align-self: start;
-            text-align: left;
-        }
-    
-        p {
-            text-align: left;
+        .content__section-icon {
+            margin-bottom: pxToRem(22);
         }
     }
 }
@@ -361,45 +333,16 @@
     @include tablet {
         grid-column: 3;
         grid-row: 2;
-        padding-top: pxToRem(17);
-    
-        .content__icon {
-            align-self: start;
-            padding-left: pxToRem(4);
-        }
-        
-        h3 {
-            align-self: start;
-            text-align: left;
-            padding-left: pxToRem(12);
-        }
-    
-        p {
-            text-align: left;
-            padding-left: pxToRem(13);
-        }
+        margin-top: pxToRem(17);
     }
 
     @include desktop {
         grid-column: 3;
         grid-row: 2;
-        padding-top: pxToRem(60);
-        padding-left: pxToRem(46);
+        margin-top: pxToRem(60);
 
-        .content__icon {
-            align-self: start;
-            padding-left: pxToRem(4);
-        }
-        
-        h3 {
-            align-self: start;
-            text-align: left;
-            padding-left: pxToRem(12);
-        }
-    
-        p {
-            text-align: left;
-            padding-left: pxToRem(13);
+        .content__section-icon {
+            margin-bottom: pxToRem(22);
         }
     }
 }
@@ -409,40 +352,23 @@
     @include tablet {
         grid-column: 1;
         grid-row: 2;
-        padding-right: pxToRem(12);
-        padding-top: pxToRem(17);
+        margin-top: pxToRem(17);
+        text-align: right;
 
-        .content__icon {
+        .content__section-icon {
             align-self: end;
-        }
-
-        h3 {
-            align-self: end;
-            text-align: right;
-        }
-
-        p {
-            text-align: right;
         }
     }
 
     @include desktop {
         grid-column: 1;
         grid-row: 2;
-        padding-top: pxToRem(60);
-        padding-right: pxToRem(61);
+        margin-top: pxToRem(60);
+        text-align: right;
 
-        .content__icon {
+        .content__section-icon {
             align-self: end;
-        }
-
-        h3 {
-            align-self: end;
-            text-align: right;
-        }
-
-        p {
-            text-align: right;
+            margin-bottom: pxToRem(22);
         }
     }
 }
