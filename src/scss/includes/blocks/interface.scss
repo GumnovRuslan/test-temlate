@@ -177,7 +177,7 @@
     &__iPhoneX {
 
         @include mobile {
-            margin-bottom: pxToRem(43);
+            margin-bottom: pxToRem(45);
             min-width: pxToRem(227);
             height: pxToRem(444);
         }
@@ -189,7 +189,7 @@
         }
         
         @include desktop {
-            margin-bottom: pxToRem(44);
+            margin-bottom: pxToRem(42);
             width: pxToRem(319);
             height: pxToRem(622);
         }
