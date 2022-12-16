@@ -297,7 +297,8 @@
 		&__political-container {
                   display: flex;
                   align-items: center;
-                  padding: pxToRem(20) pxToRem(23) pxToRem(30) pxToRem(23);
+                  justify-content: center;
+                  padding: pxToRem(20) pxToRem(0) pxToRem(30) pxToRem(0);
                   gap: pxToRem(18);
                   border-top: pxToRem(1) solid $color-text-divider;
 		}
@@ -311,7 +312,7 @@
 
 		&__political-text {
                   font-weight: 300;
-                  font-size: pxToRem(11.8);
+                  font-size: pxToRem(12.8);
                   line-height: pxToRem(13);
                   color: $color-text-divider;
 		}
