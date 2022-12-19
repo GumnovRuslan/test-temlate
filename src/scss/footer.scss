@@ -3,12 +3,34 @@
 
       &__wrapper {
             position: relative;
-            padding-top: pxToRem(150);
+
+            @include mobile {
+                  padding-top: pxToRem(150);
+            }
+            
+            @include tablet {
+                  padding-top: pxToRem(75);
+            }
+
+            @include desktop {
+                  padding-top: pxToRem(128);
+            }
       }
 
       &__background {
             background: $color-grey-900;
-            padding-top: pxToRem(220);
+
+            @include mobile {
+                  padding-top: pxToRem(221);
+            }
+
+            @include tablet {
+                  padding-top: pxToRem(135);
+            }
+
+            @include desktop {
+                  padding-top: pxToRem(235);
+            }
       }
 
 	&__contacts {
@@ -18,26 +40,38 @@
             width: 100%;
 	}
 
-      //---contacts---
+      &__info-quick-link {
 
-	&__contacts-container {
+            @include tablet {
+                  flex: auto;
+            }
+
+            @include desktop {
+                  flex: auto;
+            }
+      }
+}
+
+.contacts {
+
+      &__container {
             display: flex;
             box-shadow: $shadows-block;
             background: $color-secondary-main;
+
+            :hover .contacts__btn {
+                  opacity: 0.6;
+            }
+
+            :hover .contacts__item-text {
+                  opacity: 0.6;
+            }
 
             @include mobile {
                   flex-direction: column;
                   gap: pxToRem(10);
                   padding: pxToRem(10);
                   border-radius: pxToRem(10);
-
-                  :hover .footer__contacts-button {
-                        opacity: 0.6;
-                  }
-
-                  :hover .footer__contacts-text {
-                        opacity: 0.6;
-                  }
             }
 
             @include tablet {
@@ -46,12 +80,12 @@
             }
 
             @include desktop {
-                  padding: pxToRem(57) pxToRem(50);
+                  padding: pxToRem(56) pxToRem(50);
                   border-radius: pxToRem(30);
             }
 	}
 
-	&__contacts-form {
+	&__form {
             display: flex;
             align-items: center;
 
@@ -103,7 +137,7 @@
             }
 	}
 
-	&__contacts-button {
+	&__btn {
             border-radius: 50%;
             background: $color-info-main;
 
@@ -120,7 +154,7 @@
             }
 	}
 
-      &__contacts-button-favicon {
+      &__btn-favicon {
 
             @include mobile {
                   width: pxToRem(20);
@@ -138,14 +172,39 @@
             }
       }
 
-      &__contacts-item {
+      &__item {
 
             @include mobile {
                   margin-bottom: pxToRem(20);
             }
+
+            @include desktop {
+                  padding-top: pxToRem(15);
+            }
       }
 
-	&__contacts-text {
+      &__item-mail {
+
+            @include mobile {
+                  :nth-child(2) {
+                        display: none;
+                  }
+            }
+      
+            @include tablet {
+                  :nth-child(1) {
+                        display: none;
+                  }
+            }
+      
+            @include desktop {
+                  :nth-child(1) {
+                        display: none;
+                  }
+            }
+      }
+
+	&__item-text {
             word-wrap: break-word;
             color: $color-grey-900;
             text-align: center;
@@ -169,38 +228,40 @@
 	}
 }
 
-.contacts__item-mail {
-
-      @include mobile {
-            :nth-child(2) {
-                  display: none;
-            }
-      }
-
-      @include tablet {
-            :nth-child(1) {
-                  display: none;
-            }
-      }
-
-      @include desktop {
-            :nth-child(1) {
-                  display: none;
-            }
-      }
-}
-
-.footer {
-
-      &__info {
-            display: flex;
-            flex-direction: column;
-            gap: pxToRem(60);
-            padding-bottom: pxToRem(60);
-      }
-}
-
 .info {
+
+      &__container {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include mobile {
+                  gap: pxToRem(60);
+                  max-width: pxToRem(343);
+                  margin: 0 auto;
+                  margin-bottom: pxToRem(60);
+            }
+
+            @include tablet {
+                  gap: pxToRem(24);
+                  margin-bottom: pxToRem(56);
+            }
+
+            @include desktop {
+                  gap: pxToRem(66);
+                  margin-bottom: pxToRem(64);
+            }
+      }
+
+      &__logo-container {
+
+            @include tablet {
+                  max-width: pxToRem(213);
+            }
+
+            @include desktop {
+                  max-width: pxToRem(334);
+            }
+      }
 
       &__title-logo {
             text-transform: uppercase;
@@ -208,40 +269,159 @@
             font-size: pxToRem(31.25);
             line-height: pxToRem(47);
             color: $color-text-divider;
-            margin-bottom: pxToRem(1);
+
+            @include mobile {
+                  margin-bottom: pxToRem(1);
+            }
+
+            @include tablet {
+                  margin-bottom: pxToRem(7);
+            }
+
+            @include desktop {
+                  margin-bottom: pxToRem(1);
+            }
+      }
+
+      &__quick-link-container {
+
+            @include mobile {
+
+            }
+
+            @include tablet {
+                  padding-top: pxToRem(11);
+            }
+
+            @include desktop {
+                  
+            }
+      }
+
+      &__news-letter-container {
+
+            @include mobile {
+
+            }
+
+            @include tablet {
+                  padding-top: pxToRem(11);
+                  max-width: pxToRem(213);
+            }
+
+            @include desktop {
+                  width: pxToRem(370);
+            }
       }
 
       &__title {
             text-transform: uppercase;
             font-weight: 600;
-            font-size: pxToRem(25);
-            line-height: pxToRem(38);
             color: $color-text-divider;
-            margin-bottom: pxToRem(11);
+
+            @include mobile {
+                  margin-bottom: pxToRem(11);
+                  font-size: pxToRem(25);
+                  line-height: pxToRem(38);
+            }
+
+            @include tablet {
+                  margin-bottom: pxToRem(13);
+                  font-size: pxToRem(20);
+                  line-height: pxToRem(30);
+            }
+
+            @include desktop {
+                  margin-bottom: pxToRem(11);
+                  font-size: pxToRem(25);
+                  line-height: pxToRem(38);
+            }
       }
 
       &__subtitle-logo {
-            margin-bottom: pxToRem(38);
+
+            @include mobile {
+                  max-width: pxToRem(330);
+                  margin-bottom: pxToRem(38);
+            }
+
+            @include tablet {
+                  margin-bottom: pxToRem(30);
+
+                  span {
+                        display: none;
+                  }
+            }
+
+            @include desktop {
+                  margin-bottom: pxToRem(38);
+            }
       }
 
       &__subtitle-news {
-            margin-bottom: pxToRem(33);
+
+            @include mobile {
+                  margin-bottom: pxToRem(33);
+            }
+
+            @include tablet {
+                  margin-bottom: pxToRem(30);
+            }
+
+            @include desktop {
+                  max-width: pxToRem(350);
+                  margin-bottom: pxToRem(33);
+            }
       }
 
       &__network {
+            height: pxToRem(24);
             display: flex;
       }
 
       &__network-link {
-            
-            &:not(:last-child) {
-                  border-right: pxToRem(1) solid $color-secondary-main;
-                  padding-right: pxToRem(30);
+
+            &:hover .info__network-image--color{
+                  fill: $color-info-main;
             }
 
-            &:not(:first-child) {
-                  padding-left: pxToRem(30);
+            &:not(:last-child) {
+                  border-right: pxToRem(1) solid $color-secondary-main;
             }
+
+            @include mobile {
+
+                  &:not(:last-child) {
+                        padding-right: pxToRem(29);
+                  }
+      
+                  &:not(:first-child) {
+                        padding-left: pxToRem(30);
+                  }
+            }
+
+            @include tablet {
+                  
+                  &:not(:last-child) {
+                        padding-right: pxToRem(19);
+                  }
+      
+                  &:not(:first-child) {
+                        padding-left: pxToRem(19);
+                  }
+            }
+
+            @include desktop {
+                  
+                  &:not(:last-child) {
+                        padding-right: pxToRem(29);
+                  }
+      
+                  &:not(:first-child) {
+                        padding-left: pxToRem(30);
+                  }
+            }
+      
       }
 
       &__network-image {
@@ -268,52 +448,136 @@
             width: 100%;
             height: pxToRem(50);
             border-radius: pxToRem(4);
+            border: 0;
+            padding: 0;
 
-            ::placeholder {
-                  padding-left: pxToRem(10);
+            &::placeholder {
+                  font-family: JosefinSans;
+                  color: $color-text-primary;
+            }
+
+            @include mobile {
+                  &::placeholder {
+                        padding-left: pxToRem(17);
+                        font-weight: normal;
+                        font-size: pxToRem(16);
+                        line-height: pxToRem(24);
+                  }
+            }
+
+            @include tablet {
+                  &::placeholder {
+                        padding-left: pxToRem(15);
+                        font-weight: 300;
+                        font-size: pxToRem(12.8);
+                        line-height: pxToRem(13);
+                  }
+            }
+
+            @include desktop {
+                  &::placeholder {
+                        padding-left: pxToRem(17);
+                        font-weight: normal;
+                        font-size: pxToRem(16);
+                        line-height: pxToRem(24);
+                  }
             }
       }
 
       &__search-btn {
             position: absolute;
-            right: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #2f3640;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.4s;
-            text-decoration:none;
+            top: calc(50% - 1.438rem);
+            border-radius: pxToRem(4);
+            background: $color-primary-main;
+
+            @include mobile {
+                  right: pxToRem(1.86);
+                  padding: pxToRem(11) pxToRem(13);
             }
+
+            @include tablet {
+                  right: pxToRem(3);
+                  padding: pxToRem(11) pxToRem(14);
+            }
+
+            @include desktop {
+                  right: pxToRem(3);
+                  padding: pxToRem(11) pxToRem(14);
+            }
+      }
+
+      &__search-btn-favicon {
+
+            @include mobile {
+                  width: pxToRem(22.31);
+                  height: pxToRem(24);
+            }
+
+            @include tablet {
+                  width: pxToRem(24);
+                  height: pxToRem(24);
+            }
+
+            @include desktop {
+                  width: pxToRem(24);
+                  height: pxToRem(24);
+            }
+      }
 }
 
 .political {
-}
-.footer {
 
-		&__political-container {
+		&__container {
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  padding: pxToRem(20) pxToRem(0) pxToRem(30) pxToRem(0);
                   gap: pxToRem(18);
                   border-top: pxToRem(1) solid $color-text-divider;
+
+                  @include mobile {
+                        padding: pxToRem(20) pxToRem(0) pxToRem(27) pxToRem(0);
+                  }
+
+                  @include tablet {
+                        padding: pxToRem(18) 0;
+                  }
+
+                  @include desktop {
+                        padding: pxToRem(18) 0;
+                  }
 		}
 
-		&__political-favicon {
+		&__image {
+
+                  @include mobile {
+                        width: pxToRem(18);
+                  }
+
+                  @include tablet {
+                        width: pxToRem(24);
+                  }
+
+                  @include desktop {
+                        width: pxToRem(24);
+                  }
 		}
 
-		&__political-image {
-                  width: pxToRem(18);
-		}
-
-		&__political-text {
-                  font-weight: 300;
-                  font-size: pxToRem(12.8);
-                  line-height: pxToRem(13);
+		&__text {
+                  text-align: center;
                   color: $color-text-divider;
+
+                  @include mobile {
+                        font-weight: 300;
+                        font-size: pxToRem(12.8);
+                        line-height: pxToRem(13);
+                  }
+
+                  @include tablet {
+                        line-height: pxToRem(24);
+                  }
+
+                  @include desktop {
+                        line-height: pxToRem(24);
+                  }
 		}
 }
