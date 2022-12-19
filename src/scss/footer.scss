@@ -56,6 +56,7 @@
 
       &__container {
             display: flex;
+            flex-wrap: wrap;
             box-shadow: $shadows-block;
             background: $color-secondary-main;
 
@@ -75,11 +76,13 @@
             }
 
             @include tablet {
+                  row-gap: pxToRem(15);
                   padding: pxToRem(21.5) pxToRem(17.5);
                   border-radius: pxToRem(15);
             }
 
             @include desktop {
+                  row-gap: pxToRem(15);
                   padding: pxToRem(56) pxToRem(50);
                   border-radius: pxToRem(30);
             }
@@ -113,12 +116,9 @@
                   padding: pxToRem(23) 0;
                   gap: pxToRem(17);
 
-                  &:not(:first-child) {
-                        border-left: pxToRem(3) solid $color-text-primary;
-                  }
-      
-                  &:last-child {
+                  &:nth-child(even) {
                         padding-left: pxToRem(27);
+                        border-left: pxToRem(3) solid $color-text-primary;
                   }
             }
 
@@ -127,12 +127,9 @@
                   padding: pxToRem(8.5) 0;
                   gap: pxToRem(17);
 
-                  &:not(:first-child) {
-                        border-left: pxToRem(4) solid $color-text-primary;
-                  }
-      
-                  &:last-child {
+                  &:nth-child(even) {
                         padding-left: pxToRem(46);
+                        border-left: pxToRem(4) solid $color-text-primary;
                   }
             }
 	}
@@ -285,24 +282,12 @@
 
       &__quick-link-container {
 
-            @include mobile {
-
-            }
-
             @include tablet {
                   padding-top: pxToRem(11);
-            }
-
-            @include desktop {
-                  
             }
       }
 
       &__news-letter-container {
-
-            @include mobile {
-
-            }
 
             @include tablet {
                   padding-top: pxToRem(11);
@@ -445,42 +430,32 @@
       }
 
       &__search-line {
+            font-family: JosefinSans;
             width: 100%;
             height: pxToRem(50);
             border-radius: pxToRem(4);
             border: 0;
-            padding: 0;
-
-            &::placeholder {
-                  font-family: JosefinSans;
-                  color: $color-text-primary;
-            }
+            color: $color-text-primary;
 
             @include mobile {
-                  &::placeholder {
-                        padding-left: pxToRem(17);
-                        font-weight: normal;
-                        font-size: pxToRem(16);
-                        line-height: pxToRem(24);
-                  }
+                  padding: 0 pxToRem(62) 0 pxToRem(17);
+                  font-weight: normal;
+                  font-size: pxToRem(16);
+                  line-height: pxToRem(24);
             }
 
             @include tablet {
-                  &::placeholder {
-                        padding-left: pxToRem(15);
-                        font-weight: 300;
-                        font-size: pxToRem(12.8);
-                        line-height: pxToRem(13);
-                  }
+                  padding: 0 pxToRem(62) 0 pxToRem(15);
+                  font-weight: 300;
+                  font-size: pxToRem(12.8);
+                  line-height: pxToRem(13);
             }
 
             @include desktop {
-                  &::placeholder {
-                        padding-left: pxToRem(17);
-                        font-weight: normal;
-                        font-size: pxToRem(16);
-                        line-height: pxToRem(24);
-                  }
+                  padding: 0 pxToRem(62) 0 pxToRem(17);
+                  font-size: pxToRem(16);
+                  font-weight: normal;
+                  line-height: pxToRem(24);
             }
       }
 
