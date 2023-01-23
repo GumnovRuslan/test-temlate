@@ -24,26 +24,12 @@
             margin-bottom: pxToRem(58);
             }
     }
-    
-    &__title {
-
-        @include tablet {
-            margin-top: pxToRem(1);
-        }
-
-        @include desktop {
-            margin-top: pxToRem(1);
-        }
-    }
 
     &__subtitle {
         text-align: center;
 
         @include mobile {
-
-            :nth-child(1) {
-                max-width: pxToRem(300);
-            }
+            max-width: pxToRem(300);
 
             :nth-child(2) {
                 display: none;
@@ -55,13 +41,10 @@
         }
 
         @include tablet {
+            max-width: pxToRem(450);
 
             :nth-child(1) {
                 display: none;
-            }
-
-            :nth-child(2) {
-                max-width: pxToRem(450);
             }
 
             :nth-child(3) {
@@ -70,6 +53,7 @@
         }
 
         @include desktop {
+            max-width: pxToRem(600);
 
             :nth-child(1) {
                 display: none;
@@ -77,10 +61,6 @@
 
             :nth-child(2) {
                 display: none;
-            }
-
-            :nth-child(3) {
-                max-width: pxToRem(600);
             }
         }
     }
@@ -191,7 +171,7 @@
         }
     }
 
-    &__image-interface {
+    &__interface-image {
         border-radius: pxToRem(40);
         box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
 
