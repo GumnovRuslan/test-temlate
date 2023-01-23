@@ -60,7 +60,7 @@
         }
     }
 
-    &__image {
+    &__phone {
 
         @include tablet {
             flex: auto;
@@ -72,7 +72,7 @@
         }
     }
 
-    &__phone {
+    &__image-phone {
 
         @include mobile {
             max-width: pxToRem(267);
@@ -138,34 +138,37 @@
         }
     }
 
-    &__header {
+    &__heading {
 
         @include mobile {
             margin-bottom: pxToRem(24);
-
-            :nth-child(3) {
-                display: none;
-            }
         }
         
         @include tablet {
             margin-bottom: pxToRem(16);
-
-            :nth-child(3) {
-                display: none;
-            }
         }
         
         @include desktop {
             margin-bottom: pxToRem(46);
-
-            :nth-child(2) {
-                display: none;
-            }
         }
     }
 
-	&__title {
+    &__title {
+
+        @include mobile {
+            margin-bottom: pxToRem(13);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(7);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(17);
+        }
+    }
+
+	&__title-text {
             color: $color-info-main;
             text-transform: uppercase;
 
@@ -173,49 +176,80 @@
                 font-size: pxToRem(25);
                 line-height: pxToRem(38);
                 font-weight: 600;
-                margin-bottom: pxToRem(13);
             }
 
             @include tablet {
                 font-size: pxToRem(31.25);
                 line-height: pxToRem(47);
                 font-weight: 700;
-                margin-bottom: pxToRem(7);
             }
 
             @include desktop {
                 font-size: pxToRem(48.83);
                 line-height: pxToRem(63);
                 font-weight: 700;
-                margin-bottom: pxToRem(17);
             }
 		}
 
+    &__subtitle-text {
+        @include mobile {
+            
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        
+        @include tablet {
+            
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        
+        @include desktop {
 
-    &__title-download {
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
+
+    &__download-title {
+
+        @include mobile {
+            margin-bottom: pxToRem(19);
+        }
+        
+        @include tablet {
+            margin-bottom: pxToRem(23);
+        }
+        
+        @include desktop {
+            margin-bottom: pxToRem(5);
+        }
+    }
+
+    &__download-title-text {
             text-transform: uppercase;
             font-weight: 600;
 
             @include mobile {
-                margin-bottom: pxToRem(19);
                 font-size: pxToRem(20);
                 line-height: pxToRem(30);
             }
             
             @include tablet {
-                margin-bottom: pxToRem(23);
                 font-size: pxToRem(20);
                 line-height: pxToRem(30);
             }
             
             @include desktop {
-                margin-bottom: pxToRem(5);
                 font-size: pxToRem(25);
                 line-height: pxToRem(38);
             }
         }
 
-	&__images-download {
+	&__download-network {
             display: flex;
             flex-wrap: wrap;
 
@@ -232,7 +266,7 @@
             }
 		}
 
-	&__image-google {
+	&__network-image {
 
             @include mobile {
                 max-width: pxToRem(108);
@@ -243,22 +277,7 @@
             }
 
             @include desktop {
-                max-width: pxToRem(149);
-            }
-		}
-
-	&__image-appStore {
-
-            @include mobile{
-                max-width: pxToRem(108);
-            }
-
-            @include tablet{
                 max-width: pxToRem(151);
-            }
-            
-            @include desktop {
-                max-width: pxToRem(149);
             }
 		}
 }
