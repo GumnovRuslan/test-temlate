@@ -16,6 +16,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'JosefinSans';
 }
 
 input[type="submit"]:focus {
@@ -292,4 +293,191 @@ button, input, label, select {
 	flex-direction: column;
 	align-items: center;
 	gap: pxToRem(18);
+}
+
+.header-position {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+
+    @include mobile {
+        top: pxToRem(40);
+    }
+
+    @include tablet {
+        top: pxToRem(18);
+    }
+
+    @include desktop {
+        top: pxToRem(28);
+    }
+}
+
+//=====Animation==========
+
+.menu__logo {
+	animation: logo 1.5s ease 0s 1 normal none;
+
+	@keyframes logo {
+		0% {
+			top: pxToRem(-100);
+		}
+
+		100% {
+
+			@include mobile {
+				top: calc(50% - 1.875rem);
+			}
+
+			@include tablet {
+				top: calc(50% - 2.813rem);
+			}
+
+			@include desktop {
+				top: calc(50% - 2.813rem);
+			}
+		}
+	}
+}
+
+.info__contacts, .download__section {
+	position: relative;
+	animation: info 2s ease 0s 1 normal none;
+
+	@keyframes info {
+		0% {
+			left: -100vw;
+		}
+
+		100% {
+			left: 0;
+		}
+	}
+}
+
+.info__networks {
+	position: relative;
+	animation: networks 2s ease 0s 1 normal none;
+
+	@keyframes networks {
+		0% {
+			right: -100vw;
+		}
+
+		100% {
+			right: 0;
+		}
+	}
+}
+
+.menu__navigation, button, .download__image, .footer__contacts {
+	animation: navigation 3s ease 0s 1 normal none;
+
+	@keyframes navigation {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+.card__border, .improvements__smartphone {
+	position: relative;
+	animation: hero-card 2s ease 0s 1 normal none;
+
+	@keyframes hero-card {
+		0% {
+			right: 100vw;
+			bottom: 50vh;
+		}
+
+		100% {
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.hero__phone {
+	position: relative;
+	animation: hero-phone 2s ease 0s 1 normal none;
+
+	@keyframes hero-phone {
+		0% {
+			left: 100vw;
+			bottom: 50vh;
+		}
+
+		100% {
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.improvements__card {
+
+	&:nth-child(1) {
+		position: relative;
+		animation: about-card-1 2s ease 0s 1 normal none;
+		@keyframes about-card-1 {
+			0% {
+				left: 100vw;
+			}
+	
+			100% {
+				left: 0;
+			}
+		}
+	}
+
+	&:nth-child(2) {
+		position: relative;
+		animation: about-card-2 2.5s ease 0s 1 normal none;
+		@keyframes about-card-2 {
+			0% {
+				left: 100vw;
+			}
+
+			100% {
+				left: 0;
+			}
+		}
+	}
+
+	&:nth-child(3) {
+		position: relative;
+		animation: about-card-3 3s ease 0s 1 normal none;
+		@keyframes about-card-3 {
+			0% {
+				left: 100vw;
+			}
+
+			100% {
+				left: 0;
+			}
+		}
+	}
+}
+
+.content__image-interface {
+	position: relative;
+	animation: phone 3s ease-in-out 0s infinite normal none;
+
+	@keyframes phone {
+		0% {
+			top: pxToRem(20);
+		}
+
+		50% {
+			top: pxToRem(-20);
+		}
+
+		100% {
+			top: pxToRem(20);
+		}
+	}
 }
