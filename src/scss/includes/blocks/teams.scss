@@ -1,0 +1,357 @@
+.teams {
+
+    &__content {
+    }
+
+    &__header {
+
+        @include mobile {
+            margin-bottom: pxToRem(38);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(31);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(59.5);
+        }
+    }
+
+    &__header-text {
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        @include mobile {
+            max-width: pxToRem(300);
+
+            :nth-child(2) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include tablet {
+            max-width: pxToRem(450);
+
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            max-width: pxToRem(600);
+
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    &__subtitle-text {
+    }
+
+    &__cards {
+    }
+
+    &__cards-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            gap: pxToRem(30);
+        }
+
+        @include tablet {
+            gap: pxToRem(24);
+        }
+
+        @include desktop {
+            gap: pxToRem(30);
+        }
+    }
+}
+
+.card-team {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: pxToRem(10);
+        box-shadow: $shadows-card;
+
+        @include mobile {
+            max-width: pxToRem(343);
+            padding-top: pxToRem(29);
+            padding-bottom: pxToRem(53);
+        }
+
+        @include tablet {
+            width: pxToRem(213);
+            padding-top: pxToRem(30);
+            padding-bottom: pxToRem(29.5);
+        }
+
+        @include desktop {
+            width: pxToRem(370);
+            padding-top: pxToRem(29);
+            padding-bottom: pxToRem(52);
+        }
+    }
+
+    &__photo {
+        position: relative;
+
+        @include mobile {
+            margin-bottom: pxToRem(60);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(11);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(60);
+        }
+    }
+
+    &__photo-border {
+
+        :nth-child(1) {
+            transform: rotate(0.5deg)
+        }
+
+        :nth-child(2) {
+            transform: rotate(90.5deg)
+        }
+
+        :nth-child(3) {
+            transform: rotate(180.5deg);
+        }
+
+        :nth-child(4) {
+            transform: rotate(270.5deg);
+        }
+
+        @include mobile {
+            padding: pxToRem(11);
+        }
+
+        @include tablet {
+            padding: pxToRem(9);
+        }
+
+        @include desktop {
+            padding: pxToRem(11);
+        }
+    }
+
+    &__border-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mobile {
+            width: pxToRem(220);
+        }
+
+        @include tablet {
+            width: pxToRem(178);
+        }
+
+        @include desktop {
+            width: pxToRem(220);
+        }
+    }
+
+    &__border-part {
+        --p: 22.7;
+        --b: 0.25rem;
+        --c: #5956E9;
+        
+        aspect-ratio: 1;
+        position: relative;
+
+        @include mobile {
+            --w: 13.75rem;
+        }
+
+        @include tablet {
+            --w: 11.125rem;
+        }
+
+        @include desktop {
+            --w: 13.75rem;
+        }
+    
+        &::before, &::after {
+            content:"";
+            position: absolute;
+            border-radius: 50%;
+        }
+    
+        &::before {
+            inset: 0;
+            background:
+            radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+            conic-gradient(var(--c) calc(var(--p) * 1%),#0000 0);
+            -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - var(--b)),#000 calc(100% - var(--b)));
+        }
+    
+        &::after {
+            inset: calc(50% - var(--b)/2);
+            background: var(--c);
+            transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w)/2));
+        }
+    }
+
+    &__photo-image {
+
+        @include desktop {
+            width: pxToRem(198);
+            height: pxToRem(198);
+        }
+
+        @include tablet {
+            width: pxToRem(160);
+            height: pxToRem(160);
+        }
+
+        @include desktop {
+            width: pxToRem(198);
+            height: pxToRem(198);
+        }
+    }
+
+    &__info {
+        text-align: center;
+
+        @include mobile {
+            padding: 0 pxToRem(8);
+            margin-bottom: pxToRem(29);
+        }
+
+        @include tablet {
+            padding: 0 pxToRem(6);
+            margin-bottom: pxToRem(27.5);
+        }
+
+        @include desktop {
+            padding: 0 pxToRem(23);
+            margin-bottom: pxToRem(30);
+        }
+    }
+
+    &__name {
+        text-transform: uppercase;
+
+        @include mobile {
+            margin-bottom: pxToRem(1);
+            font-size: pxToRem(31.25);
+            font-weight: 700;
+            line-height: pxToRem(48);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(9);
+            font-size: pxToRem(20);
+            font-weight: 600;
+            line-height: pxToRem(30);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(1.5);
+            font-size: pxToRem(31.25);
+            font-weight: 700;
+            line-height: pxToRem(47);
+        }
+    }
+
+    &__jop-position {
+        text-transform: uppercase;
+        color: $color-text-primary;
+
+        @include mobile {
+            margin-bottom: pxToRem(14);
+            font-size: pxToRem(20);
+            font-weight: 600;
+            line-height: pxToRem(30);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(18);
+            font-weight: 400;
+            line-height: pxToRem(24);
+        }
+
+        @include desktop {
+            margin-bottom: pxToRem(14);
+            font-size: pxToRem(20);
+            font-weight: 600;
+            line-height: pxToRem(30);
+        }
+    }
+
+    &__description {
+        margin: 0 auto;
+
+        @include tablet {
+            max-width: pxToRem(158);
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__social-network {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: pxToRem(10);
+    }
+
+    &__network-content {
+        height: pxToRem(24);
+
+        &:hover .network__svg{
+            fill: $color-info-main;
+        }
+
+        &:not(:last-child) {
+            border-right: pxToRem(1) solid $color-grey-900;
+        }
+
+        @include mobile {
+            padding: 0 pxToRem(30.5);
+        }
+
+        @include tablet {
+            padding: 0 pxToRem(13);
+        }
+
+        @include desktop {
+            padding: 0 pxToRem(30.5);
+        }
+    }
+
+    &__network-favicon {
+        width: pxToRem(24);
+        height: pxToRem(24);
+    }
+}
