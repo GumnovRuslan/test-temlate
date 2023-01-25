@@ -1,59 +1,89 @@
 .download {
 
     &__container {
+        margin: 0 auto;
 
         @include mobile {
             max-width: pxToRem(375);
-            margin: 0 auto;
             padding-bottom: pxToRem(60);
         }
     
         @include tablet {
             max-width: pxToRem(768);
-            margin: 0 auto;
             padding-bottom: pxToRem(120);
         }
     
         @include desktop {
             max-width: pxToRem(1440);
-            margin: 0 auto;
             padding-bottom: pxToRem(120);
         }
     }
 
-    &__header {
+    &__content {
+        display: flex;
 
         @include mobile {
+            flex-direction: column;
+            gap: pxToRem(60);
+        }
+        
+        @include tablet {
+            gap: pxToRem(28);
+        }
+        
+        @include desktop {
+            gap: pxToRem(80);
+        }
+    }
+
+    &__content-main {
+
+        @include mobile {
+            max-width: pxToRem(325);
+        }
+
+        @include tablet {
+            max-width: pxToRem(325);
+        }
+
+        @include desktop {
+            max-width: pxToRem(570);
+            padding-top: pxToRem(17);
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            gap: pxToRem(16);
             margin-bottom: pxToRem(42);
         }
         
         @include tablet {
+            gap: pxToRem(20);
             margin-bottom: pxToRem(40);
         }
 
         @include desktop {
+            gap: pxToRem(2);
             margin-bottom: pxToRem(31);
         }
     }
 
-    &__title {
+    &__title-text {
 
         @include mobile {
-            margin-bottom: pxToRem(16);
             span {
                 display: block;
             }
         }
         
         @include tablet {
-            margin-bottom: pxToRem(20);
             span {
                 display: block;
             }
-        }
-        
-        @include desktop {
-            margin-bottom: pxToRem(2);
         }
     }
 
@@ -81,40 +111,7 @@
         }
     }
 
-    &__content {
-        display: flex;
-
-        @include mobile {
-            flex-direction: column;
-            gap: pxToRem(60);
-        }
-        
-        @include tablet {
-            gap: pxToRem(28);
-        }
-        
-        @include desktop {
-            gap: pxToRem(80);
-        }
-    }
-
-    &__section {
-
-        @include mobile {
-            max-width: pxToRem(325);
-        }
-
-        @include tablet {
-            max-width: pxToRem(325);
-        }
-
-        @include desktop {
-            max-width: pxToRem(570);
-            padding-top: pxToRem(17);
-        }
-    }
-
-    &__service {
+    &__market {
         display: flex;
         gap: pxToRem(25);
 
@@ -131,7 +128,7 @@
         }
     }
 
-    &__statistics {
+    &__cards {
         display: flex;
         flex-wrap: wrap;
 
@@ -148,7 +145,7 @@
         }
     }
 
-    &__cart {
+    &__card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -179,7 +176,7 @@
         }
     }
 
-    &__icon {
+    &__card-icon {
 
         @include mobile {
             width: pxToRem(18);
@@ -199,7 +196,7 @@
         }
     }
 
-    &__number {
+    &__card-number {
         text-transform: uppercase;
         font-weight: 600;
 
@@ -219,7 +216,7 @@
         }
     }
 
-    &__text {
+    &__card-text {
         text-align: center;
 
         @include desktop {
@@ -229,7 +226,7 @@
         }
     }
 
-    &__image {
+    &__content-phone {
         position: relative;
 
         @include mobile {
@@ -247,7 +244,7 @@
         }
     }
 
-    &__gravity {
+    &__phone-image {
 
         @include mobile {
             width: pxToRem(334);
@@ -262,7 +259,7 @@
         }
     }
 
-    &__image-shadow {
+    &__phone-shadow {
         position: absolute;
         border-radius: 50%;
         box-shadow: $shadows-card;
