@@ -294,3 +294,38 @@ button, input, label, select {
 	align-items: center;
 	gap: pxToRem(18);
 }
+
+.button-play {
+
+    &__item-big, 
+    &__item-middle, 
+    &__item-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    &__item-big {
+        width: pxToRem(70);
+        height: pxToRem(70);
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    &__item-middle {
+        width: pxToRem(60);
+        height: pxToRem(60);
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    &__item-small {
+        width: pxToRem(50);
+        height: pxToRem(50);
+        background: $color-text-divider;
+    }
+
+    &__image {
+        width: pxToRem(24);
+        height: pxToRem(24);
+    }
+}

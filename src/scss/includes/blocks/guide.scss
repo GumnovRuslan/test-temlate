@@ -44,10 +44,7 @@
             max-width: pxToRem(300);
             margin: 0 auto;
 
-            :nth-child(2) {
-                display: none;
-            }
-
+            :nth-child(2), 
             :nth-child(3) {
                 display: none;
             }
@@ -57,10 +54,7 @@
             max-width: pxToRem(450);
             margin: 0 auto;
             
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(3) {
                 display: none;
             }
@@ -70,10 +64,7 @@
             max-width: pxToRem(600);
             margin: 0 auto;
             
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(2) {
                 display: none;
             }
@@ -135,10 +126,6 @@
 
 .video {
 
-    &__container {
-        position: relative;
-    }
-
     &__image-preview {
         border-radius: pxToRem(10);
         box-shadow: $shadows-block;
@@ -162,38 +149,5 @@
             width: pxToRem(770);
             height: pxToRem(319);
         }
-    }
-}
-
-.button-play {
-
-    &__item-big {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(70);
-        height: pxToRem(70);
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.7);
-    }
-
-    &__item-middle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(60);
-        height: pxToRem(60);
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    &__item-small {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(50);
-        height: pxToRem(50);
-        border-radius: 50%;
-        background: $color-text-divider;
     }
 }
