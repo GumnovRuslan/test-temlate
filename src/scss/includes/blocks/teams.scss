@@ -1,9 +1,6 @@
 .teams {
 
-    &__content {
-    }
-
-    &__header {
+    &__heading {
 
         @include mobile {
             margin-bottom: pxToRem(38);
@@ -18,19 +15,13 @@
         }
     }
 
-    &__header-text {
-    }
-
     &__subtitle {
         text-align: center;
 
         @include mobile {
             max-width: pxToRem(300);
 
-            :nth-child(2) {
-                display: none;
-            }
-
+            :nth-child(2), 
             :nth-child(3) {
                 display: none;
             }
@@ -39,10 +30,7 @@
         @include tablet {
             max-width: pxToRem(450);
 
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(3) {
                 display: none;
             }
@@ -51,20 +39,11 @@
         @include desktop {
             max-width: pxToRem(600);
 
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(2) {
                 display: none;
             }
         }
-    }
-
-    &__subtitle-text {
-    }
-
-    &__cards {
     }
 
     &__cards-container {
@@ -329,7 +308,7 @@
     &__network-content {
         height: pxToRem(24);
 
-        &:hover .network__svg{
+        &:hover .network__svg {
             fill: $color-info-main;
         }
 
