@@ -4,29 +4,44 @@
 
         @include mobile {
             margin-bottom: pxToRem(38);
-
-            :nth-child(3) {
-                display: none;
-            }
-            :nth-child(4) {
-                display: none;
-            }
         }
     
         @include tablet {
             margin-bottom: pxToRem(58);
-
-            :nth-child(2) {
-                display: none;
-            }
-            :nth-child(4) {
-                display: none;
-            }
         }
     
         @include desktop {
             margin-bottom: pxToRem(60);
             padding-right: pxToRem(52);
+        }
+    }
+
+    &__subtitle {
+
+        @include mobile {
+            max-width: pxToRem(300);
+
+            :nth-child(3) {
+                display: none;
+            }
+            :nth-child(4) {
+                display: none;
+            }
+        }
+    
+        @include tablet {
+            max-width: pxToRem(450);
+
+            :nth-child(2) {
+                display: none;
+            }
+            :nth-child(4) {
+                display: none;
+            }
+        }
+    
+        @include desktop {
+            max-width: pxToRem(601);
 
             :nth-child(2) {
                 display: none;
@@ -34,29 +49,6 @@
             :nth-child(3) {
                 display: none;
             }
-        }
-    }
-
-    &__title {
-        
-        @include tablet {
-            padding-top: pxToRem(1);
-        }
-    }
-
-    &__subtitle {
-        text-align: center;
-
-        @include mobile {
-            max-width: pxToRem(300);
-        }
-
-        @include tablet {
-            max-width: pxToRem(450);
-        }
-
-        @include desktop {
-            max-width: pxToRem(601);
         }
     }
 }
@@ -86,7 +78,7 @@
         }
     }
 
-    &__image {
+    &__smartphone {
         position: relative;
 
         @include tablet {
@@ -100,7 +92,31 @@
         }
     }
 
-    &__smartphone {
+    &__smartphone-shadow {
+        position: absolute;
+        width: pxToRem(212);
+        height: pxToRem(71);
+        border-radius: 50%;
+        box-shadow: $shadows-card;
+        transform: rotateX(10deg);
+
+        @include mobile {
+            left: 0;
+            bottom: pxToRem(-35);
+        }
+
+        @include tablet {
+            left: 0;
+            bottom: pxToRem(-17);
+        }
+
+        @include desktop {
+            left: pxToRem(74);
+            bottom: pxToRem(13);
+        }
+    }
+
+    &__image-smartphone {
         
         @include mobile {
             max-width: pxToRem(238);
@@ -118,7 +134,7 @@
         }
     }
 
-    &__items {
+    &__cards {
         display: flex;
         flex-direction: column;
 
@@ -237,30 +253,6 @@
         
         @include desktop {
             display: block;
-        }
-    }
-
-    &__shadow {
-        position: absolute;
-        width: pxToRem(212);
-        height: pxToRem(71);
-        border-radius: 50%;
-        box-shadow: $shadows-card;
-        transform: rotateX(10deg);
-
-        @include mobile {
-            left: 0;
-            bottom: pxToRem(-35);
-        }
-
-        @include tablet {
-            left: 0;
-            bottom: pxToRem(-17);
-        }
-
-        @include desktop {
-            left: pxToRem(74);
-            bottom: pxToRem(13);
         }
     }
 }
