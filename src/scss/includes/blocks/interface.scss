@@ -1,6 +1,6 @@
 .interface {
 
-    &__header {
+    &__heading {
 
         @include mobile {
             margin-bottom: pxToRem(38);
@@ -31,16 +31,13 @@
         }
     }
 
-    &__subtitle-content {
+    &__subtitle {
         text-align: center;
         
         @include mobile {
             max-width: pxToRem(300);
 
-            :nth-child(2) {
-                display: none;
-            }
-
+            :nth-child(2), 
             :nth-child(3) {
                 display: none;
             }
@@ -49,10 +46,7 @@
         @include tablet {
             max-width: pxToRem(450);
             
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(3) {
                 display: none;
             }
@@ -61,10 +55,7 @@
         @include desktop {
             max-width: pxToRem(600);
             
-            :nth-child(1) {
-                display: none;
-            }
-
+            :nth-child(1), 
             :nth-child(2) {
                 display: none;
             }
@@ -78,50 +69,30 @@
         position: relative;
 
         &::before {
-            content: "";
-            position: absolute;
             left: 0;
-            background: $color-text-divider;
-
-            @include mobile {
-                top: calc(50% - 13.875rem - 1.875rem);
-                width: 0;
-                height: pxToRem(444);
-                box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
-            }
-            
-            @include tablet {
-                top: calc(50% - 13.875rem - 1.875rem);
-                width: pxToRem(10);
-                height: pxToRem(444);
-                box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
-            }
-            
-            @include desktop {
-                top: calc(50% - 16.938rem - 1.875rem);
-                width: pxToRem(10);
-                height: pxToRem(542);
-                box-shadow: 0px 0px pxToRem(40) pxToRem(60) $color-text-divider;
-            }
         }
 
         &::after {
+            right: 0;
+        }
+
+        &::before, 
+        &::after  {
             content: "";
             position: absolute;
-            right: 0;
             background: $color-text-divider;
 
             @include mobile {
                 top: calc(50% - 13.875rem - 1.875rem);
                 width: 0;
-                height: pxToRem(444);
+                height: pxToRem(480);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
             }
             
             @include tablet {
-                top: calc(50% - 13.875rem - 1.875rem);
+                top: calc(50% - 16.875rem - 1.875rem);
                 width: pxToRem(10);
-                height: pxToRem(444);
+                height: pxToRem(570);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
             }
             
@@ -129,33 +100,15 @@
                 top: calc(50% - 16.938rem - 1.875rem);
                 width: pxToRem(10);
                 height: pxToRem(542);
-                box-shadow: 0px 0px pxToRem(40) pxToRem(60) $color-text-divider;
+                box-shadow: 0 0 pxToRem(40) pxToRem(60) $color-text-divider;
             }
         }
     }
 
-    &__images {
-        
+    &__content {
         display: flex;
         flex-wrap: nowrap;
         overflow: auto;
-        flex: auto;
-        
-        &::-webkit-scrollbar {
-            height: pxToRem(17);
-        }
-
-        &::-webkit-scrollbar-thumb {
-            border-radius: pxToRem(10);
-            background-color: rgb(225, 225, 225);
-            -webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.5); 
-        }
-
-        &::-webkit-scrollbar-track-piece {
-            border-radius: pxToRem(10);
-            background: $color-info-main;
-            -webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.3);
-        }
 
         @include mobile {
             padding: 0 pxToRem(74);
@@ -193,29 +146,5 @@
             width: pxToRem(319);
             height: pxToRem(622);
         }
-    }
-
-    &__dotters {
-        display: flex;
-        justify-content: center;
-        gap: pxToRem(14);
-    }
-
-    &__border {
-        padding: pxToRem(2);
-        
-        &:hover {
-            padding: pxToRem(2);
-            outline: pxToRem(1) solid $color-info-main;
-            border-radius: 50%;
-        }
-    }
-
-    &__dotter {
-        display: block;
-        width: pxToRem(16);
-        height: pxToRem(16);
-        border-radius: 50%;
-        background: $color-info-main;
     }
 }
