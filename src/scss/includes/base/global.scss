@@ -328,6 +328,23 @@ button, input, label, select {
         width: pxToRem(24);
         height: pxToRem(24);
     }
+    
+.scrollbar {
+	
+	&::-webkit-scrollbar {
+		height: pxToRem(17);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: pxToRem(10);
+		background-color: rgb(225, 225, 225);
+		-webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.5); 
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		border-radius: pxToRem(10);
+		background: $color-info-main;
+		-webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.3);
 
 .header-position {
     position: absolute;
@@ -345,6 +362,25 @@ button, input, label, select {
     @include desktop {
         top: pxToRem(28);
     }
+}
+
+.scrollbar-alt {
+	
+	&::-webkit-scrollbar {
+		height: pxToRem(20);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: pxToRem(10);
+		background-color: rgb(167, 164, 219);
+		-webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.5); 
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		border-radius: pxToRem(10);
+		background: rgb(255, 255, 255);
+		-webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.3);
+	}
 }
 
 //=====Animation==========
@@ -513,5 +549,6 @@ button, input, label, select {
 		100% {
 			top: pxToRem(20);
 		}
+
 	}
 }
