@@ -22,7 +22,7 @@
         @include mobile {
             max-width: pxToRem(300);
 
-            :nth-child(3), :nth-child(4) {
+            :nth-child(2), :nth-child(3) {
                 display: none;
             }
         }
@@ -30,7 +30,7 @@
         @include tablet {
             max-width: pxToRem(450);
 
-            :nth-child(2), :nth-child(4) {
+            :nth-child(1), :nth-child(3) {
                 display: none;
             }
         }
@@ -38,7 +38,7 @@
         @include desktop {
             max-width: pxToRem(601);
 
-            :nth-child(2), :nth-child(3) {
+            :nth-child(1), :nth-child(2) {
                 display: none;
             }
         }
