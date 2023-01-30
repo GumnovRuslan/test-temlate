@@ -328,7 +328,8 @@ button, input, label, select {
         width: pxToRem(24);
         height: pxToRem(24);
     }
-    
+}
+
 .scrollbar {
 	
 	&::-webkit-scrollbar {
@@ -345,6 +346,8 @@ button, input, label, select {
 		border-radius: pxToRem(10);
 		background: $color-info-main;
 		-webkit-box-shadow: inset 0 0 pxToRem(6) rgba(0,0,0,0.3);
+	}
+}
 
 .header-position {
     position: absolute;
