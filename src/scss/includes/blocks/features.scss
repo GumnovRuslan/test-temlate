@@ -176,12 +176,12 @@
         box-shadow: pxToRem(40) pxToRem(40) pxToRem(100) #18303F80;
 
         @include mobile {
-            max-width: pxToRem(214);
+            width: pxToRem(214);
             height: pxToRem(468);
         }
         
         @include tablet {
-            max-width: pxToRem(214);
+            width: pxToRem(214);
             height: pxToRem(468);
         }
         
