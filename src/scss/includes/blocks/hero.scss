@@ -76,14 +76,17 @@
 
         @include mobile {
             max-width: pxToRem(267);
+            max-height: pxToRem(511);
         }
         
         @include tablet {
             max-width: pxToRem(217);
+            max-height: pxToRem(415);
         }
         
         @include desktop {
             max-width: pxToRem(370);
+            max-height: pxToRem(707);
         }
     }
 }
