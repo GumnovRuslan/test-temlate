@@ -92,6 +92,7 @@
 
         @include tablet {
             max-width: pxToRem(213);
+            overflow: hidden;
         }
 
         @include desktop {
@@ -99,11 +100,22 @@
         }
     }
 
+    &__cart-preview {
+        height: pxToRem(228);
+        position: relative;
+    }
+
     &__cart-image {
         border-top-left-radius: pxToRem(10);
         border-top-right-radius: pxToRem(10);
         max-width: 100%;
-        height: pxToRem(228);
+
+        @include tablet {
+            position: absolute;
+            left: calc(50% - 185px);
+            top: 0;
+            min-width: pxToRem(370);
+        }
     }
 
     &__cart-info {

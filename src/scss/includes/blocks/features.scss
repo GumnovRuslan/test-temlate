@@ -4,7 +4,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url("../../../img/Background\ Image.png");
+        background-image: url("../../../img/Background\ Image.webp");
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: cover;
@@ -177,12 +177,12 @@
 
         @include mobile {
             width: pxToRem(214);
-            height: pxToRem(468);
+            height: pxToRem(465);
         }
         
         @include tablet {
             width: pxToRem(214);
-            height: pxToRem(468);
+            height: pxToRem(465);
         }
         
         @include desktop {
