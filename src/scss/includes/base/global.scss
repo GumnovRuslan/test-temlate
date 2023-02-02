@@ -393,52 +393,39 @@ button, input, label, select {
 
 	@keyframes logo {
 		0% {
-			top: pxToRem(-100);
+			transform: translateY(-100px);
 		}
 
 		100% {
-
-			@include mobile {
-				top: calc(50% - 1.875rem);
-			}
-
-			@include tablet {
-				top: calc(50% - 2.813rem);
-			}
-
-			@include desktop {
-				top: calc(50% - 2.813rem);
-			}
+			transform: translateY(0);
 		}
 	}
 }
 
 .info__contacts, .download__section {
-	position: relative;
 	animation: info 2s ease 0s 1 normal none;
 
 	@keyframes info {
 		0% {
-			left: -100vw;
+			transform: translateX(-100vw);
 		}
 
 		100% {
-			left: 0;
+			transform: translateX(0);
 		}
 	}
 }
 
 .info__networks {
-	position: relative;
 	animation: networks 2s ease 0s 1 normal none;
 
 	@keyframes networks {
 		0% {
-			right: -100vw;
+			transform: translateX(100vw);
 		}
 
 		100% {
-			right: 0;
+			transform: translateX(0);
 		}
 	}
 }
@@ -458,35 +445,29 @@ button, input, label, select {
 }
 
 .card__border, .improvements__smartphone-image {
-	position: relative;
 	animation: hero-card 2s ease 0s 1 normal none;
 
 	@keyframes hero-card {
 		0% {
-			right: 100vw;
-			bottom: 50vh;
+			transform: translate(-100vw, -50vh);
 		}
 
 		100% {
-			right: 0;
-			bottom: 0;
+			transform: translate(0);
 		}
 	}
 }
 
 .hero__phone {
-	position: relative;
 	animation: hero-phone 2s ease 0s 1 normal none;
 
 	@keyframes hero-phone {
 		0% {
-			left: 100vw;
-			bottom: 50vh;
+			transform: translate(100vw, -50vh);
 		}
 
 		100% {
-			left: 0;
-			bottom: 0;
+			transform: translate(0);
 		}
 	}
 }
@@ -494,63 +475,59 @@ button, input, label, select {
 .improvements__card {
 
 	&:nth-child(1) {
-		position: relative;
 		animation: about-card-1 2s ease 0s 1 normal none;
 		@keyframes about-card-1 {
 			0% {
-				left: 100vw;
+				transform: translateX(100vw);
 			}
 	
 			100% {
-				left: 0;
+				transform: translate(0);
 			}
 		}
 	}
 
 	&:nth-child(2) {
-		position: relative;
 		animation: about-card-2 2.5s ease 0s 1 normal none;
 		@keyframes about-card-2 {
 			0% {
-				left: 100vw;
+				transform: translateX(100vw);
 			}
-
+	
 			100% {
-				left: 0;
+				transform: translate(0);
 			}
 		}
 	}
 
 	&:nth-child(3) {
-		position: relative;
 		animation: about-card-3 3s ease 0s 1 normal none;
 		@keyframes about-card-3 {
 			0% {
-				left: 100vw;
+				transform: translateX(100vw);
 			}
-
+	
 			100% {
-				left: 0;
+				transform: translate(0);
 			}
 		}
 	}
 }
 
 .content__interface-image {
-	position: relative;
 	animation: phone 3s ease-in-out 0s infinite normal none;
 
 	@keyframes phone {
 		0% {
-			top: pxToRem(20);
+			transform: translateY(20px);
 		}
 
 		50% {
-			top: pxToRem(-20);
+			transform: translateY(-20px);
 		}
 
 		100% {
-			top: pxToRem(20);
+			transform: translateY(20px);
 		}
 
 	}
