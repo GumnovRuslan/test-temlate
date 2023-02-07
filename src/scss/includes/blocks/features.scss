@@ -352,3 +352,9 @@
         }
     }
 }
+
+body[dir="rtl"] {
+    .browser, .vector {
+        text-align: left;
+    }
+}

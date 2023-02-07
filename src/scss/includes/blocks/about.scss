@@ -93,12 +93,12 @@
         transform: rotateX(10deg);
 
         @include mobile {
-            left: 0;
+            left: calc(50% - 130px);
             bottom: pxToRem(-35);
         }
 
         @include tablet {
-            left: 0;
+            left: calc(50% - 130px);
             bottom: pxToRem(-17);
         }
 

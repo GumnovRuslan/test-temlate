@@ -402,87 +402,17 @@ button, input, label, select {
 	}
 }
 
-.info__contacts, .download__section {
-	animation: info 2s ease 0s 1 normal none;
-
-	@keyframes info {
-		0% {
-			transform: translateX(-100vw);
-		}
-
-		100% {
-			transform: translateX(0);
-		}
-	}
-}
-
-.info__networks {
-	animation: networks 2s ease 0s 1 normal none;
-
-	@keyframes networks {
-		0% {
-			transform: translateX(100vw);
-		}
-
-		100% {
-			transform: translateX(0);
-		}
-	}
-}
-
-.menu__navigation, button, .download__image, .footer__contacts {
-	animation: navigation 3s ease 0s 1 normal none;
-
-	@keyframes navigation {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-}
-
-.card__border, .improvements__smartphone-image {
-	animation: hero-card 2s ease 0s 1 normal none;
-
-	@keyframes hero-card {
-		0% {
-			transform: translate(-100vw, -50vh);
-		}
-
-		100% {
-			transform: translate(0);
-		}
-	}
-}
-
-.hero__phone {
-	animation: hero-phone 2s ease 0s 1 normal none;
-
-	@keyframes hero-phone {
-		0% {
-			transform: translate(100vw, -50vh);
-		}
-
-		100% {
-			transform: translate(0);
-		}
-	}
-}
-
 .improvements__card {
 
 	&:nth-child(1) {
 		animation: about-card-1 2s ease 0s 1 normal none;
 		@keyframes about-card-1 {
 			0% {
-				transform: translateX(100vw);
+				opacity: 0;
 			}
 	
 			100% {
-				transform: translate(0);
+				opacity: 1;
 			}
 		}
 	}
@@ -491,11 +421,11 @@ button, input, label, select {
 		animation: about-card-2 2.5s ease 0s 1 normal none;
 		@keyframes about-card-2 {
 			0% {
-				transform: translateX(100vw);
+				opacity: 0;
 			}
 	
 			100% {
-				transform: translate(0);
+				opacity: 1;
 			}
 		}
 	}
@@ -504,17 +434,17 @@ button, input, label, select {
 		animation: about-card-3 3s ease 0s 1 normal none;
 		@keyframes about-card-3 {
 			0% {
-				transform: translateX(100vw);
+				opacity: 0;
 			}
 	
 			100% {
-				transform: translate(0);
+				opacity: 1;
 			}
 		}
 	}
 }
 
-.content__interface-image {
+.content__interface-image, .hero__image-phone {
 	animation: phone 3s ease-in-out 0s infinite normal none;
 
 	@keyframes phone {
@@ -529,6 +459,19 @@ button, input, label, select {
 		100% {
 			transform: translateY(20px);
 		}
+	}
+}
 
+.card__content {
+	animation: hero-card 2s ease-in-out 0s 1 normal none;
+
+	@keyframes hero-card {
+		0% {
+			transform: translateX(40px);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
 	}
 }

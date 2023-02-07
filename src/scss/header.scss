@@ -394,3 +394,19 @@
     width: 100vw;
     overflow-y: scroll;
 }
+
+body[dir="rtl"] {
+    .burger__menu {
+        left: auto;
+        right: -100vh;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: pxToRem(10);
+        border-bottom-left-radius: pxToRem(10);
+    }
+
+    #burger-checkbox:checked ~ .no-scroll .burger__menu {
+        left: auto;
+        right: 0;
+    }
+}

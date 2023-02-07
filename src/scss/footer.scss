@@ -1,549 +1,621 @@
-
 .footer {
+  &__wrapper {
+    position: relative;
 
-      &__wrapper {
-            position: relative;
+    @include mobile {
+      padding-top: pxToRem(150);
+    }
 
-            @include mobile {
-                  padding-top: pxToRem(150);
-            }
-            
-            @include tablet {
-                  padding-top: pxToRem(75);
-            }
+    @include tablet {
+      padding-top: pxToRem(75);
+    }
 
-            @include desktop {
-                  padding-top: pxToRem(128);
-            }
-      }
+    @include desktop {
+      padding-top: pxToRem(128);
+    }
+  }
 
-      &__background {
-            background: $color-grey-900;
+  &__background {
+    background: $color-grey-900;
 
-            @include mobile {
-                  padding-top: pxToRem(221);
-            }
+    @include mobile {
+      padding-top: pxToRem(221);
+    }
 
-            @include tablet {
-                  padding-top: pxToRem(135);
-            }
+    @include tablet {
+      padding-top: pxToRem(135);
+    }
 
-            @include desktop {
-                  padding-top: pxToRem(235);
-            }
-      }
+    @include desktop {
+      padding-top: pxToRem(235);
+    }
+  }
 
-	&__contacts {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-	}
+  &__contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-      &__info-quick-link {
+  &__info-quick-link {
+    @include tablet {
+      flex: auto;
+    }
 
-            @include tablet {
-                  flex: auto;
-            }
-
-            @include desktop {
-                  flex: auto;
-            }
-      }
+    @include desktop {
+      flex: auto;
+    }
+  }
 }
 
 .contacts {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: $shadows-block;
+    background: $color-secondary-main;
 
-      &__container {
-            display: flex;
-            flex-wrap: wrap;
-            box-shadow: $shadows-block;
-            background: $color-secondary-main;
+    :hover .contacts__btn {
+      opacity: 0.6;
+    }
 
-            :hover .contacts__btn {
-                  opacity: 0.6;
-            }
+    :hover .contacts__item-text {
+      opacity: 0.6;
+    }
 
-            :hover .contacts__item-text {
-                  opacity: 0.6;
-            }
+    @include mobile {
+      flex-direction: column;
+      gap: pxToRem(10);
+      padding: pxToRem(10);
+      border-radius: pxToRem(10);
+    }
 
-            @include mobile {
-                  flex-direction: column;
-                  gap: pxToRem(10);
-                  padding: pxToRem(10);
-                  border-radius: pxToRem(10);
-            }
+    @include tablet {
+      row-gap: pxToRem(15);
+      padding: pxToRem(21.5) pxToRem(17.5);
+      border-radius: pxToRem(15);
+    }
 
-            @include tablet {
-                  row-gap: pxToRem(15);
-                  padding: pxToRem(21.5) pxToRem(17.5);
-                  border-radius: pxToRem(15);
-            }
+    @include desktop {
+      row-gap: pxToRem(15);
+      padding: pxToRem(56) pxToRem(50);
+      border-radius: pxToRem(30);
+    }
+  }
 
-            @include desktop {
-                  row-gap: pxToRem(15);
-                  padding: pxToRem(56) pxToRem(50);
-                  border-radius: pxToRem(30);
-            }
-	}
+  &__form {
+    display: flex;
+    align-items: center;
 
-	&__form {
-            display: flex;
-            align-items: center;
+    @include mobile {
+      position: relative;
+      flex-direction: column;
+      gap: pxToRem(20);
+      padding-top: pxToRem(20);
 
-            @include mobile {
-                  position: relative;
-                  flex-direction: column;
-                  gap: pxToRem(20);
-                  padding-top: pxToRem(20);
-
-                  &:not(:last-child) {
-                        ::after {
-                              content: "";
-                              position: absolute;
-                              bottom: 0;
-                              left: calc(50% - 58.5px);
-                              width: pxToRem(117);
-                              height: pxToRem(4);
-                              background: $color-grey-900;
-                        }
-                  }
-            }
-
-            @include tablet {
-                  width: 50%;
-                  padding: pxToRem(23) 0;
-                  gap: pxToRem(17);
-
-                  &:nth-child(even) {
-                        padding-left: pxToRem(27);
-                        border-left: pxToRem(3) solid $color-text-primary;
-                  }
-            }
-
-            @include desktop {
-                  width: 50%;
-                  padding: pxToRem(8.5) 0;
-                  gap: pxToRem(17);
-
-                  &:nth-child(even) {
-                        padding-left: pxToRem(46);
-                        border-left: pxToRem(4) solid $color-text-primary;
-                  }
-            }
-	}
-
-	&__btn {
-            border-radius: 50%;
-            background: $color-info-main;
-
-            @include mobile {
-                  padding: pxToRem(15);
-            }
-
-            @include tablet {
-                  padding: pxToRem(18);
-            }
-
-            @include desktop {
-                  padding: pxToRem(30);
-            }
-	}
-
-      &__btn-favicon {
-
-            @include mobile {
-                  width: pxToRem(20);
-                  height: pxToRem(20);
-            }
-
-            @include tablet {
-                  width: pxToRem(24);
-                  height: pxToRem(24);
-            }
-
-            @include desktop {
-                  width: pxToRem(40);
-                  height: pxToRem(40);
-            }
+      &:not(:last-child) {
+        ::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: calc(50% - 58.5px);
+          width: pxToRem(117);
+          height: pxToRem(4);
+          background: $color-grey-900;
+        }
       }
+    }
 
-      &__item {
+    @include tablet {
+      width: 50%;
+      padding: pxToRem(23) 0;
+      gap: pxToRem(17);
 
-            @include mobile {
-                  margin-bottom: pxToRem(20);
-            }
-
-            @include desktop {
-                  padding-top: pxToRem(15);
-            }
+      &:nth-child(even) {
+        padding-left: pxToRem(27);
+        border-left: pxToRem(3) solid $color-text-primary;
       }
+    }
 
-      &__item-mail {
+    @include desktop {
+      width: 50%;
+      padding: pxToRem(8.5) 0;
+      gap: pxToRem(17);
 
-            @include mobile {
-                  :nth-child(2) {
-                        display: none;
-                  }
-            }
-      
-            @include tablet {
-                  :nth-child(1) {
-                        display: none;
-                  }
-            }
-      
-            @include desktop {
-                  :nth-child(1) {
-                        display: none;
-                  }
-            }
+      &:nth-child(even) {
+        padding-left: pxToRem(46);
+        border-left: pxToRem(4) solid $color-text-primary;
       }
+    }
+  }
 
-	&__item-text {
-            word-wrap: break-word;
-            color: $color-grey-900;
-            text-align: center;
+  &__btn {
+    border-radius: 50%;
+    background: $color-info-main;
 
-            @include mobile {
-                  text-transform: uppercase;
-                  font-weight: 600;
-                  font-size: pxToRem(20);
-                  line-height: pxToRem(30);
-            }
-      
-            @include tablet {
-                  line-height: pxToRem(24);
-            }
-      
-            @include desktop {
-                  font-weight: 600;
-                  font-size: pxToRem(25);
-                  line-height: pxToRem(38);
-            }
-	}
+    @include mobile {
+      padding: pxToRem(15);
+    }
+
+    @include tablet {
+      padding: pxToRem(18);
+    }
+
+    @include desktop {
+      padding: pxToRem(30);
+    }
+  }
+
+  &__btn-favicon {
+    @include mobile {
+      width: pxToRem(20);
+      height: pxToRem(20);
+    }
+
+    @include tablet {
+      width: pxToRem(24);
+      height: pxToRem(24);
+    }
+
+    @include desktop {
+      width: pxToRem(40);
+      height: pxToRem(40);
+    }
+  }
+
+  &__item {
+    @include mobile {
+      margin-bottom: pxToRem(20);
+    }
+
+    @include desktop {
+      padding-top: pxToRem(15);
+    }
+  }
+
+  &__item-mail {
+    @include mobile {
+      :nth-child(2) {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      :nth-child(1) {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      :nth-child(1) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-text {
+    word-wrap: break-word;
+    color: $color-grey-900;
+    text-align: center;
+
+    @include mobile {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: pxToRem(20);
+      line-height: pxToRem(30);
+    }
+
+    @include tablet {
+      line-height: pxToRem(24);
+    }
+
+    @include desktop {
+      font-weight: 600;
+      font-size: pxToRem(25);
+      line-height: pxToRem(38);
+    }
+  }
 }
 
 .info {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
 
-      &__container {
-            display: flex;
-            flex-wrap: wrap;
+    @include mobile {
+      gap: pxToRem(60);
+      max-width: pxToRem(343);
+      margin: 0 auto;
+      margin-bottom: pxToRem(60);
+    }
 
-            @include mobile {
-                  gap: pxToRem(60);
-                  max-width: pxToRem(343);
-                  margin: 0 auto;
-                  margin-bottom: pxToRem(60);
-            }
+    @include tablet {
+      gap: pxToRem(24);
+      margin-bottom: pxToRem(56);
+    }
 
-            @include tablet {
-                  gap: pxToRem(24);
-                  margin-bottom: pxToRem(56);
-            }
+    @include desktop {
+      gap: pxToRem(66);
+      margin-bottom: pxToRem(64);
+    }
+  }
 
-            @include desktop {
-                  gap: pxToRem(66);
-                  margin-bottom: pxToRem(64);
-            }
+  &__logo-container {
+    @include tablet {
+      max-width: pxToRem(213);
+    }
+
+    @include desktop {
+      max-width: pxToRem(334);
+    }
+  }
+
+  &__title-logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: pxToRem(31.25);
+    line-height: pxToRem(47);
+    color: $color-text-divider;
+
+    @include mobile {
+      margin-bottom: pxToRem(1);
+    }
+
+    @include tablet {
+      margin-bottom: pxToRem(7);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(1);
+    }
+  }
+
+  &__quick-link-container {
+    @include tablet {
+      padding-top: pxToRem(11);
+    }
+  }
+
+  &__news-letter-container {
+    @include tablet {
+      padding-top: pxToRem(11);
+      max-width: pxToRem(213);
+    }
+
+    @include desktop {
+      width: pxToRem(370);
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-text-divider;
+
+    @include mobile {
+      margin-bottom: pxToRem(11);
+      font-size: pxToRem(25);
+      line-height: pxToRem(38);
+    }
+
+    @include tablet {
+      margin-bottom: pxToRem(13);
+      font-size: pxToRem(20);
+      line-height: pxToRem(30);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(11);
+      font-size: pxToRem(25);
+      line-height: pxToRem(38);
+    }
+  }
+
+  &__subtitle-logo {
+    @include mobile {
+      max-width: pxToRem(330);
+      margin-bottom: pxToRem(38);
+    }
+
+    @include tablet {
+      margin-bottom: pxToRem(30);
+
+      span {
+        display: none;
       }
+    }
 
-      &__logo-container {
+    @include desktop {
+      margin-bottom: pxToRem(38);
+    }
+  }
 
-            @include tablet {
-                  max-width: pxToRem(213);
-            }
+  &__subtitle-news {
+    @include mobile {
+      margin-bottom: pxToRem(33);
+    }
 
-            @include desktop {
-                  max-width: pxToRem(334);
-            }
+    @include tablet {
+      margin-bottom: pxToRem(30);
+    }
+
+    @include desktop {
+      max-width: pxToRem(350);
+      margin-bottom: pxToRem(33);
+    }
+  }
+
+  &__network {
+    height: pxToRem(24);
+    display: flex;
+    align-items: center;
+  }
+
+  &__network-link {
+      padding: pxToRem(5) 0;
+    &:hover .info__network-image--color {
+      fill: $color-info-main;
+    }
+
+    &:not(:last-child) {
+      border-right: pxToRem(1) solid $color-secondary-main;
+    }
+
+    @include mobile {
+      padding-right: pxToRem(29);
+
+      &:not(:first-child) {
+        padding-left: pxToRem(30);
       }
+    }
 
-      &__title-logo {
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: pxToRem(31.25);
-            line-height: pxToRem(47);
-            color: $color-text-divider;
+    @include tablet {
+      padding-right: pxToRem(19);
 
-            @include mobile {
-                  margin-bottom: pxToRem(1);
-            }
-
-            @include tablet {
-                  margin-bottom: pxToRem(7);
-            }
-
-            @include desktop {
-                  margin-bottom: pxToRem(1);
-            }
+      &:not(:first-child) {
+        padding-left: pxToRem(19);
       }
+    }
 
-      &__quick-link-container {
+    @include desktop {
+      padding-right: pxToRem(29);
 
-            @include tablet {
-                  padding-top: pxToRem(11);
-            }
+      &:not(:first-child) {
+        padding-left: pxToRem(30);
       }
+    }
+  }
 
-      &__news-letter-container {
+  &__network-image {
+    width: pxToRem(24);
+    height: pxToRem(24);
+  }
 
-            @include tablet {
-                  padding-top: pxToRem(11);
-                  max-width: pxToRem(213);
-            }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: pxToRem(12);
+    color: $color-text-divider;
+  }
 
-            @include desktop {
-                  width: pxToRem(370);
-            }
-      }
+  &__list-item {
+    line-height: pxToRem(24);
+  }
 
-      &__title {
-            text-transform: uppercase;
-            font-weight: 600;
-            color: $color-text-divider;
+  &__search {
+    position: relative;
+  }
 
-            @include mobile {
-                  margin-bottom: pxToRem(11);
-                  font-size: pxToRem(25);
-                  line-height: pxToRem(38);
-            }
+  &__search-line {
+    font-family: JosefinSans;
+    width: 100%;
+    height: pxToRem(50);
+    border-radius: pxToRem(4);
+    border: 0;
+    color: $color-text-primary;
 
-            @include tablet {
-                  margin-bottom: pxToRem(13);
-                  font-size: pxToRem(20);
-                  line-height: pxToRem(30);
-            }
+    @include mobile {
+      padding: 0 pxToRem(62) 0 pxToRem(17);
+      font-weight: normal;
+      font-size: pxToRem(16);
+      line-height: pxToRem(24);
+    }
 
-            @include desktop {
-                  margin-bottom: pxToRem(11);
-                  font-size: pxToRem(25);
-                  line-height: pxToRem(38);
-            }
-      }
+    @include tablet {
+      padding: 0 pxToRem(62) 0 pxToRem(15);
+      font-weight: 300;
+      font-size: pxToRem(12.8);
+      line-height: pxToRem(13);
+    }
 
-      &__subtitle-logo {
+    @include desktop {
+      padding: 0 pxToRem(62) 0 pxToRem(17);
+      font-size: pxToRem(16);
+      font-weight: normal;
+      line-height: pxToRem(24);
+    }
+  }
 
-            @include mobile {
-                  max-width: pxToRem(330);
-                  margin-bottom: pxToRem(38);
-            }
+  &__search-btn {
+    position: absolute;
+    top: calc(50% - 1.438rem);
+    border-radius: pxToRem(4);
+    background: $color-primary-main;
 
-            @include tablet {
-                  margin-bottom: pxToRem(30);
+    @include mobile {
+      right: pxToRem(1.86);
+      padding: pxToRem(11) pxToRem(13);
+    }
 
-                  span {
-                        display: none;
-                  }
-            }
+    @include tablet {
+      right: pxToRem(3);
+      padding: pxToRem(11) pxToRem(14);
+    }
 
-            @include desktop {
-                  margin-bottom: pxToRem(38);
-            }
-      }
+    @include desktop {
+      right: pxToRem(3);
+      padding: pxToRem(11) pxToRem(14);
+    }
+  }
 
-      &__subtitle-news {
+  &__search-btn-favicon {
+    @include mobile {
+      width: pxToRem(22.31);
+      height: pxToRem(24);
+    }
 
-            @include mobile {
-                  margin-bottom: pxToRem(33);
-            }
+    @include tablet {
+      width: pxToRem(24);
+      height: pxToRem(24);
+    }
 
-            @include tablet {
-                  margin-bottom: pxToRem(30);
-            }
-
-            @include desktop {
-                  max-width: pxToRem(350);
-                  margin-bottom: pxToRem(33);
-            }
-      }
-
-      &__network {
-            height: pxToRem(24);
-            display: flex;
-      }
-
-      &__network-link {
-
-            &:hover .info__network-image--color{
-                  fill: $color-info-main;
-            }
-
-            &:not(:last-child) {
-                  border-right: pxToRem(1) solid $color-secondary-main;
-            }
-
-            @include mobile {
-                  padding-right: pxToRem(29);
-      
-                  &:not(:first-child) {
-                        padding-left: pxToRem(30);
-                  }
-            }
-
-            @include tablet {
-                  padding-right: pxToRem(19);
-      
-                  &:not(:first-child) {
-                        padding-left: pxToRem(19);
-                  }
-            }
-
-            @include desktop {
-                  padding-right: pxToRem(29);
-      
-                  &:not(:first-child) {
-                        padding-left: pxToRem(30);
-                  }
-            }
-      
-      }
-
-      &__network-image {
-            width: pxToRem(24);
-            height: pxToRem(24);
-      }
-
-      &__list {
-            display: flex;
-            flex-direction: column;
-            gap: pxToRem(12);
-            color: $color-text-divider;
-      }
-
-      &__list-item {
-            line-height: pxToRem(24);
-      }
-
-      &__search {
-            position: relative;
-      }
-
-      &__search-line {
-            font-family: JosefinSans;
-            width: 100%;
-            height: pxToRem(50);
-            border-radius: pxToRem(4);
-            border: 0;
-            color: $color-text-primary;
-
-            @include mobile {
-                  padding: 0 pxToRem(62) 0 pxToRem(17);
-                  font-weight: normal;
-                  font-size: pxToRem(16);
-                  line-height: pxToRem(24);
-            }
-
-            @include tablet {
-                  padding: 0 pxToRem(62) 0 pxToRem(15);
-                  font-weight: 300;
-                  font-size: pxToRem(12.8);
-                  line-height: pxToRem(13);
-            }
-
-            @include desktop {
-                  padding: 0 pxToRem(62) 0 pxToRem(17);
-                  font-size: pxToRem(16);
-                  font-weight: normal;
-                  line-height: pxToRem(24);
-            }
-      }
-
-      &__search-btn {
-            position: absolute;
-            top: calc(50% - 1.438rem);
-            border-radius: pxToRem(4);
-            background: $color-primary-main;
-
-            @include mobile {
-                  right: pxToRem(1.86);
-                  padding: pxToRem(11) pxToRem(13);
-            }
-
-            @include tablet {
-                  right: pxToRem(3);
-                  padding: pxToRem(11) pxToRem(14);
-            }
-
-            @include desktop {
-                  right: pxToRem(3);
-                  padding: pxToRem(11) pxToRem(14);
-            }
-      }
-
-      &__search-btn-favicon {
-
-            @include mobile {
-                  width: pxToRem(22.31);
-                  height: pxToRem(24);
-            }
-
-            @include tablet {
-                  width: pxToRem(24);
-                  height: pxToRem(24);
-            }
-
-            @include desktop {
-                  width: pxToRem(24);
-                  height: pxToRem(24);
-            }
-      }
+    @include desktop {
+      width: pxToRem(24);
+      height: pxToRem(24);
+    }
+  }
 }
 
 .political {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: pxToRem(18);
+    border-top: pxToRem(1) solid $color-text-divider;
 
-		&__container {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  gap: pxToRem(18);
-                  border-top: pxToRem(1) solid $color-text-divider;
+    @include mobile {
+      padding: pxToRem(20) pxToRem(0) pxToRem(27) pxToRem(0);
+    }
 
-                  @include mobile {
-                        padding: pxToRem(20) pxToRem(0) pxToRem(27) pxToRem(0);
-                  }
+    @include tablet {
+      padding: pxToRem(18) 0;
+    }
 
-                  @include tablet {
-                        padding: pxToRem(18) 0;
-                  }
+    @include desktop {
+      padding: pxToRem(18) 0;
+    }
+  }
 
-                  @include desktop {
-                        padding: pxToRem(18) 0;
-                  }
-		}
+  &__image {
+    @include mobile {
+      width: pxToRem(18);
+    }
 
-		&__image {
+    @include tablet {
+      width: pxToRem(24);
+    }
 
-                  @include mobile {
-                        width: pxToRem(18);
-                  }
+    @include desktop {
+      width: pxToRem(24);
+    }
+  }
 
-                  @include tablet {
-                        width: pxToRem(24);
-                  }
+  &__text {
+    text-align: center;
+    color: $color-text-divider;
 
-                  @include desktop {
-                        width: pxToRem(24);
-                  }
-		}
+    @include mobile {
+      font-weight: 300;
+      font-size: pxToRem(12.8);
+      line-height: pxToRem(13);
+    }
 
-		&__text {
-                  text-align: center;
-                  color: $color-text-divider;
+    @include tablet {
+      line-height: pxToRem(24);
+    }
 
-                  @include mobile {
-                        font-weight: 300;
-                        font-size: pxToRem(12.8);
-                        line-height: pxToRem(13);
-                  }
+    @include desktop {
+      line-height: pxToRem(24);
+    }
+  }
+}
 
-                  @include tablet {
-                        line-height: pxToRem(24);
-                  }
+body[dir="rtl"] {
+  .contacts {
+    &__form {
+      @include tablet {
+        &:nth-child(even) {
+          padding-right: pxToRem(27);
+          border-right: pxToRem(3) solid $color-text-primary;
+          border-left: none;
+          padding-left: 0;
+        }
+      }
 
-                  @include desktop {
-                        line-height: pxToRem(24);
-                  }
-		}
+      @include desktop {
+        &:nth-child(even) {
+          padding-right: pxToRem(46);
+          border-right: pxToRem(4) solid $color-text-primary;
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .info {
+    &__network-link {
+      &:not(:last-child) {
+        border-left: pxToRem(1) solid $color-secondary-main;
+        border-right: none;
+      }
+
+      @include mobile {
+        padding-right: 0;
+        padding-left: pxToRem(29);
+
+        &:not(:first-child) {
+          padding-right: pxToRem(30);
+        }
+      }
+
+      @include tablet {
+        padding-left: pxToRem(19);
+        padding-right: 0;
+
+        &:not(:first-child) {
+          padding-right: pxToRem(19);
+        }
+      }
+
+      @include desktop {
+        padding-left: pxToRem(29);
+        padding-right: 0;
+
+        &:not(:first-child) {
+          padding-right: pxToRem(30);
+        }
+      }
+    }
+
+    &__search-btn {
+      right: auto;
+      @include mobile {
+        left: pxToRem(1.86);
+      }
+
+      @include tablet {
+        left: pxToRem(3);
+      }
+
+      @include desktop {
+        left: pxToRem(3);
+      }
+    }
+
+    &__search-line {
+      @include mobile {
+        padding: 0 pxToRem(17) 0 pxToRem(62);
+      }
+
+      @include tablet {
+        padding: 0 pxToRem(15) 0 pxToRem(62);
+      }
+
+      @include desktop {
+        padding: 0 pxToRem(17) 0 pxToRem(62);
+      }
+    }
+  }
 }
