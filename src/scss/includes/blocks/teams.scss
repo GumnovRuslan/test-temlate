@@ -306,6 +306,8 @@
     }
 
     &__network-content {
+        display: flex;
+        align-items: center;
         height: pxToRem(24);
 
         &:hover .network__svg {
@@ -317,15 +319,15 @@
         }
 
         @include mobile {
-            padding: 0 pxToRem(30.5);
+            padding: pxToRem(15) pxToRem(30.5);
         }
 
         @include tablet {
-            padding: 0 pxToRem(13);
+            padding: pxToRem(15) pxToRem(13);
         }
 
         @include desktop {
-            padding: 0 pxToRem(30.5);
+            padding: pxToRem(20) pxToRem(30.5);
         }
     }
 

@@ -375,10 +375,7 @@
             }
 
             @include mobile {
-
-                  &:not(:last-child) {
-                        padding-right: pxToRem(29);
-                  }
+                  padding-right: pxToRem(29);
       
                   &:not(:first-child) {
                         padding-left: pxToRem(30);
@@ -386,10 +383,7 @@
             }
 
             @include tablet {
-                  
-                  &:not(:last-child) {
-                        padding-right: pxToRem(19);
-                  }
+                  padding-right: pxToRem(19);
       
                   &:not(:first-child) {
                         padding-left: pxToRem(19);
@@ -397,10 +391,7 @@
             }
 
             @include desktop {
-                  
-                  &:not(:last-child) {
-                        padding-right: pxToRem(29);
-                  }
+                  padding-right: pxToRem(29);
       
                   &:not(:first-child) {
                         padding-left: pxToRem(30);
