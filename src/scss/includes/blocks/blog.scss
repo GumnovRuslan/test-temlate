@@ -1,5 +1,9 @@
 .blog {
 
+    @include dark-theme {
+        background: $color-black-gray;
+    }
+
     &__header {
         
         @include mobile {
@@ -98,11 +102,20 @@
         @include desktop {
             max-width: pxToRem(370);
         }
+
+        @include dark-theme {
+            background: $color-light-gray;
+            box-shadow: $shadows-card-dark;
+        }
     }
 
     &__cart-preview {
         height: pxToRem(228);
         position: relative;
+
+        @include dark-theme {
+            background: $color-dark;
+        }
     }
 
     &__cart-image {
@@ -115,6 +128,10 @@
             left: calc(50% - 185px);
             top: 0;
             min-width: pxToRem(370);
+        }
+
+        @include dark-theme {
+            opacity: 0.8;
         }
     }
 
@@ -151,6 +168,10 @@
         @include desktop {
             margin-bottom: pxToRem(10);
         }
+
+        @include dark-theme {
+            color: $color-white;
+        }
     }
 
     &__info-description {
@@ -176,5 +197,17 @@
         font-weight: 600;
         line-height: pxToRem(26);
         color: $color-info-main;
+
+        &:hover {
+            color: $color-purple;
+            
+            @include dark-theme {
+                color: $color-primary-main;
+            }
+        }
+
+        @include dark-theme {
+            color: $color-purple;
+        }
     }
 }

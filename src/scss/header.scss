@@ -26,6 +26,7 @@
             display: none;
         }
     }
+}
 
 .info {
 
@@ -122,6 +123,11 @@
             padding: pxToRem(5);
             border-radius: pxToRem(5);
         }
+
+        @include dark-theme {
+            background: $color-black-gray;
+            box-shadow: $shadows-card-dark; 
+        }
     }
 
     &__burger {
@@ -168,6 +174,12 @@
             height: pxToRem(90);
             left: calc(50% - 6.22rem);
             top: calc(50% - 2.813rem);
+        }
+
+        @include dark-theme {
+            background: $color-purple;
+            outline: 3px solid $color-black-gray;
+            box-shadow: $shadows-card-dark;
         }
     }
 
@@ -225,7 +237,15 @@
             &:hover {
                 color: $color-primary-main;
                 text-decoration: underline;
+
+                @include dark-theme {
+                    color: $color-purple;
+                }
             }
+        }
+
+        @include dark-theme {
+            color: $color-white;
         }
     }
 
@@ -250,6 +270,10 @@
         &:hover {
             background: rgb(230, 230, 230);
             border-radius: pxToRem(3);
+
+            @include dark-theme {
+                background: $color-purple;
+            }
         }
         
         @include desktop {
@@ -263,6 +287,10 @@
         height: pxToRem(2);
         background: $color-grey-900;
 
+        @include dark-theme {
+            background: $color-white;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -271,6 +299,10 @@
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-grey-900;
+
+            @include dark-theme {
+                background: $color-white;
+            }
         }
 
         &::after {
@@ -281,6 +313,10 @@
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-grey-900;
+
+            @include dark-theme {
+                background: $color-white;
+            }
         }
     }
 
@@ -296,6 +332,11 @@
         background: $color-secondary-main;
         box-shadow: $shadows-block;
         transition: 0.5s all;
+
+        @include dark-theme {
+            background: $color-black-gray;
+            box-shadow: $shadows-block-white;
+        }
     }
 
     &__close {
@@ -322,6 +363,10 @@
         border-radius: 50%;
         background: $color-primary-main;
 
+        @include dark-theme {
+            background: $color-purple;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -329,6 +374,10 @@
             height: pxToRem(2);
             background: $color-secondary-main;
             transform: rotate(45deg);
+
+            @include dark-theme {
+                background: $color-dark;
+            }
         }
 
         &::after {
@@ -338,6 +387,10 @@
             height: pxToRem(2);
             background: $color-secondary-main;
             transform: rotate(-45deg);
+
+            @include dark-theme {
+                background: $color-dark;
+            }
         }
     }
 
@@ -369,13 +422,21 @@
         text-transform: uppercase;
         color: $color-grey-900;
 
+        @include dark-theme {
+            color: $color-white;
+        }
+
         &:hover {
             color: $color-primary-main;
             text-decoration: underline;
+
+            @include dark-theme {
+                color: $color-purple;
+            }
         }
     }
 }
-}
+
 
 #burger-checkbox {
     display: none;

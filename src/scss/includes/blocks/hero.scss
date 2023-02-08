@@ -1,12 +1,8 @@
 .hero {
     
-    &__background {
+    &__container {
         display: flex;
         justify-content: center;
-        background-image: url("../../../img/Background\ Image.webp");
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         @include mobile {
             padding: pxToRem(188) 0 pxToRem(131) 0;
@@ -19,7 +15,6 @@
         @include desktop {
             padding: pxToRem(216) 0 pxToRem(86) 0;
         }
-
     }
     
     &__content {
@@ -113,6 +108,9 @@
             margin-left: pxToRem(12);
             border: pxToRem(20) solid #7572FF;
         }
+        @include dark-theme {
+            border-color: $color-purple;
+        }
     }
 
     &__content {
@@ -138,6 +136,10 @@
             padding: pxToRem(41) pxToRem(30) pxToRem(40) pxToRem(30);
             right: pxToRem(72);
             margin-right: pxToRem(-40);
+        }
+
+        @include dark-theme {
+            background: $color-light-gray;
         }
     }
 
@@ -192,6 +194,10 @@
                 line-height: pxToRem(63);
                 font-weight: 700;
             }
+
+            @include dark-theme {
+                color: $color-purple;
+            }
 		}
 
     &__subtitle-text {
@@ -214,6 +220,9 @@
             &:nth-child(1) {
                 display: none;
             }
+        }
+        @include dark-theme {
+            color: $color-white-gray;
         }
     }
 
@@ -249,6 +258,10 @@
             @include desktop {
                 font-size: pxToRem(25);
                 line-height: pxToRem(38);
+            }
+            
+            @include dark-theme {
+                color: $color-white;
             }
         }
 

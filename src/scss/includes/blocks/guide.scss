@@ -1,5 +1,9 @@
 .guide {
 
+    @include dark-theme {
+        background: $color-black-gray;
+    }
+
     &__wrapper {
         position: relative;
 

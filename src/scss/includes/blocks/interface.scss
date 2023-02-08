@@ -1,5 +1,9 @@
 .interface {
 
+    @include dark-theme {
+        background: $color-black-gray;
+    }
+
     &__heading {
 
         @include mobile {
@@ -82,11 +86,19 @@
             position: absolute;
             background: $color-text-divider;
 
+            @include dark-theme {
+                background: $color-black-gray;
+                }
+
             @include mobile {
                 top: calc(50% - 13.875rem - 1.875rem);
                 width: 0;
                 height: pxToRem(480);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
+
+                @include dark-theme {
+                    box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-black-gray;
+                }
             }
             
             @include tablet {
@@ -94,6 +106,10 @@
                 width: pxToRem(10);
                 height: pxToRem(570);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
+
+                @include dark-theme {
+                    box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-black-gray;
+                }
             }
             
             @include desktop {
@@ -101,6 +117,10 @@
                 width: pxToRem(10);
                 height: pxToRem(542);
                 box-shadow: 0 0 pxToRem(40) pxToRem(60) $color-text-divider;
+
+                @include dark-theme {
+                    box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-black-gray;
+                }
             }
         }
     }

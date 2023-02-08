@@ -1,5 +1,9 @@
 .teams {
 
+    @include dark-theme {
+        background: $color-black-gray;
+    }
+
     &__heading {
 
         @include mobile {
@@ -90,6 +94,11 @@
             width: pxToRem(370);
             padding-top: pxToRem(29);
             padding-bottom: pxToRem(52);
+        }
+
+        @include dark-theme {
+            background: $color-light-gray;
+            box-shadow: $shadows-card-dark;
         }
     }
 
@@ -259,6 +268,10 @@
             font-weight: 700;
             line-height: pxToRem(47);
         }
+
+        @include dark-theme {
+            color: $color-white;
+        }
     }
 
     &__jop-position {
@@ -316,6 +329,10 @@
 
         &:not(:last-child) {
             border-right: pxToRem(1) solid $color-grey-900;
+
+            @include dark-theme {
+                border-right: pxToRem(1) solid $color-white;
+            }
         }
 
         @include mobile {
@@ -334,6 +351,12 @@
     &__network-favicon {
         width: pxToRem(24);
         height: pxToRem(24);
+    }
+}
+
+.network__svg {
+    @include dark-theme {
+        fill: $color-purple;
     }
 }
 

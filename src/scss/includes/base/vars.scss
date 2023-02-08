@@ -13,6 +13,14 @@ $color-text-primary: #6C6C72;
 $color-text-divider: #ffffff;
 $color-info-main: #5851EA;
 
+// Color for Dark-theme
+$color-white: #f4f4f4;
+$color-white-gray: #c8c8c8;
+$color-light-gray: #373737;
+$color-black-gray: #27292d;
+$color-dark: #111111;
+$color-purple: #a0a4d9;
+
 :root {
     --color-primary-main: #{$color-primary-main};
     --color-secondary-main: #{$color-secondary-main};
@@ -25,6 +33,10 @@ $color-info-main: #5851EA;
 //Shadows
 $shadows-card: 0px 1px 10px rgba(0, 0, 0, 0.1);
 $shadows-block: 0px 10px 100px rgba(0, 0, 0, 0.24);
+$shadows-card-white: 0px 1px 10px rgb(236, 236, 236);
+$shadows-block-white: 0px 10px 100px rgb(236, 236, 236);
+$shadows-card-dark: 0px 1px 10px rgb(0, 0, 0,);
+$shadows-block-dark: 0px 10px 100px rgba(0, 0, 0, 0.496);
 
 // Media queries
 

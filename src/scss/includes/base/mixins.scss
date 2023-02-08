@@ -32,6 +32,13 @@
 	}
 }
 */
+
+@mixin dark-theme() {
+	@media (prefers-color-scheme: dark) {
+	  @content;
+	}
+  }
+
 // Media queries
 @mixin media($min, $max) {
 	@media (min-width: $min) and (max-width: $max) {

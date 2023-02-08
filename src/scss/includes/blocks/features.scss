@@ -1,13 +1,9 @@
 .features {
 
-    &__background {
+    &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url("../../../img/Background\ Image.webp");
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     &__header {
@@ -62,6 +58,12 @@
             :nth-child(2) {
                 display: none;
             }
+        }
+    }
+
+    &__subtitle-text {
+        @include dark-theme {
+            color: $color-white-gray;
         }
     }
 }
@@ -148,11 +150,19 @@
             line-height: pxToRem(38);
             font-size: pxToRem(25);
         }
+
+        @include dark-theme {
+            color: $color-white;
+        }
     }
 
     &__section-subtitle {
         line-height: pxToRem(24);
         color: $color-text-divider;
+
+        @include dark-theme {
+            color: $color-white-gray;
+        }
     }
 
     &__interface {

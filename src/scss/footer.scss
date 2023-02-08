@@ -1,4 +1,9 @@
 .footer {
+
+  @include dark-theme {
+    background: $color-black-gray;
+  }
+
   &__wrapper {
     position: relative;
 
@@ -56,12 +61,13 @@
     box-shadow: $shadows-block;
     background: $color-secondary-main;
 
-    :hover .contacts__btn {
-      opacity: 0.6;
-    }
-
-    :hover .contacts__item-text {
-      opacity: 0.6;
+    :hover  {
+      .contacts__item-text {
+        text-shadow: 0 0 2px $color-purple;
+      }
+      .contacts__btn {
+        outline: pxToRem(3) solid $color-purple;
+      }
     }
 
     @include mobile {
@@ -81,6 +87,12 @@
       row-gap: pxToRem(15);
       padding: pxToRem(56) pxToRem(50);
       border-radius: pxToRem(30);
+    }
+
+    @include dark-theme {
+      background: $color-light-gray;
+      box-shadow: $shadows-block-dark;
+      border: pxToRem(2) solid $color-text-primary;
     }
   }
 
@@ -214,6 +226,10 @@
       font-weight: 600;
       font-size: pxToRem(25);
       line-height: pxToRem(38);
+    }
+
+    @include dark-theme {
+      color: $color-white;
     }
   }
 }

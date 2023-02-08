@@ -1,4 +1,7 @@
 .about {
+    @include dark-theme {
+        background: $color-black-gray;
+    }
 
     &__header {
 
@@ -41,6 +44,12 @@
             :nth-child(1), :nth-child(2) {
                 display: none;
             }
+        }
+    }
+
+    &__subtitle-text {
+        @include dark-theme {
+            color: $color-white-gray;
         }
     }
 }
@@ -106,9 +115,15 @@
             left: pxToRem(74);
             bottom: pxToRem(13);
         }
+
+        @include dark-theme {
+            box-shadow: $shadows-card-dark;
+            background: $color-light-gray;
+        }
     }
 
-    &__image-smartphone {
+    &__smartphone-image {
+        position: relative;
         
         @include mobile {
             max-width: pxToRem(238);
@@ -172,6 +187,11 @@
             max-width: pxToRem(570);
             padding: pxToRem(30) pxToRem(19) pxToRem(16) pxToRem(17);
         }
+
+        @include dark-theme {
+            box-shadow: $shadows-card-dark;
+            background: $color-light-gray;
+        }
     }
 
     &__progress {
@@ -216,6 +236,10 @@
         text-transform: uppercase;
         line-height: pxToRem(30);
         letter-spacing: pxToRem(0.6);
+
+        @include dark-theme {
+            color: $color-white;
+        }
     }
 
     &__description {
@@ -230,6 +254,10 @@
         
         @include desktop {
             display: none;
+        }
+
+        @include dark-theme {
+            color: $color-white-gray;
         }
     }
 
@@ -246,5 +274,9 @@
         @include desktop {
             display: block;
         }
+
+        @include dark-theme {
+		color: $color-white-gray;
+	}
     }
 }
