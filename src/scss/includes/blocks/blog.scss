@@ -73,6 +73,14 @@
             flex-direction: column;
             align-items: center;
             gap: pxToRem(40);
+
+            @include print {
+                flex-direction: row;
+                gap: pxToRem(20);
+                justify-content: space-between;
+                align-items: start;
+
+            }
         }
 
         @include tablet {
@@ -92,6 +100,10 @@
 
         @include mobile {
             max-width: pxToRem(343);
+
+            @include print {
+                max-width: pxToRem(200);
+            }
         }
 
         @include tablet {
@@ -113,8 +125,8 @@
         height: pxToRem(228);
         position: relative;
 
-        @include dark-theme {
-            background: $color-dark;
+        @include print {
+            height: auto;
         }
     }
 
@@ -157,6 +169,11 @@
         line-height: pxToRem(30);
         color: $color-grey-900;
 
+        @include print {
+            font-size: pxToRem(16);
+            line-height: pxToRem(20);
+        }
+
         @include mobile {
             margin-bottom: pxToRem(18);
         }
@@ -178,6 +195,10 @@
 
         @include mobile {
             margin-bottom: pxToRem(19.5);
+
+            @include print {
+                margin: 0;
+            }
         }
 
         @include tablet {
@@ -197,6 +218,10 @@
         font-weight: 600;
         line-height: pxToRem(26);
         color: $color-info-main;
+
+        @include print {
+            display: none;
+        }
 
         &:hover {
             color: $color-purple;

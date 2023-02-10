@@ -1,5 +1,9 @@
 .guide {
 
+    @include print {
+        display: none;
+    }
+
     @include dark-theme {
         background: $color-black-gray;
     }

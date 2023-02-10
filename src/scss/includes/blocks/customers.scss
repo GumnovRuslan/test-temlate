@@ -1,4 +1,8 @@
 .customers {
+    
+    @include print {
+        display: none;
+    }
 
     &__heading {
         text-align: center;

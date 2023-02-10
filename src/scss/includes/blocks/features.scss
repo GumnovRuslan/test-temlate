@@ -4,6 +4,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include print {
+            margin: pxToRem(200) 0;
+        }
     }
 
     &__header {
@@ -19,6 +23,12 @@
         @include desktop {
             margin-bottom: pxToRem(58);
             }
+    }
+
+    &__title-text {
+        @include print {
+            margin-bottom: pxToRem(30);
+        }
     }
 
     &__subtitle {
@@ -77,6 +87,13 @@
             flex-direction: column;
             align-items: center;
             gap: pxToRem(35);
+
+            @include print {
+                flex-direction: row;
+                gap: pxToRem(50);
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
         
         @include tablet {
@@ -99,6 +116,16 @@
     }
 
     &__section {
+
+        @include print {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: pxToRem(5);
+            border: pxToRem(1) solid $color-dark; 
+            height: pxToRem(150);
+
+        }
         
         @include mobile {
             text-align: center;
@@ -120,6 +147,10 @@
         max-width: pxToRem(50);
         height: pxToRem(50);
 
+        @include print {
+            display: none;
+        }
+
         @include mobile {
             margin: 0 auto;
             margin-bottom: pxToRem(30);
@@ -135,6 +166,10 @@
         color: $color-text-divider;
         margin-bottom: pxToRem(18);
         font-weight: 600;
+        
+        @include print {
+            color: $color-dark;
+        }
 
         @include mobile {
             letter-spacing: pxToRem(0.7);
@@ -160,12 +195,20 @@
         line-height: pxToRem(24);
         color: $color-text-divider;
 
+        @include print {
+            color: $color-dark;
+        }
+
         @include dark-theme {
             color: $color-white-gray;
         }
     }
 
     &__interface {
+
+        @include print {
+            display: none;
+        }
 
         @include mobile {
             padding-top: pxToRem(19);

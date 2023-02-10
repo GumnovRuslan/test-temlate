@@ -82,6 +82,10 @@
             max-width: pxToRem(343);
             padding-top: pxToRem(29);
             padding-bottom: pxToRem(53);
+
+            @include print {
+            padding-bottom: pxToRem(25);
+        }
         }
 
         @include tablet {
@@ -104,6 +108,10 @@
 
     &__photo {
         position: relative;
+
+        @include print {
+            display: none;
+        }
 
         @include mobile {
             margin-bottom: pxToRem(60);
@@ -232,6 +240,10 @@
         @include mobile {
             padding: 0 pxToRem(8);
             margin-bottom: pxToRem(29);
+
+            @include print {
+                margin: 0;
+            }
         }
 
         @include tablet {
@@ -253,6 +265,10 @@
             font-size: pxToRem(31.25);
             font-weight: 700;
             line-height: pxToRem(48);
+
+            @include print {
+                font-size: pxToRem(25);
+            }
         }
 
         @include tablet {
@@ -316,6 +332,10 @@
         justify-content: center;
         flex-wrap: wrap;
         row-gap: pxToRem(10);
+
+        @include print {
+            display: none;
+        }
     }
 
     &__network-content {

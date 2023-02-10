@@ -1,4 +1,9 @@
 .about {
+
+    @include print {
+        padding-bottom: pxToRem(50);
+    }
+
     @include dark-theme {
         background: $color-black-gray;
     }
@@ -24,6 +29,10 @@
 
         @include mobile {
             max-width: pxToRem(300);
+
+            @include print {
+                max-width: pxToRem(500);
+            }
 
             :nth-child(2), :nth-child(3) {
                 display: none;
@@ -81,6 +90,10 @@
 
     &__smartphone {
         position: relative;
+        
+        @include print {
+            display: none;
+        }
 
         @include tablet {
             align-self: center;
@@ -145,6 +158,10 @@
         display: flex;
         flex-direction: column;
 
+        @include print {
+            flex-direction: row;
+        }
+
         @include mobile {
             gap: pxToRem(20);
         }
@@ -166,6 +183,11 @@
         box-shadow: $shadows-card;
         background: $color-secondary-main;
         border-radius: pxToRem(10);
+
+        @include print {
+            display: flex;
+            flex-direction: column;
+        }
 
         @include mobile {
             column-gap: pxToRem(19);
@@ -196,6 +218,10 @@
 
     &__progress {
         grid-row: 1/3;
+
+        @include print {
+            display: none;
+        }
     }
 
     &__progress-container {
@@ -240,9 +266,17 @@
         @include dark-theme {
             color: $color-white;
         }
+
+        @include print {
+            text-align: center;
+        }
     }
 
     &__description {
+
+        @include print {
+            text-align: center;
+        }
         
         @include mobile {
             display: block;

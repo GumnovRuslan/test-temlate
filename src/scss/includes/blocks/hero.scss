@@ -6,6 +6,10 @@
 
         @include mobile {
             padding: pxToRem(188) 0 pxToRem(131) 0;
+
+            @include print {
+                padding: pxToRem(100) 0;
+            }
         }
 
         @include tablet {
@@ -56,6 +60,10 @@
     }
 
     &__phone {
+
+        @include print {
+            display: none;
+        }
 
         @include tablet {
             flex: auto;
@@ -117,6 +125,10 @@
         position: relative;
         background: $color-secondary-main;
 
+        @include print {
+            border: pxToRem(1) solid $color-dark;
+        }
+
         @include mobile {
             max-width: pxToRem(323);
             padding: pxToRem(30) pxToRem(18) pxToRem(20) pxToRem(18);
@@ -140,6 +152,7 @@
 
         @include dark-theme {
             background: $color-light-gray;
+            box-shadow: pxToRem(5) pxToRem(5) pxToRem(10) $color-dark;
         }
     }
 
@@ -226,6 +239,12 @@
         }
     }
 
+    &__footer-download {
+        @include print {
+            display: none;
+        }
+    }
+
     &__download-title {
 
         @include mobile {
@@ -284,16 +303,16 @@
 
 	&__network-image {
 
-            @include mobile {
-                max-width: pxToRem(108);
-            }
+        @include mobile {
+            max-width: pxToRem(108);
+        }
 
-            @include tablet {
-                max-width: pxToRem(149);
-            }
+        @include tablet {
+            max-width: pxToRem(149);
+        }
 
-            @include desktop {
-                max-width: pxToRem(151);
-            }
-		}
+        @include desktop {
+            max-width: pxToRem(151);
+        }
+	}
 }

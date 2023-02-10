@@ -159,6 +159,9 @@ button, input, label, select {
 	text-transform: uppercase;
 	color: $color-secondary-main;
 
+	@include print {
+		color: $color-dark;
+	}
 
 	@include mobile {
 		line-height: pxToRem(38);
@@ -206,6 +209,10 @@ button, input, label, select {
 	line-height: pxToRem(24);
 	color: $color-text-divider;
 
+	@include print {
+		color: $color-dark;
+	}
+
 	@include dark-theme {
 		color: $color-white-gray;
 	}
@@ -219,6 +226,10 @@ button, input, label, select {
 	background: $color-info-main;
 	color: $color-secondary-main;
 	cursor: pointer;
+
+	@include print {
+        display: none;
+    }
 
 	&:hover {
 		opacity: 0.8;
@@ -419,6 +430,10 @@ button, input, label, select {
 
     @include mobile {
         top: pxToRem(40);
+
+		@include print {
+            top: pxToRem(10);
+        }
     }
 
     @include tablet {
