@@ -94,9 +94,9 @@
                 }
 
             @include mobile {
-                top: calc(50% - 13.875rem - 1.875rem);
+                top: calc(50% - 280px);
                 width: 0;
-                height: pxToRem(480);
+                height: pxToRem(500);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
 
                 @include dark-theme {
@@ -105,9 +105,9 @@
             }
             
             @include tablet {
-                top: calc(50% - 16.875rem - 1.875rem);
+                top: calc(50% - 358px);
                 width: pxToRem(10);
-                height: pxToRem(570);
+                height: pxToRem(622);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
 
                 @include dark-theme {
@@ -116,13 +116,13 @@
             }
             
             @include desktop {
-                top: calc(50% - 16.938rem - 1.875rem);
+                top: calc(50% - 333px);
                 width: pxToRem(10);
-                height: pxToRem(542);
-                box-shadow: 0 0 pxToRem(40) pxToRem(60) $color-text-divider;
+                height: pxToRem(600);
+                box-shadow: 0 0 pxToRem(25) pxToRem(30) $color-text-divider;
 
                 @include dark-theme {
-                    box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-black-gray;
+                    box-shadow: 0 0 pxToRem(25) pxToRem(30) $color-black-gray;
                 }
             }
         }
@@ -135,37 +135,36 @@
 
         @include mobile {
             padding: 0 pxToRem(74);
+            padding-bottom: pxToRem(45);
             gap: pxToRem(40);
         }
         
         @include tablet {
             padding: 0 pxToRem(100);
             gap: pxToRem(50);
+            padding-bottom: pxToRem(64);
         }
         
         @include desktop {
             padding: 0 pxToRem(200);
             gap: pxToRem(200);
-            
+            padding-bottom: pxToRem(42);
         }
     }
 
     &__iPhoneX {
 
         @include mobile {
-            margin-bottom: pxToRem(45);
             min-width: pxToRem(227);
             height: pxToRem(444);
         }
         
         @include tablet {
-            margin-bottom: pxToRem(64);
             width: pxToRem(227);
             height: pxToRem(444);
         }
         
         @include desktop {
-            margin-bottom: pxToRem(42);
             width: pxToRem(319);
             height: pxToRem(622);
         }
