@@ -97,7 +97,7 @@
         @include desktop {
             width: pxToRem(370);
             padding-top: pxToRem(29);
-            padding-bottom: pxToRem(52);
+            padding-bottom: pxToRem(55);
         }
 
         @include dark-theme {
@@ -181,7 +181,6 @@
         --c: #5956E9;
         
         aspect-ratio: 1;
-        // position: relative;
 
         @include mobile {
             --w: 13.75rem;
@@ -308,7 +307,7 @@
         }
 
         @include desktop {
-            margin-bottom: pxToRem(14);
+            margin-bottom: pxToRem(12);
             font-size: pxToRem(20);
             font-weight: 600;
             line-height: pxToRem(30);
@@ -356,15 +355,15 @@
         }
 
         @include mobile {
-            padding: pxToRem(15) pxToRem(30.5);
+            padding: 0 pxToRem(30.5);
         }
 
         @include tablet {
-            padding: pxToRem(15) pxToRem(13);
+            padding: 0 pxToRem(13);
         }
 
         @include desktop {
-            padding: pxToRem(20) pxToRem(30.5);
+            padding: 0 pxToRem(30.5);
         }
     }
 

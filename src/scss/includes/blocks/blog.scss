@@ -4,6 +4,12 @@
         background: $color-black-gray;
     }
 
+    &__wrapper {
+        @include desktop {
+            padding: pxToRem(120) 0 pxToRem(118) 0;
+        }
+    }
+
     &__header {
         
         @include mobile {
@@ -15,7 +21,7 @@
         }
 
         @include desktop {
-            margin-bottom: pxToRem(59);
+            margin-bottom: pxToRem(57);
         }
     }
 

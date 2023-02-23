@@ -69,8 +69,16 @@
     &__networks-link {
         padding: pxToRem(10);
 
-        &:last-child {
-            padding-right: 0;
+        @include desktop {
+            &:last-child {
+                padding-right: pxToRem(7);
+            }
+        }
+
+        @include tablet {
+            &:last-child {
+                padding-right: 0;
+            }
         }
     }
 

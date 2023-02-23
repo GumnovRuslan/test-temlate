@@ -257,7 +257,7 @@
 
     @include desktop {
       gap: pxToRem(66);
-      margin-bottom: pxToRem(64);
+      margin-bottom: pxToRem(60);
     }
   }
 
@@ -347,7 +347,7 @@
     }
 
     @include desktop {
-      margin-bottom: pxToRem(38);
+      margin-bottom: pxToRem(43);
     }
   }
 
@@ -373,7 +373,6 @@
   }
 
   &__network-link {
-      padding: pxToRem(5) 0;
     &:hover .info__network-image--color {
       fill: $color-info-main;
     }

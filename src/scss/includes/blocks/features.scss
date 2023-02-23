@@ -10,6 +10,19 @@
         }
     }
 
+    &__wrapper {
+
+        @include mobile {
+        }
+        
+        @include tablet {
+        }
+        
+        @include desktop {
+            padding: 122px 0 114px 0;
+        }
+    }
+
     &__header {
 
         @include mobile {
@@ -22,7 +35,7 @@
         
         @include desktop {
             margin-bottom: pxToRem(58);
-            }
+        }
     }
 
     &__title-text {

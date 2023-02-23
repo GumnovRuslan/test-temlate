@@ -16,7 +16,7 @@
         }
 
         @include desktop {
-            margin-bottom: pxToRem(59);
+            margin-bottom: pxToRem(54);
         }
     }
 
@@ -76,7 +76,7 @@
             align-items: center;
             height: pxToRem(370);
             gap: pxToRem(31);
-            margin-bottom: pxToRem(50);
+            margin-bottom: pxToRem(52);
         }
     }
 
@@ -124,13 +124,12 @@
             position: absolute;
             width: pxToRem(770);
             height: pxToRem(358);
-            justify-content: center;
-            padding: pxToRem(41) pxToRem(20) pxToRem(42) pxToRem(20);
 
             &:nth-child(1) {
                 left: calc(50% - 385px);
                 top: calc(50% - 179px);
                 z-index: 3;
+                padding: pxToRem(41) pxToRem(20) pxToRem(42) pxToRem(20);
             }
 
             &:nth-child(2) {
@@ -138,6 +137,7 @@
                 top: calc(50% - 165px);
                 max-width: pxToRem(570);
                 height: pxToRem(330);
+                padding: pxToRem(41) pxToRem(38) pxToRem(42) pxToRem(37);
             }
 
             &:nth-child(3) {
@@ -145,6 +145,7 @@
                 top: calc(50% - 165px);
                 max-width: pxToRem(570);
                 height: pxToRem(330);
+                padding: pxToRem(41) pxToRem(38) pxToRem(42) pxToRem(37);
             }
         }
 
@@ -165,7 +166,7 @@
         }
 
         @include desktop {
-            margin-bottom: pxToRem(21);
+            margin-bottom: pxToRem(19);
         }
     }
 
@@ -258,7 +259,7 @@
         }
 
         @include desktop {
-            max-width: pxToRem(647);
+            max-width: pxToRem(640);
         }
 
         @include dark-theme {
@@ -329,12 +330,21 @@
                     @include desktop {
                         &:nth-child(1) {
                             animation: scroll-mid-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: inline;
+                            }
                         }
                         &:nth-child(2) {
                             animation: scroll-left-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                         &:nth-child(3) {
                             animation: scroll-right-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -363,12 +373,21 @@
                     @include desktop {
                         &:nth-child(1) {
                             animation: scroll-right-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                         &:nth-child(2) {
                             animation: scroll-mid-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: inline;
+                            }
                         }
                         &:nth-child(3) {
                             animation: scroll-left-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -397,12 +416,21 @@
                     @include desktop {
                         &:nth-child(1) {
                             animation: scroll-left-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                         &:nth-child(2) {
                             animation: scroll-right-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: none;
+                            }
                         }
                         &:nth-child(3) {
                             animation: scroll-mid-des .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-description-slider {
+                                display: inline;
+                            }
                         }
                     }
                 }
@@ -446,6 +474,7 @@
         top: calc(50% - 165px);
         max-width: pxToRem(570);
         height: pxToRem(330);
+        padding: pxToRem(41) pxToRem(38) pxToRem(42) pxToRem(37);
     }
 }
 
@@ -456,6 +485,7 @@
         min-width: pxToRem(770);
         height: pxToRem(357);
         z-index: 4;
+        padding: pxToRem(41) pxToRem(20) pxToRem(42) pxToRem(20);
     }
 }
 
@@ -466,5 +496,6 @@
         max-width: pxToRem(570);
         height: pxToRem(330);
         z-index: 2;
+        padding: pxToRem(41) pxToRem(38) pxToRem(42) pxToRem(37);
     }
 }
