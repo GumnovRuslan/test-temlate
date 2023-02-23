@@ -6,6 +6,10 @@
 
     &__wrapper {
 
+        @include mobile {
+            padding: pxToRem(60) 0 pxToRem(55) 0;
+        }
+
         @include tablet {
             padding: pxToRem(120) 0 pxToRem(117) 0;
         }
@@ -146,6 +150,10 @@
         border-top-right-radius: pxToRem(10);
         max-width: 100%;
 
+        @include mobile {
+            height: pxToRem(228);
+        }
+
         @include tablet {
             position: absolute;
             left: calc(50% - 185px);
@@ -161,7 +169,7 @@
     &__cart-info {
 
         @include mobile {
-            padding: pxToRem(30) pxToRem(18);
+            padding: pxToRem(30) pxToRem(10) pxToRem(30) pxToRem(18);
         }
 
         @include tablet {
@@ -187,6 +195,9 @@
 
         @include mobile {
             margin-bottom: pxToRem(18);
+            span {
+                display: none;
+            }
         }
 
         @include tablet {

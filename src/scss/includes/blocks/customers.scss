@@ -8,7 +8,7 @@
         text-align: center;
 
         @include mobile {
-            margin-bottom: pxToRem(29);
+            margin-bottom: pxToRem(20);
         }
 
         @include tablet {
@@ -48,10 +48,6 @@
                 display: none;
             }
         }
-    }
-
-    &__slider {
-
     }
 
     &__slider-container {
@@ -288,6 +284,10 @@
 }
 
 .slider-button {
+
+    @include mobile {
+        display: none;
+    }
 
     &__container {
         display: flex;
