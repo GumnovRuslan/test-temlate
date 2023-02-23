@@ -156,8 +156,37 @@
         }
     }
 
-    &__heading {
+	&__title {
+            color: $color-info-main;
+            text-transform: uppercase;
 
+            @include mobile {
+                margin-bottom: pxToRem(13);
+                font-size: pxToRem(25);
+                line-height: pxToRem(38);
+                font-weight: 600;
+            }
+
+            @include tablet {
+                margin-bottom: pxToRem(7);
+                font-size: pxToRem(31.25);
+                line-height: pxToRem(47);
+                font-weight: 700;
+            }
+
+            @include desktop {
+                margin-bottom: pxToRem(17);
+                font-size: pxToRem(48.83);
+                line-height: pxToRem(63);
+                font-weight: 700;
+            }
+
+            @include dark-theme {
+                color: $color-purple;
+            }
+		}
+
+    &__subtitle {
         @include mobile {
             margin-bottom: pxToRem(24);
         }
@@ -169,112 +198,48 @@
         @include desktop {
             margin-bottom: pxToRem(46);
         }
-    }
 
-    &__title {
-
-        @include mobile {
-            margin-bottom: pxToRem(13);
-        }
-
-        @include tablet {
-            margin-bottom: pxToRem(7);
-        }
-
-        @include desktop {
-            margin-bottom: pxToRem(17);
-        }
-    }
-
-	&__title-text {
-            color: $color-info-main;
-            text-transform: uppercase;
-
-            @include mobile {
-                font-size: pxToRem(25);
-                line-height: pxToRem(38);
-                font-weight: 600;
-            }
-
-            @include tablet {
-                font-size: pxToRem(31.25);
-                line-height: pxToRem(47);
-                font-weight: 700;
-            }
-
-            @include desktop {
-                font-size: pxToRem(48.83);
-                line-height: pxToRem(63);
-                font-weight: 700;
-            }
-
-            @include dark-theme {
-                color: $color-purple;
-            }
-		}
-
-    &__subtitle-text {
-        @include mobile {
-            
-            &:nth-child(2) {
-                display: none;
-            }
-        }
-        
-        @include tablet {
-            
-            &:nth-child(2) {
-                display: none;
-            }
-        }
-        
-        @include desktop {
-
-            &:nth-child(1) {
-                display: none;
-            }
-        }
         @include dark-theme {
             color: $color-white-gray;
         }
     }
 
-    &__footer-download {
-        @include print {
-            display: none;
-        }
-    }
-
-    &__download-title {
-
+    &__subtitle-alt {
         @include mobile {
-            margin-bottom: pxToRem(19);
+            display: none;
         }
         
         @include tablet {
-            margin-bottom: pxToRem(23);
+            display: none;
         }
         
         @include desktop {
-            margin-bottom: pxToRem(5);
+            display: inline;
         }
     }
 
-    &__download-title-text {
+    &__footer-download {
+        
+    }
+
+    &__title-download {
             text-transform: uppercase;
             font-weight: 600;
 
             @include mobile {
+                margin-bottom: pxToRem(19);
                 font-size: pxToRem(20);
                 line-height: pxToRem(30);
             }
             
             @include tablet {
+                margin-bottom: pxToRem(23);
                 font-size: pxToRem(20);
                 line-height: pxToRem(30);
             }
             
             @include desktop {
+                margin-bottom: pxToRem(5);
                 font-size: pxToRem(25);
                 line-height: pxToRem(38);
             }
@@ -282,9 +247,13 @@
             @include dark-theme {
                 color: $color-white;
             }
+
+            @include print {
+                display: none;
+            }
         }
 
-	&__download-network {
+	&__network {
             display: flex;
             flex-wrap: wrap;
 
@@ -298,6 +267,10 @@
 
             @include desktop {
                 gap: pxToRem(14);
+            }
+
+            @include print {
+                display: none;
             }
 		}
 
