@@ -5,6 +5,11 @@
     }
 
     &__wrapper {
+
+        @include tablet {
+            padding: pxToRem(120) 0 pxToRem(117) 0;
+        }
+
         @include desktop {
             padding: pxToRem(120) 0 pxToRem(118) 0;
         }
@@ -160,7 +165,7 @@
         }
 
         @include tablet {
-            padding: pxToRem(30) pxToRem(18);
+            padding: pxToRem(30) pxToRem(3) pxToRem(30) pxToRem(18);
         }
 
         @include desktop {

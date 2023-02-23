@@ -138,14 +138,14 @@
 
         @include tablet {
             max-width: pxToRem(356);
-            padding: pxToRem(15) pxToRem(18) pxToRem(14) pxToRem(18);
+            padding: pxToRem(15) pxToRem(0) pxToRem(14) pxToRem(18);
             right: pxToRem(35);
             margin-right: pxToRem(-18);
         }
 
         @include desktop {
             max-width: pxToRem(570);
-            padding: pxToRem(41) pxToRem(30) pxToRem(40) pxToRem(30);
+            padding: pxToRem(41) pxToRem(23) pxToRem(40) pxToRem(30);
             right: pxToRem(72);
             margin-right: pxToRem(-40);
         }
@@ -192,10 +192,12 @@
         }
         
         @include tablet {
+            width: pxToRem(320);
             margin-bottom: pxToRem(16);
         }
         
         @include desktop {
+            width: pxToRem(485);
             margin-bottom: pxToRem(46);
         }
 
@@ -218,10 +220,6 @@
         }
     }
 
-    &__footer-download {
-        
-    }
-
     &__title-download {
             text-transform: uppercase;
             font-weight: 600;
@@ -239,7 +237,7 @@
             }
             
             @include desktop {
-                margin-bottom: pxToRem(5);
+                margin-bottom: pxToRem(4);
                 font-size: pxToRem(25);
                 line-height: pxToRem(38);
             }

@@ -167,7 +167,7 @@
         }
     
         @include tablet {
-            gap: pxToRem(20);
+            gap: pxToRem(18);
         }
     
         @include desktop {
@@ -200,7 +200,7 @@
             column-gap: pxToRem(19);
             row-gap: pxToRem(3);
             max-width: pxToRem(391);
-            padding: pxToRem(18) pxToRem(18) pxToRem(11) pxToRem(18);
+            padding: pxToRem(20) pxToRem(18) pxToRem(11) pxToRem(18);
         }
         
         @include desktop {

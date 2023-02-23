@@ -97,26 +97,33 @@
 
         @include tablet {
             position: absolute;
-            justify-content: center;
             min-width: pxToRem(450);
-            padding: pxToRem(23) pxToRem(20) pxToRem(18) pxToRem(20);
 
             &:nth-child(1) {
                 left: calc(50% - 225px);
                 top: calc(50% - 125px);
                 z-index: 3;
+                padding: pxToRem(22) pxToRem(20) pxToRem(18) pxToRem(20);
             }
 
             &:nth-child(2) {
                 left: calc(50% - 225px - 119px);
                 top: calc(50% - 105px);
                 height: pxToRem(210);
+
+                .customers__info-status {
+                    margin-bottom: 10px;
+                }
             }
 
             &:nth-child(3) {
                 left: calc(50% - 225px + 119px);
                 top: calc(50% - 105px);
                 height: pxToRem(210);
+
+                .customers__info-status {
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -162,7 +169,7 @@
         }
 
         @include tablet {
-            margin-bottom: pxToRem(12);
+            margin-bottom: pxToRem(18);
         }
 
         @include desktop {
@@ -209,7 +216,7 @@
         @include tablet {
             font-size: pxToRem(25);
             font-weight: 600;
-            line-height: pxToRem(38);
+            line-height: pxToRem(27);
         }
 
         @include desktop {
@@ -234,8 +241,9 @@
         }
 
         @include tablet {
-            margin-bottom: pxToRem(13);
+            margin-bottom: pxToRem(19);
             line-height: pxToRem(24);
+            font-size: pxToRem(14);
         }
 
         @include desktop {
@@ -364,6 +372,9 @@
                         }
                         &:nth-child(2) {
                             animation: scroll-mid .5s ease-in-out 0s 1 normal forwards;
+                            .customers__info-status {
+                                margin-bottom: pxToRem(19);
+                            }
                         }
                         &:nth-child(3) {
                             animation: scroll-left .5s ease-in-out 0s 1 normal forwards;
@@ -410,6 +421,10 @@
                         }
                         &:nth-child(3) {
                             animation: scroll-mid .5s ease-in-out 0s 1 normal forwards;
+
+                            .customers__info-status {
+                                margin-bottom: pxToRem(19);
+                            }
                         }
                     }
 
@@ -454,6 +469,7 @@
         top: calc(50% - 125px);
         height: pxToRem(250);
         z-index: 4;
+        padding: pxToRem(22) pxToRem(20) pxToRem(18) pxToRem(20);
     }
 }
 
