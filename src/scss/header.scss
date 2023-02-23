@@ -156,7 +156,7 @@
         }
     }
 
-    &__burger-line {
+    &__burger-btn-line {
         position: relative;
         width: pxToRem(18);
         height: pxToRem(2);
@@ -243,7 +243,7 @@
 
 // ===========================
 
-    &__navigation {
+    &__burger-menu {
 
         @include mobile {
             position: fixed;
@@ -254,6 +254,7 @@
             background: $color-secondary-main;
             border-top-right-radius: pxToRem(10);
             border-bottom-right-radius: pxToRem(10);
+            transition: all .5s ease-in-out;
 
             @include dark-theme {
                 background: $color-black-gray;
@@ -269,6 +270,7 @@
             background: $color-secondary-main;
             border-top-right-radius: pxToRem(10);
             border-bottom-right-radius: pxToRem(10);
+            transition: all .5s ease-in-out;
 
             @include dark-theme {
                 background: $color-black-gray;
@@ -410,7 +412,7 @@
     display: none;
 }
 
-#burger-checkbox:checked ~ .no-scroll .menu__navigation {
+#burger-checkbox:checked ~ .no-scroll .menu__burger-menu {
     left: 0;
     box-shadow: $shadows-block;
     @include dark-theme {
