@@ -96,9 +96,10 @@
 }
 
 .menu {
+    position: relative;
 
     &__container {
-        position: relative;
+        
         display: flex;
         align-items: center;
         background: $color-secondary-main;
@@ -130,6 +131,8 @@
         }
     }
 
+// ========BURGER==============
+
     &__burger {
         height: 100%;
 
@@ -145,6 +148,69 @@
             display: none;
         }
     }
+
+    &__burger-btn-open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            background: rgb(230, 230, 230);
+            border-radius: pxToRem(3);
+
+            @include dark-theme {
+                background: $color-purple;
+            }
+        }
+        
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__burger-line {
+        position: relative;
+        width: pxToRem(18);
+        height: pxToRem(2);
+        background: $color-grey-900;
+
+        @include dark-theme {
+            background: $color-white;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+
+            @include dark-theme {
+                background: $color-white;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: pxToRem(7);
+            width: pxToRem(18);
+            height: pxToRem(2);
+            background: $color-grey-900;
+
+            @include dark-theme {
+                background: $color-white;
+            }
+        }
+    }
+
+// ========LOGO==============
 
     &__logo {
         position: absolute;
@@ -201,7 +267,43 @@
         }
     }
 
+// ===========================
+
     &__navigation {
+
+        @include mobile {
+            position: fixed;
+            left: -100vw;
+            top: 0;
+            min-width: pxToRem(270);
+            height: 100vh;
+            background: $color-secondary-main;
+            box-shadow: $shadows-block;
+            border-top-right-radius: pxToRem(10);
+            border-bottom-right-radius: pxToRem(10);
+
+            @include dark-theme {
+                background: $color-black-gray;
+                box-shadow: $shadows-block-white;
+            }
+        }
+
+        @include tablet {
+            position: fixed;
+            left: -100vw;
+            top: 0;
+            min-width: pxToRem(270);
+            height: 100vh;
+            background: $color-secondary-main;
+            box-shadow: $shadows-block;
+            border-top-right-radius: pxToRem(10);
+            border-bottom-right-radius: pxToRem(10);
+
+            @include dark-theme {
+                background: $color-black-gray;
+                box-shadow: $shadows-block-white;
+            }
+        }
 
         @include desktop {
             display: flex;
@@ -211,149 +313,30 @@
         }
     }
 
-    &__nav {
-        display: flex;
-        align-items: center;
-        gap: pxToRem(9);
-        
-        @include mobile {
-            display: none;
-        }
-    
-        @include tablet {
-            display: none;
-        }
-    }
-
-    &__item {
-        
-        @include desktop {
-            padding: pxToRem(15);
-            font-size: pxToRem(20);
-            font-weight: 600;
-            text-transform: uppercase;
-            color: $color-grey-900;
-
-            &:hover {
-                color: $color-primary-main;
-                text-decoration: underline;
-
-                @include dark-theme {
-                    color: $color-purple;
-                }
-            }
-        }
-
-        @include dark-theme {
-            color: $color-white;
-        }
-    }
-
-    &__btn {
-
-        &:active {
-            box-shadow: inset 0 0 pxToRem(7) #000;
-        }
-    }
-}
-
-.burger {
-
-    &__btn-open {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-
-        &:hover {
-            background: rgb(230, 230, 230);
-            border-radius: pxToRem(3);
-
-            @include dark-theme {
-                background: $color-purple;
-            }
-        }
-        
-        @include desktop {
-            display: none;
-        }
-    }
-
-    &__line {
-        position: relative;
-        width: pxToRem(18);
-        height: pxToRem(2);
-        background: $color-grey-900;
-
-        @include dark-theme {
-            background: $color-white;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: pxToRem(7);
-            width: pxToRem(18);
-            height: pxToRem(2);
-            background: $color-grey-900;
-
-            @include dark-theme {
-                background: $color-white;
-            }
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: pxToRem(7);
-            width: pxToRem(18);
-            height: pxToRem(2);
-            background: $color-grey-900;
-
-            @include dark-theme {
-                background: $color-white;
-            }
-        }
-    }
-
-    &__menu {
-        position: fixed;
-        top: 0;
-        left: -100vh;
-        z-index: 1;
-        min-width: pxToRem(267);
-        height: 100vh;
-        border-top-right-radius: pxToRem(10);
-        border-bottom-right-radius: pxToRem(10);
-        background: $color-secondary-main;
-        box-shadow: $shadows-block;
-        transition: 0.5s all;
-
-        @include dark-theme {
-            background: $color-black-gray;
-            box-shadow: $shadows-block-white;
-        }
-    }
-
     &__close {
         display: flex;
         justify-content: end;
-        padding: pxToRem(15) ;
+        padding: pxToRem(15);
+        margin-bottom: pxToRem(15);
+
+        @include desktop {
+            display: none;
+        }
     }
 
     &__btn-close {
-        padding: pxToRem(10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(55);
+        height: pxToRem(55);
 
-        &:hover .burger__btn-line{
+        &:hover .menu__btn-close-item{
             background: rgb(255, 88, 88);
         }
     }
 
-    &__btn-line {
+    &__btn-close-item {
         position: relative;
         display: flex;
         align-items: center;
@@ -394,36 +377,33 @@
         }
     }
 
-    &__menu-wrapper {
-        height: calc(100vh - 5.313rem);
-        padding: pxToRem(15);
-        margin-right: pxToRem(5);
-        overflow: auto;
+// =========NAVIGATION=======
 
-        &::-webkit-scrollbar {
-            width: pxToRem(3);
-            background-color: $color-secondary-main;
-            border-radius: pxToRem(5);
+    &__nav {
+        display: flex;
+        
+        @include mobile {
+            flex-direction: column;
+            padding: 0 pxToRem(15);
+        }
+    
+        @include tablet {
+            flex-direction: column;
+            padding: 0 pxToRem(15);
         }
 
-        &::-webkit-scrollbar-thumb {
-            background: $color-text-primary;
-            border-radius: pxToRem(3);
+        @include desktop {
+            align-items: center;
+            gap: pxToRem(9);
         }
     }
 
     &__item {
-        display: block;
-        padding: pxToRem(10);
-        font-size: pxToRem(20);
+
         font-weight: 600;
-        line-height: pxToRem(30);
+        font-size: pxToRem(20);
         text-transform: uppercase;
         color: $color-grey-900;
-
-        @include dark-theme {
-            color: $color-white;
-        }
 
         &:hover {
             color: $color-primary-main;
@@ -433,19 +413,49 @@
                 color: $color-purple;
             }
         }
+
+        @include mobile {
+            display: block;
+            padding: pxToRem(10);
+            line-height: pxToRem(30);
+        }
+
+        @include tablet {
+            display: block;
+            padding: pxToRem(10);
+            line-height: pxToRem(30);
+
+            @include dark-theme {
+                color: $color-white;
+            }
+        }
+        
+        @include desktop {
+            padding: pxToRem(15);
+        }
+
+        @include dark-theme {
+            color: $color-white;
+        }
+    }
+
+    &__btn {
+
+        &:active {
+            box-shadow: inset 0 0 pxToRem(7) #000;
+        }
     }
 }
-
 
 #burger-checkbox {
     display: none;
 }
 
-#burger-checkbox:checked ~ .no-scroll .burger__menu {
+#burger-checkbox:checked ~ .no-scroll .menu__navigation {
     left: 0;
 }
 
-#burger-checkbox:checked ~ .no-scroll .burger__btn-open {
+#burger-checkbox:checked ~ .no-scroll .menu__burger-btn-open {
     display: none;
 }
 
@@ -453,20 +463,4 @@
     position: fixed;
     width: 100vw;
     overflow-y: scroll;
-}
-
-body[dir="rtl"] {
-    .burger__menu {
-        left: auto;
-        right: -100vh;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: pxToRem(10);
-        border-bottom-left-radius: pxToRem(10);
-    }
-
-    #burger-checkbox:checked ~ .no-scroll .burger__menu {
-        left: auto;
-        right: 0;
-    }
 }
