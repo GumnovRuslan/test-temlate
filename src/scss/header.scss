@@ -30,58 +30,43 @@
 
 .info {
 
+// =====CONTACTS========
+
     &__contacts {
         display: flex;
         gap: pxToRem(28);
     }
 
-    &__mail {
-        display: inline-flex;
-        align-items: center;
-        gap: pxToRem(18);
-        padding: pxToRem(10) pxToRem(10) pxToRem(10) 0;
-    }
-
-    &__number {
+    &__contact-link {
         display: inline-flex;
         align-items: center;
         gap: pxToRem(18);
         padding: pxToRem(10);
+
+        &:first-child {
+            padding: pxToRem(10) pxToRem(10) pxToRem(10) 0;
+        }
     }
+
+    &__contact-img {
+        width: pxToRem(18);
+        height: pxToRem(18);
+    }
+
+    &__contact-value {
+        color: $color-text-divider;
+        font-size: pxToRem(16);
+    }
+
+// =====NETWORKS=======
 
     &__networks {
         display: inline-flex;
         display: flex;
         gap: pxToRem(10);
     }
-}
-.mail {
 
-    &__favicon {
-        width: pxToRem(18);
-        height: pxToRem(18);
-    }
-
-    &__address {
-        color: $color-text-divider;
-        font-size: pxToRem(16);
-    }
-}
-.number {
-
-    &__favicon {
-        width: pxToRem(18);
-        height: pxToRem(18);
-    }
-
-    &__phone {
-        color: $color-text-divider;
-        font-size: pxToRem(16);
-    }
-}
-.networks {
-
-    &__link {
+    &__networks-link {
         padding: pxToRem(10);
 
         &:last-child {
@@ -89,7 +74,7 @@
         }
     }
 
-    &__image {
+    &__networks-image {
         width: pxToRem(18);
         height: pxToRem(18);
     }
@@ -181,11 +166,10 @@
             background: $color-white;
         }
 
-        &::before {
+        &::before, &::after {
             content: "";
             position: absolute;
             left: 0;
-            bottom: pxToRem(7);
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-grey-900;
@@ -193,21 +177,11 @@
             @include dark-theme {
                 background: $color-white;
             }
-        }
+        } 
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: pxToRem(7);
-            width: pxToRem(18);
-            height: pxToRem(2);
-            background: $color-grey-900;
+        &::before {bottom: pxToRem(7);}
 
-            @include dark-theme {
-                background: $color-white;
-            }
-        }
+        &::after {top: pxToRem(7);}
     }
 
 // ========LOGO==============
@@ -278,13 +252,11 @@
             min-width: pxToRem(270);
             height: 100vh;
             background: $color-secondary-main;
-            box-shadow: $shadows-block;
             border-top-right-radius: pxToRem(10);
             border-bottom-right-radius: pxToRem(10);
 
             @include dark-theme {
                 background: $color-black-gray;
-                box-shadow: $shadows-block-white;
             }
         }
 
@@ -295,13 +267,11 @@
             min-width: pxToRem(270);
             height: 100vh;
             background: $color-secondary-main;
-            box-shadow: $shadows-block;
             border-top-right-radius: pxToRem(10);
             border-bottom-right-radius: pxToRem(10);
 
             @include dark-theme {
                 background: $color-black-gray;
-                box-shadow: $shadows-block-white;
             }
         }
 
@@ -310,6 +280,7 @@
             flex: auto;
             justify-content: space-between;
             padding: 0 pxToRem(30) 0 pxToRem(34);
+            box-shadow: none !important;
         }
     }
 
@@ -350,34 +321,22 @@
             background: $color-purple;
         }
 
-        &::before {
+        &::before, &::after {
             content: "";
             position: absolute;
             width: pxToRem(18);
             height: pxToRem(2);
             background: $color-secondary-main;
-            transform: rotate(45deg);
 
             @include dark-theme {
                 background: $color-dark;
             }
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            width: pxToRem(18);
-            height: pxToRem(2);
-            background: $color-secondary-main;
-            transform: rotate(-45deg);
+        &::before {transform: rotate(45deg);}
 
-            @include dark-theme {
-                background: $color-dark;
-            }
-        }
+        &::after {transform: rotate(-45deg);}
     }
-
-// =========NAVIGATION=======
 
     &__nav {
         display: flex;
@@ -404,6 +363,10 @@
         font-size: pxToRem(20);
         text-transform: uppercase;
         color: $color-grey-900;
+        
+        @include dark-theme {
+            color: $color-white;
+        }
 
         &:hover {
             color: $color-primary-main;
@@ -433,10 +396,6 @@
         @include desktop {
             padding: pxToRem(15);
         }
-
-        @include dark-theme {
-            color: $color-white;
-        }
     }
 
     &__btn {
@@ -453,6 +412,10 @@
 
 #burger-checkbox:checked ~ .no-scroll .menu__navigation {
     left: 0;
+    box-shadow: $shadows-block;
+    @include dark-theme {
+        box-shadow: $shadows-block-white;
+    }
 }
 
 #burger-checkbox:checked ~ .no-scroll .menu__burger-btn-open {
