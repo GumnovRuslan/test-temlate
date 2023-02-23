@@ -94,9 +94,9 @@
                 }
 
             @include mobile {
-                top: calc(50% - 280px);
+                top: calc(50% - 225px);
                 width: 0;
-                height: pxToRem(500);
+                height: pxToRem(400);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
 
                 @include dark-theme {
@@ -105,9 +105,9 @@
             }
             
             @include tablet {
-                top: calc(50% - 358px);
+                top: calc(50% - 263px);
                 width: pxToRem(10);
-                height: pxToRem(622);
+                height: pxToRem(440);
                 box-shadow: 0 0 pxToRem(20) pxToRem(30) $color-text-divider;
 
                 @include dark-theme {
